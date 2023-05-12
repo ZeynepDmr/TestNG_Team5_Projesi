@@ -23,5 +23,11 @@ public class BillingUs {
        @FindBy(xpath ="//a[@href='https://hubcomfy.com/my-account-2/']")
        public WebElement myAccount;
 
+       @FindBy(xpath = "//a[@ href='https://hubcomfy.com/my-account-2/edit-address/']")
+       public WebElement addresses;
+
+       @FindBy(id = "billing_first_name")
+       public WebElement isim;
+
 }
 

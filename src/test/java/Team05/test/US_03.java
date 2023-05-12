@@ -16,7 +16,7 @@ import java.awt.event.ActionEvent;
 public class US_03 {
 
    /*
-    Kullanici Addreses bolumune tiklar
+
     Kullanici Billing Adress bolumunde Add kutusunu tiklar
     Kullanici First Name kutusuna tiklar
     Kullanici Isim bilgisini girer
@@ -35,6 +35,7 @@ public class US_03 {
 
     */
 
+
     @Test
     public void test1() {
         //  Kullanici ilgili adrese gider
@@ -45,13 +46,26 @@ public class US_03 {
 
         // Kullanici username/email adresini girer
         billingUs.userName.sendKeys(ConfigReader.getProperty("Customer_Username"), Keys.ENTER);
-
+        ReusableMethods.bekle(2);
         // Kullanici alt kutucuga passwordu girer
         billingUs.password.sendKeys(ConfigReader.getProperty("Customer_Password"), Keys.ENTER);
+        ReusableMethods.scrollEnd();
+        ReusableMethods.bekle(2);
+        //Kullanici account kutucuguna tiklar
+        Driver.getDriver();
+        billingUs.myAccount.click();
+
+        //Kullanici Addreses bolumune tiklar
+        billingUs.addresses.click();
+
+      //  Kullanici Billing Adress bolumunde Add kutusunu tiklar
 
 
-        // Kullanici sayfaya giris yapar,Kullanici My Account bolumune tiklar
-        //Actions action = new Actions(billingUs);
+
+
+
+
+
 
 
     }
