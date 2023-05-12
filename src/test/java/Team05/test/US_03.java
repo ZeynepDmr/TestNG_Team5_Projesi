@@ -1,17 +1,10 @@
 package Team05.test;
 
-import Team05.pages.BillingUs;
+import Team05.pages.BillingUsLocates;
 import Team05.utilities.ConfigReader;
 import Team05.utilities.Driver;
-import Team05.utilities.ReusableMethods;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
-
-import javax.swing.*;
-import java.awt.event.ActionEvent;
 
 public class US_03 {
 
@@ -41,7 +34,7 @@ public class US_03 {
         //  Kullanici ilgili adrese gider
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
         //  Kullanici Sign  In butonuna tiklar
-        BillingUs billingUs = new BillingUs();
+        BillingUsLocates billingUs = new BillingUsLocates();
         billingUs.signInButonu.click();
 
         // Kullanici username/email adresini girer
