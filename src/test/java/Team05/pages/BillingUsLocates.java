@@ -4,10 +4,10 @@ import Team05.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.Test;
 
-public class BillingUs {
-    public BillingUs() {
+public class BillingUsLocates {
+    //US_03_04
+    public BillingUsLocates() {
         PageFactory.initElements(Driver.getDriver(), this);
 
     }
