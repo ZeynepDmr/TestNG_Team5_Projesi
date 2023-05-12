@@ -3,6 +3,7 @@ package Team05.utilities;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.github.javafaker.Faker;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -200,5 +201,30 @@ public class ReusableMethods {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         String attribute_Value = (String) js.executeScript("return document.getElementById('" + id + "')." + attributeName);
         System.out.println("Attribute Value: = " + attribute_Value);
+    }
+
+    //Faker
+    public static String fakerInput(String faker2){
+        Faker faker = new Faker();
+        if(faker2=="email"){
+            String fakeEmail = faker.internet().emailAddress();
+            return fakeEmail;
+        } else if (faker2=="username") {
+            String fakeUsername = faker.name().username();
+            return fakeUsername;
+        }
+        else  {
+            String fakePassword = faker.internet().password();
+            return fakePassword;
+
+        }
+
+
+
+
+
+
+
+
     }
 }
