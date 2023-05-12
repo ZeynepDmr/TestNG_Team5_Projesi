@@ -9,7 +9,7 @@ public class US_14 {
     public US_14(){
         PageFactory.initElements(Driver.getDriver(),this);
 
-           @FindBy(xpath = "//*[@id='username']")
-                   public WebElement email;
+         //  @FindBy(xpath = "//*[@id='username']")
+           //        public WebElement email;
     }
 }
