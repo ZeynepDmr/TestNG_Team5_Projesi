@@ -13,6 +13,29 @@ public class VendorAddressLocates {
 
     }
 
+    // SingIn
+    @FindBy(xpath = "//a[.='Sign In']")
+    public WebElement signIn;
+
+    @FindBy(xpath = "//input[@id='username']")
+    public WebElement userName;
+
+    @FindBy(xpath = "//input[@id='password']")
+    public WebElement passWord;
+
+    @FindBy(xpath = "//button[@name='login']")
+    public WebElement singInButton;
+
+    @FindBy(xpath = "//input[@id='woocommerce-login-nonce']")
+    public WebElement loginSuccessful;
+
+    @FindBy(xpath = "//li[@id='menu-item-1079']")
+    public WebElement myAccount;
+
+    @FindBy(xpath = "//li[@class='woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--edit-address']")
+    public  WebElement a2;//test
+
+
     //Billing Address Locates
     @FindBy(xpath = "//a[.='Addresses']")
     public WebElement addresses;
@@ -78,9 +101,6 @@ public class VendorAddressLocates {
 
     @FindBy(xpath = "//button[@name='save_address']")
     public WebElement shippingAddressSaveAddress;
-
-
-
 
 
 }
