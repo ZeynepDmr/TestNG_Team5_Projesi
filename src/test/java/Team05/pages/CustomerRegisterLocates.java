@@ -27,6 +27,14 @@ public class CustomerRegisterLocates {
     @FindBy(xpath = "//*[@id='register-policy']")
     public WebElement Register_Policy_Check;
 
+    @FindBy(xpath = "//*[@id='signup']/form/button")
+    public WebElement Singup_Button;
+
+    @FindBy(xpath = "//*[@id='header']/div/div/div/div/div/div[9]/div/div/a")
+    public WebElement Profile;
+
+    @FindBy(xpath = "//*[@id='main']/div/div/div/div/div/div/nav/ul/li[10]/a")
+    public WebElement Sing_Out;
 
 
 }
