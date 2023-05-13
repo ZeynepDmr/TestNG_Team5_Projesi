@@ -94,9 +94,17 @@ public class US_03 {
 
      //   action.doubleClick(billingUs.houseNstreetName);
      //   billingUs.houseNstreetName.sendKeys("Balg 12");
-        action.moveToElement(billingUs.countrDdm).click().build().perform();
-        //Select dropdown = new Select(billingUs.countrDdm);
 
+
+
+
+
+        //Select dropdown = new Select(billingUs.countrDdm);
+        action.moveToElement(billingUs.countrDdm).click().build().perform();
+        //action.scrollToElement(billingUs.nederlandsddm);
+        action.moveToElement(billingUs.nederlandsddm).click().build();
+        //  Select dropdown = new Select(billingUs.countrDdm);
+       //   dropdown.selectByValue("Nederlands");
        // action.moveToElement(billingUs.nederlandsddm).click().build().perform();
         //dropdown.selectByVisibleText("Nederland");
        // action.
