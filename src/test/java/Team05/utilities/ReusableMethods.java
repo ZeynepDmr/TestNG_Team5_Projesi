@@ -3,6 +3,7 @@ package Team05.utilities;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.github.javafaker.Faker;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -200,5 +201,39 @@ public class ReusableMethods {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         String attribute_Value = (String) js.executeScript("return document.getElementById('" + id + "')." + attributeName);
         System.out.println("Attribute Value: = " + attribute_Value);
+    }
+
+    //Faker
+    /*
+  email, username, password, firsmane,lastname, copon  olarak ( "customerRegesterPage.User_Name_Input.sendKeys(fakerInput("coupon"));" gibi)
+  seçim yaptığınız taktirde ilgili konuda random oluşumlar yapacaktır.
+     */
+    public static String fakerInput(String faker2){
+        Faker faker = new Faker();
+        if(faker2=="email"){
+            String fakeEmail = faker.internet().emailAddress();
+            return fakeEmail;
+        } else if (faker2=="username") {
+            String fakeUsername = faker.name().username();
+            return fakeUsername;
+        }
+        else if (faker2=="password"){
+            String fakePassword = faker.internet().password();
+            return fakePassword;
+
+        } else if (faker2=="firsname") {
+            String fakerFirstName = faker.name().firstName();
+            return fakerFirstName;
+        }
+        else if (faker2=="lastname"){
+
+            String fakerLastName = faker.name().lastName();
+            return fakerLastName;
+        }
+        else {
+            String fakerCoupon = faker.code().asin();
+            return fakerCoupon;
+        }
+
     }
 }

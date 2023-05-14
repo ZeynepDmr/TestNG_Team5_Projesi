@@ -1,8 +1,21 @@
 package Team05.test;
 
+import Team05.pages.VendorRegisterLocates;
+import Team05.utilities.ConfigReader;
+import Team05.utilities.Driver;
+import org.testng.annotations.Test;
+
 public class US_09 {
-    public static void main(String[] args) {
-        System.out.println("beyz");
+    @Test
+    public void testName() {
+        Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
+        VendorRegisterLocates vendorRegisterLocates = new VendorRegisterLocates();
+        vendorRegisterLocates.VendorRegister.click();
+        vendorRegisterLocates.BecomeVRegister.click();
+        vendorRegisterLocates.VendorEmail.click();
+    }
+
+
         //madde bir git add .
         //git commit -m""
         // git branch: hangi branchte oldugumu gösterir ayrıca branch listemi de gösterir
@@ -11,7 +24,22 @@ public class US_09 {
         //git merge branch ismi: branchimi merge yapmak (birlestirmek) istedigimde kullanırım.
         // master ve maindeyken merge yapmamak gerekli
 
-//branch değişikliği
+        //branchte yapılan değişikler için her zaman git add it commit -m yapmak gerek
+        //branchte yapılan değişiklikler main'e geçtikten sonra MERGE edilir
 
-    }
+        //"değisiklik yaptıktan sonra değişikliği birleştirmek için "git merge "main""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
