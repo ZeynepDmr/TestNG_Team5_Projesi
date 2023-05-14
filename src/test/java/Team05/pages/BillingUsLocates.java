@@ -39,14 +39,38 @@ public class BillingUsLocates {
        @FindBy(xpath ="//input[@name='billing_company']")
       public  WebElement companyKutusu;
 
-       @FindBy(id ="select2-billing_country-container")
-       public WebElement countrDdm;
+        @FindBy(xpath ="//span[@title='Netherlands']")
+        public WebElement countryDdm;
+
 
        @FindBy(xpath ="//input[@name='billing_address_1']")
        public WebElement houseNstreetName;
 
-       @FindBy(xpath ="//span[@tittle='Nederlands']")
-       public WebElement nederlandsddm;
+
+      @FindBy(xpath ="//input[@name='billing_address_1']")
+       public WebElement houseNumStrName;
+
+      @FindBy(xpath ="//input[@name='billing_address_2']")
+      public WebElement apartmanNo;
+
+      @FindBy(xpath ="//input[@id='billing_city']")
+      public WebElement townCity;
+
+      //State kutusu locate almam gerekiyor DropDown
+
+
+      @FindBy(xpath ="//input[@id='billing_postcode']")
+      public WebElement zipCodeKutus;
+
+      @FindBy(xpath ="//input[@id='billing_phone']")
+      public WebElement phoneKutusu;
+
+      @FindBy(xpath ="//input[@value='vefasonmezams4@gmail.com']")
+      public WebElement emailAssert;
+
+      @FindBy(xpath ="//button[@name='save_address']")
+      public WebElement saveAdressKtusu;
+
 
 
 

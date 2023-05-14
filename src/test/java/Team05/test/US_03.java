@@ -9,30 +9,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import javax.swing.*;
 
 public class US_03 {
-
-   /*
-
-
-
-
-
-
-    Kullanici Street adress alanindaki House number street name alanina tiklar
-    Kullanici house number ve street name bilgisini girer
-    Kullanici Town/City kutusuna tiklar ve bilgi girisi yapar
-    Kullanici  Town/City bilgi girisi yapar
-    Kullanici ZIP code alanina tiklar
-    Kullanici ZIP code alanina bilgi girisi yapar
-    Kullanici Phone kutusuna tiklar
-    Kullanici Phone kutusuna  bir telefon numarasi girer
-
-    */
-
 
     @Test
     public void test1() {
@@ -43,10 +25,10 @@ public class US_03 {
         billingUs.signInButonu.click();
 
         // Kullanici username/email adresini girer
-        billingUs.userName.sendKeys(ConfigReader.getProperty("Customer_Username"), Keys.ENTER);
+        billingUs.userName.sendKeys(ConfigReader.getProperty("Customer_Username1"), Keys.ENTER);
         ReusableMethods.bekle(2);
         // Kullanici alt kutucuga passwordu girer
-        billingUs.password.sendKeys(ConfigReader.getProperty("Customer_Password"), Keys.ENTER);
+        billingUs.password.sendKeys(ConfigReader.getProperty("Customer_Password1"), Keys.ENTER);
         ReusableMethods.bekle(2);
         ReusableMethods.scrollEnd();
        // ReusableMethods.bekle(2);
@@ -83,48 +65,105 @@ public class US_03 {
        Driver.getDriver();
        ReusableMethods.bekle(2);
        action.sendKeys(Keys.PAGE_DOWN).perform();
-        Driver.getDriver();
+       // Driver.getDriver();
         ReusableMethods.bekle(2);
-      // ReusableMethods.ddmVisibleText(billingUs.countrDdm,"Netherlands");
-      // Select select = new Select(billingUs.countrDdm);
-      // select.selectByVisibleText("Netherlands");
-
-       // Kullanici Street adress alanindaki House number street name alanina tiklar
-      //Kullanici house number ve street name bilgisini girer
-
-     //   action.doubleClick(billingUs.houseNstreetName);
-     //   billingUs.houseNstreetName.sendKeys("Balg 12");
 
 
 
+      //--------------------------------------///
 
 
-        //Select dropdown = new Select(billingUs.countrDdm);
-        action.moveToElement(billingUs.countrDdm).click().build().perform();
-        //action.scrollToElement(billingUs.nederlandsddm);
-        action.moveToElement(billingUs.nederlandsddm).click().build();
-        //  Select dropdown = new Select(billingUs.countrDdm);
-       //   dropdown.selectByValue("Nederlands");
-       // action.moveToElement(billingUs.nederlandsddm).click().build().perform();
-        //dropdown.selectByVisibleText("Nederland");
-       // action.
+       //action.moveToElement(billingUs.countrDdm).click().build().perform();
+      //  Select select1 = new Select(billingUs.country);
+      //  select1.selectByValue("NL");
+        //-------------------------------------//
+        action.moveToElement(billingUs.countryDdm).click();
 
-
-
+        Select select = new Select(billingUs.countryDdm);
+        select.selectByVisibleText("NL");
 
 
 
+        // Kullanici Street adress alanindaki House number street name alanina tiklar
+      //  Kullanici house number ve street name bilgisini girer
+       Driver.getDriver();
+       billingUs.houseNstreetName.click();
+       billingUs.houseNstreetName.sendKeys("Balg 12",Keys.ENTER);
+       ReusableMethods.bekle(2);
+       billingUs.apartmanNo.sendKeys(" ",Keys.ENTER);
+       ReusableMethods.bekle(2);
 
-
-
+       // Kullanici Town/City kutusuna tiklar ve bilgi girisi yapar
+       // Kullanici  Town/City bilgi girisi yapar
+        billingUs.townCity.sendKeys("Hoofddorp",Keys.ENTER);
+        ReusableMethods.bekle(2);
 
 
 
 
 
+       // Kullanici ZIP code alanina tiklar
+      //  Kullanici ZIP code alanina bilgi girisi yapar
+        billingUs.zipCodeKutus.sendKeys("2134 ZP",Keys.ENTER);
+        ReusableMethods.bekle(2);
+
+       // Kullanici Phone kutusuna tiklar
+      //  Kullanici Phone kutusuna  bir telefon numarasi girer
+        billingUs.phoneKutusu.sendKeys("0031624506246",Keys.ENTER);
+
+       // Kullanici Email Adressi kayit olunan e-mail Adresi olarak otomatik gelmeli
+        Assert.assertTrue(billingUs.emailAssert.getText().equals("Customer_Username1"));
+
+      //  "Save Adress"butonuna tiklayarak Billing Adresse eklenmeli
+        billingUs.saveAdressKtusu.click();
+      //  "Save Adress"butonuna tiklayarak Billing Adresse eklenmeli
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // ReusableMethods.ddmVisibleText(billingUs.countrDdm,"Netherlands");
+        // select.selectByVisibleText("Netherlands");
+        // Kullanici Street adress alanindaki House number street name alanina tiklar
+        //Kullanici house number ve street name bilgisini girer
+
+        //   action.doubleClick(billingUs.houseNstreetName);
+        //   billingUs.houseNstreetName.sendKeys("Balg 12");
+       /*
+        Select select1 = new Select(billingUs.country);
+        select1.selectByValue("NL");
+
+        action.doubleClick();
+
+        */
 
 
 

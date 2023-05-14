@@ -1,6 +1,8 @@
 package Team05.utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -20,9 +22,10 @@ public class Driver {
         Bir class'tan obje oluşturmanın önüne geçmek için default constructor'ın kullanımını engellemek için
     private access modifire kullanarak bir constructor oluştururuz
      */
-    private Driver(){
+    private Driver() {
 
     }
+
     static WebDriver driver;
 
     public static WebDriver getDriver() {
@@ -67,3 +70,4 @@ public class Driver {
         }
     }
 }
+
