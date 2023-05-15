@@ -204,6 +204,7 @@ public class VendorAddProductLocates {
         PageFactory.initElements(Driver.getDriver(), this);
 
     }
+
     //AddNew locator(zeynep)
     @FindBy(xpath = "(//*[text()='Add New'])[1]")
     public WebElement addNew;
@@ -249,17 +250,17 @@ public class VendorAddProductLocates {
     public WebElement anySize;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
