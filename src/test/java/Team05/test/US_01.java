@@ -126,7 +126,7 @@ bekle(3);
         customerRegesterPage.Singup_Button.click();
         bekle(10);
 
-       // Driver.closeDriver();
+        Driver.closeDriver();
 
     }
 
