@@ -314,6 +314,73 @@ public class VendorAddProductLocates {}
 
 
 
+    }
+    @FindBy(xpath = "//*[text()='Sign In']")
+    public WebElement login;
+    @FindBy(xpath="//*[@id='username']")
+    public WebElement userName;
+
+    @FindBy(xpath = "//*[@id='password']")
+    public WebElement password;
+
+    @FindBy(xpath = "(//*[text()='Sign In'])[2]")
+    public WebElement signin;
+
+
+   // @FindBy(xpath= "//li[@id='menu-item-1079']")
+   // public WebElement myAccount;
+
+
+    @FindBy(linkText = "My Account")
+    public static WebElement myAccount;
+
+    @FindBy(linkText = "Store Manager")
+    public static WebElement storeManager;
+
+
+    @FindBy(xpath= "//*[@class='wcfm_menu_items wcfm_menu_wcfm-products']")
+    public WebElement products;
+
+    @FindBy(xpath = "(//*[text()='Add New'])[1]")
+    public WebElement addNew;
+
+    @FindBy(xpath = "//*[@id='product_type']")
+    public WebElement simpleProduct;
+
+
+    //Virtual tıklama(zeynep)
+    @FindBy(css="input[id='is_virtual']")
+    public WebElement virtual;
+
+    //is_downloadable tıklama(zeynep)
+    @FindBy(css = "input[id='is_downloadable']")
+    public WebElement is_downloadable;
+
+    @FindBy(css = "input[id='pro_title']")
+    public WebElement productTitle;
+
+
+    //price kutucugu (zeynep)
+    @FindBy(xpath = "//*[@id='regular_price']")
+    public WebElement price;
+
+    //sale price kutucugu(zeynep)
+  //  @FindBy(xpath = "//*[@id='sale_price']")
+  //  public WebElement salePrice;
+
+
+
+    @FindBy(css = "input[id='wcfm_products_simple_draft_button']")
+    public WebElement draft;
+
+
+
+
+
+
+    //variableProduct secimi(zeynep)
+   // @FindBy(xpath = "//*[@id='product_type']")
+   // public static WebElement variableProduct;
 
 
 
@@ -335,8 +402,27 @@ public class VendorAddProductLocates {}
 
 
 
+    @FindBy(xpath="//img[@id='featured_img_display']")
+    public WebElement imageBuyuk;
 
 
+    @FindBy(xpath = "//img[@id='gallery_img_gimage_0_display']")
+    public WebElement imageKucuk;
+
+    @FindBy(xpath = "(//*[@*='228'])[2]")
+    public WebElement homeGarden;
+
+    @FindBy(xpath = "//input[@*='252']")
+    public WebElement homeDesign;
+
+    @FindBy(xpath = "(//input[@*='submit'])[3]")
+    public WebElement submitButton;
+
+    @FindBy(xpath = "//input[@value='View']")
+    public WebElement viewButton;
+
+    @FindBy(xpath = "(//img[@*='presentation'])[1]")
+    public WebElement productLastImage;
 
 
 
@@ -482,6 +568,18 @@ public class VendorAddProductLocates {}
     @FindBy(xpath = "//*[@id='product_type']")
     public WebElement dropDown;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 //buraya kadar zeynep
 //package Team05.pages;
