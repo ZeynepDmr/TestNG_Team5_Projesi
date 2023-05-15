@@ -18,6 +18,10 @@ public class VendorAddProductLocates {}
 //    }
 /*
 
+
+    }
+
+
     //AddNew locator(zeynep)
     @FindBy(xpath = "(//*[text()='Add New'])[1]")
     public WebElement addNew;
@@ -70,51 +74,6 @@ public class VendorAddProductLocates {}
 
 
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -453,6 +412,70 @@ public class VendorAddProductLocates {}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//buraya kadar zeynep
+
+    @FindBy(linkText = "Store Manager")
+    public WebElement storemanager;
+
+
+    @FindBy(xpath = "(//h2)[1]")
+    public WebElement storeManagerText;
+
+    @FindBy(css = "a[class='wcfm_menu_item active']")
+    public WebElement products;
+
+    @FindBy(xpath = "//*[text()='Products']")
+    public WebElement productsText;
+
+    //DropDown
+    @FindBy(xpath = "//*[@id='product_type']")
+    public WebElement dropDown;
+}
 
 //buraya kadar zeynep
 //package Team05.pages;
@@ -899,4 +922,5 @@ public class VendorAddProductLocates {}
 //
 //
 ////buraya kadar zeynep
+
 
