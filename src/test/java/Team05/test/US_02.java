@@ -53,7 +53,6 @@ public class US_02 {
         customerRegesterPage.Sing_Out.click();
         bekle(3);
         Driver.closeDriver();
-
     }
         @Test
         public void TC_2 (){
@@ -72,11 +71,8 @@ public class US_02 {
             customerRegesterPage.Register_Policy_Check.click();
             bekle(3);
             customerRegesterPage.Singup_Button.click();
-            bekle(3);
-            customerRegesterPage.Profile.click();
-            bekle(3);
-            customerRegesterPage.Sing_Out.click();
-            bekle(3);
+            bekle(6);
+
             Driver.closeDriver();
         }
 

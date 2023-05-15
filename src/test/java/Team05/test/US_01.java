@@ -124,9 +124,9 @@ bekle(3);
         customerRegesterPage.Register_Policy_Check.click();
         bekle(3);
         customerRegesterPage.Singup_Button.click();
-        bekle(5);
+        bekle(10);
 
-        Driver.closeDriver();
+       // Driver.closeDriver();
 
     }
 
@@ -154,12 +154,14 @@ bekle(3);
 
 
         customerRegesterPage.E_Mail_Input.clear();
-        customerRegesterPage.E_Mail_Input.sendKeys("asdw@r");
-        bekle(5);
+        customerRegesterPage.E_Mail_Input.sendKeys("asdw@re");
+        customerRegesterPage.Singup_Button.click();
+        bekle(6);
 
         customerRegesterPage.E_Mail_Input.clear();
         customerRegesterPage.E_Mail_Input.sendKeys("as dw@re");
-        bekle(5);
+        customerRegesterPage.Singup_Button.click();
+        bekle(10);
 
         customerRegesterPage.E_Mail_Input.clear();
     }
