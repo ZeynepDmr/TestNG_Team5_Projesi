@@ -11,6 +11,7 @@ public class VendorAddProductLocates {
         PageFactory.initElements(Driver.getDriver(), this);
 
     }
+
     //AddNew locator(zeynep)
     @FindBy(xpath = "(//*[text()='Add New'])[1]")
     public WebElement addNew;
@@ -54,51 +55,6 @@ public class VendorAddProductLocates {
     // Any size tıkla(zeynep)
     @FindBy(xpath = "//*[@data-name='default_attribute_pa_size']")
     public WebElement anySize;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -441,4 +397,65 @@ public class VendorAddProductLocates {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //buraya kadar zeynep
+
+    @FindBy(linkText = "Store Manager")
+    public WebElement storemanager;
+
+    @FindBy(xpath = "(//h2)[1]")
+    public WebElement storeManagerText;
+
+    @FindBy(css = "a[class='wcfm_menu_item active']")
+    public WebElement products;
+
+    @FindBy(xpath = "//*[text()='Products']")
+    public WebElement productsText;
+
+    //DropDown
+    @FindBy(xpath = "//*[@id='product_type']")
+    public WebElement dropDown;
+}
