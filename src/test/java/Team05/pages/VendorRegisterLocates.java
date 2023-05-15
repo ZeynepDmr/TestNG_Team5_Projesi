@@ -46,5 +46,36 @@ public class VendorRegisterLocates {
 
 
 
+    @FindBy(xpath = "/html/body/div[2]/div[2]/div[2]/div")
+    public WebElement Copy;
+
+
+    @FindBy(xpath = "//*[text()='Too short']")//passwordda kisa oldu dogrulama
+    public WebElement tooShort;
+
+
+    @FindBy(xpath = "//*[text()='Weak']")//passwordda zayif oldugunu dogrulama
+    public WebElement Weak;
+
+    @FindBy(xpath = "//*[text()='Password strength should be atleast Good.']")//paasword kisminda olan paralo gucu en az good seviyesinde olmalidir dogrulama
+    public WebElement good;
+
+    @FindBy(xpath = "//*[text()='Password and Confirm-password are not same.']")//Password and Confirm-password are not same. paralo ve paralo onaylama kismi ayni olmadigini dogrulama
+    public  WebElement passwordConfirmPassword;
+
+    @FindBy(xpath = "//*[@class='wcfm-message wcfm-error']")//Bu E-posta zaten var dogrulama
+    public WebElement Emailalreadyexists;
+
+    @FindBy(xpath = "//*[@class='wcfm-message wcfm-error']")//gecersiz dogrulama kodu
+    public WebElement Verificationcodeinvalid;
+
+    @FindBy(xpath = "(//h1)[2]")//basarili sekilde kayit olduguna dair dogrulama
+    public WebElement basariliKayit;
+
+
 
 }
+
+
+
+
