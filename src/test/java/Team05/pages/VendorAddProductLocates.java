@@ -22,6 +22,8 @@ public class VendorAddProductLocates {}
     }
 
 
+
+
     //AddNew locator(zeynep)
     @FindBy(xpath = "(//*[text()='Add New'])[1]")
     public WebElement addNew;
@@ -64,7 +66,11 @@ public class VendorAddProductLocates {}
 
     // Any size tıkla(zeynep)
     @FindBy(xpath = "//*[@data-name='default_attribute_pa_size']")
+
+    public WebElement anySize;
+
     public WebElement anySize; }
+
 
 }
 
