@@ -60,7 +60,7 @@ public class VendorAddProductLocates {}
 
     // Any size tıkla(zeynep)
     @FindBy(xpath = "//*[@data-name='default_attribute_pa_size']")
-    public WebElement anySize;
+    public WebElement anySize; }
 
 }
 

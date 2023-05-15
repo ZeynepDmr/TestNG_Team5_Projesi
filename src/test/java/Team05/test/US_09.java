@@ -5,14 +5,25 @@ import Team05.utilities.ConfigReader;
 import Team05.utilities.Driver;
 import org.testng.annotations.Test;
 
+import static Team05.utilities.ReusableMethods.bekle;
+
 public class US_09 {
     @Test
     public void testName() {
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
         VendorRegisterLocates vendorRegisterLocates = new VendorRegisterLocates();
         vendorRegisterLocates.VendorRegister.click();
+        bekle(3);
         vendorRegisterLocates.BecomeVRegister.click();
+        bekle(3);
+
+        Driver.getDriver().get(ConfigReader.getProperty("Fake_Url"));
+        bekle(5);
+        vendorRegisterLocates.Copy.click();
         vendorRegisterLocates.VendorEmail.click();
+
+
+
     }
 
 
