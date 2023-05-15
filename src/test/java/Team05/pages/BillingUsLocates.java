@@ -39,7 +39,7 @@ public class BillingUsLocates {
        @FindBy(xpath ="//input[@name='billing_company']")
       public  WebElement companyKutusu;
 
-        @FindBy(xpath ="//span[@title='Netherlands']")
+        @FindBy(xpath ="//*[@id='billing_country']")
         public WebElement countryDdm;
 
 
@@ -68,8 +68,14 @@ public class BillingUsLocates {
       @FindBy(xpath ="//input[@value='vefasonmezams4@gmail.com']")
       public WebElement emailAssert;
 
-      @FindBy(xpath ="//button[@name='save_address']")
+      @FindBy(xpath ="//button[@class='btn btn-dark btn-rounded btn-sm']")
       public WebElement saveAdressKtusu;
+
+      @FindBy(xpath ="(//table[@class='address-table'])[1]")
+      public  WebElement billingscontains;
+
+      @FindBy(xpath ="//a[@href='https://hubcomfy.com/my-account-2/edit-address/shipping/']")
+      public WebElement shippingBill;
 
 
 
