@@ -164,7 +164,10 @@ bekle(3);
         bekle(10);
 
         customerRegesterPage.E_Mail_Input.clear();
+        Driver.closeDriver();
     }
+
+
 
     @Test
     public void TC_5() {
