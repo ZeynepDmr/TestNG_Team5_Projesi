@@ -84,7 +84,7 @@ public class US_03 {
        ReusableMethods.bekle(2);
 
        // Kullanici Town/City kutusuna tiklar ve bilgi girisi yapar
-       // Kullanici  Town/City bilgi girisi yapar
+
         billingUs.townCity.sendKeys("Hoofddorp",Keys.ENTER);
         ReusableMethods.bekle(2);
 
@@ -106,58 +106,10 @@ public class US_03 {
        billingUs.saveAdressKtusu.click();
         ReusableMethods.bekle(2);
        */
-       // System.out.println(billingUs.billingscontains.getText());
+         System.out.println(billingUs.billingscontains.getText());
+        ReusableMethods.tumSayfaResmi();
         String billingBilgisi= billingUs.billingscontains.getText();
         Assert.assertTrue(billingBilgisi.contains("Hoofddorp"));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // ReusableMethods.ddmVisibleText(billingUs.countrDdm,"Netherlands");
-        // select.selectByVisibleText("Netherlands");
-        // Kullanici Street adress alanindaki House number street name alanina tiklar
-        //Kullanici house number ve street name bilgisini girer
-
-        //   action.doubleClick(billingUs.houseNstreetName);
-        //   billingUs.houseNstreetName.sendKeys("Balg 12");
-       /*
-        Select select1 = new Select(billingUs.country);
-        select1.selectByValue("NL");
-
-        action.doubleClick();
-
-        */
 
 
 
