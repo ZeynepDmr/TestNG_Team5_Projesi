@@ -37,4 +37,6 @@ public class CustomerRegisterLocates {
     public WebElement Sing_Out;
 
 
+
+
 }
