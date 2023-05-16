@@ -14,6 +14,8 @@ import java.security.Key;
 
 public class US_16 {
 
+
+
            /*
 Kullanici url'e gider
 Kullanici sign in butonuna tiklar
@@ -30,6 +32,7 @@ US14 ve US15 deki işlemler yapılabilmeli
 Ürünün eklendiğini Product kısmında görebilmeli
 
             */
+
            WebDriver driver;
            Actions actions;
            VendorAddProductLocates vendorAddProductLocates;

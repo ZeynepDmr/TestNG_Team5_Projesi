@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Negative smoke test Calistirma">
+    <test name="Istenen Negative Smoke Test Calistirma">
+
+        <classes>
+            <class name="Team05.test.Negative_Test.US_11"/>
+        </classes>
+    </test>
+</suite>

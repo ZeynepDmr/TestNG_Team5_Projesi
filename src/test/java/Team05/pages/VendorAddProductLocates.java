@@ -6,7 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class VendorAddProductLocates {}
+public class VendorAddProductLocates {
+
+
+    /*
+
     //US_14_18
   // public VendorAddProductLocates() {
 //        PageFactory.initElements(Driver.getDriver(), this);
@@ -15,11 +19,11 @@ public class VendorAddProductLocates {}
     
 
 
-//    }
-/*
+//
 
 
-    }
+
+
 
 
 
@@ -79,7 +83,7 @@ public class VendorAddProductLocates {}
 
 
 
-*/
+
 
 
 
@@ -460,7 +464,7 @@ public class VendorAddProductLocates {}
 
 
 
-
+*/
 
 
 
