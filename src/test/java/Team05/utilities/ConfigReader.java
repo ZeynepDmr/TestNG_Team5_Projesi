@@ -22,8 +22,9 @@ public class ConfigReader {
             throw new RuntimeException(e);
         }
     }
+
     //properties dosyasındaki key değerini alıp test methodumda kullanabilmek için bir method oluşturmalıyız
-    public static String getProperty(String Key){//String bir değer döndürmesi için String bir parametre atarız
+    public static String getProperty(String Key) {//String bir değer döndürmesi için String bir parametre atarız
     /*
         Test method'undan gönderdiğimiz string key değerini alıp ConfigReader class'ından
     getProperty() methodunu kullanarak bu key'e ait value'yu bize getirir.
@@ -32,8 +33,6 @@ public class ConfigReader {
 
         return properties.getProperty(Key);
     }
-
-
 
 }
 
