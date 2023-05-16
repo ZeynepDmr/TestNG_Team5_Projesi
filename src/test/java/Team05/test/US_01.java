@@ -150,6 +150,7 @@ bekle(3);
 
         customerRegesterPage.E_Mail_Input.clear();
         customerRegesterPage.E_Mail_Input.sendKeys("asdw@");
+        customerRegesterPage.Singup_Button.click();
         bekle(5);
 
 
