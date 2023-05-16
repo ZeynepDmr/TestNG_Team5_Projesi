@@ -4,7 +4,7 @@ import Team05.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
+/*
 public class VendorAddProductLocates {
     //US_14_18
     public VendorAddProductLocates() {
@@ -57,7 +57,7 @@ public class VendorAddProductLocates {
     public WebElement anySize;
 
 
-
+*/
 
 
 

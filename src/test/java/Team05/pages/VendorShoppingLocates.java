@@ -43,9 +43,24 @@ public class VendorShoppingLocates {
     // @FindBy(xpath = "//td[@class='product-name']")
     // public WebElement sepetSonucYazısı ;
 
+    @FindBy(xpath = "//div[@class='wc-proceed-to-checkout']")
+    public WebElement proceedToCheckout ;
 
+    @FindBy(id = "billing_first_name")
+    public WebElement billingFirstName ;
 
+    @FindBy(id = "payment_method_cod")
+    public WebElement paymentMethodClick;
 
+    @FindBy(id = "payment_method_bacs")
+    public WebElement wireTransferClick;
 
+    @FindBy(xpath = "//button[@id='place_order']")
+    public WebElement placeOrderClick;
 
+    @FindBy(xpath = "//li[@id='menu-item-1079']")
+    public WebElement myAccount;
+
+    @FindBy(xpath = "//li[@class='woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders']")
+    public WebElement ordersClick;
 }
