@@ -11,17 +11,18 @@ public class BillingUsLocates {
         PageFactory.initElements(Driver.getDriver(), this);
 
     }
-        @FindBy(xpath = "//*[text()='Sign In']")
-        public WebElement signInButonu;
 
-        @FindBy(xpath = "(//input[@type='text'])[1]")
-        public WebElement userName;
+    @FindBy(xpath = "//*[text()='Sign In']")
+    public WebElement signInButonu;
 
-        @FindBy(id ="password")
-        public WebElement password;
+    @FindBy(xpath = "(//input[@type='text'])[1]")
+    public WebElement userName;
 
-       @FindBy(xpath ="//a[@href='https://hubcomfy.com/my-account-2/']")
-       public WebElement myAccount;
+    @FindBy(id = "password")
+    public WebElement password;
+
+    @FindBy(xpath = "//a[@href='https://hubcomfy.com/my-account-2/']")
+    public WebElement myAccount;
 
 }
 
