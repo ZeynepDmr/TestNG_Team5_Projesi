@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 public class VendorAddProductLocates {
 
 
+
     /*
 
     //US_14_18
@@ -25,7 +26,10 @@ public class VendorAddProductLocates {
 
 
 
-
+    //US_14_18
+    public VendorAddProductLocates() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
 
 
     //AddNew locator(zeynep)
@@ -70,16 +74,15 @@ public class VendorAddProductLocates {
 
     // Any size tıkla(zeynep)
     @FindBy(xpath = "//*[@data-name='default_attribute_pa_size']")
-
     public WebElement anySize;
 
-    public WebElement anySize; }
+
+   // public WebElement anySize; }
 
 
 }
 
 
-   public WebElement anySize;
 
 
 
@@ -222,106 +225,16 @@ public class VendorAddProductLocates {
 
 
 
+
+=======
+>>>>>>> main
 
 //Buraya kadar Tuba
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
     @FindBy(xpath = "//*[text()='Sign In']")
     public WebElement login;
-    @FindBy(xpath="//*[@id='username']")
+    @FindBy(xpath = "//*[@id='username']")
     public WebElement userName;
 
     @FindBy(xpath = "//*[@id='password']")
@@ -331,8 +244,8 @@ public class VendorAddProductLocates {
     public WebElement signin;
 
 
-   // @FindBy(xpath= "//li[@id='menu-item-1079']")
-   // public WebElement myAccount;
+// @FindBy(xpath= "//li[@id='menu-item-1079']")
+// public WebElement myAccount;
 
 
     @FindBy(linkText = "My Account")
@@ -342,73 +255,31 @@ public class VendorAddProductLocates {
     public static WebElement storeManager;
 
 
-    @FindBy(xpath= "//*[@class='wcfm_menu_items wcfm_menu_wcfm-products']")
+    @FindBy(xpath = "//*[@class='wcfm_menu_items wcfm_menu_wcfm-products']")
     public WebElement products;
-
-    @FindBy(xpath = "(//*[text()='Add New'])[1]")
-    public WebElement addNew;
 
     @FindBy(xpath = "//*[@id='product_type']")
     public WebElement simpleProduct;
 
-
-    //Virtual tıklama(zeynep)
-    @FindBy(css="input[id='is_virtual']")
-    public WebElement virtual;
-
-    //is_downloadable tıklama(zeynep)
-    @FindBy(css = "input[id='is_downloadable']")
-    public WebElement is_downloadable;
-
     @FindBy(css = "input[id='pro_title']")
     public WebElement productTitle;
 
-
-    //price kutucugu (zeynep)
-    @FindBy(xpath = "//*[@id='regular_price']")
-    public WebElement price;
-
-    //sale price kutucugu(zeynep)
-  //  @FindBy(xpath = "//*[@id='sale_price']")
-  //  public WebElement salePrice;
-
+//sale price kutucugu(zeynep)
+//  @FindBy(xpath = "//*[@id='sale_price']")
+//  public WebElement salePrice;
 
 
     @FindBy(css = "input[id='wcfm_products_simple_draft_button']")
     public WebElement draft;
 
 
+//variableProduct secimi(zeynep)
+// @FindBy(xpath = "//*[@id='product_type']")
+// public static WebElement variableProduct;
 
 
-
-
-    //variableProduct secimi(zeynep)
-   // @FindBy(xpath = "//*[@id='product_type']")
-   // public static WebElement variableProduct;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    @FindBy(xpath="//img[@id='featured_img_display']")
+    @FindBy(xpath = "//img[@id='featured_img_display']")
     public WebElement imageBuyuk;
-
 
     @FindBy(xpath = "//img[@id='gallery_img_gimage_0_display']")
     public WebElement imageKucuk;
@@ -428,6 +299,7 @@ public class VendorAddProductLocates {
     @FindBy(xpath = "(//img[@*='presentation'])[1]")
     public WebElement productLastImage;
 
+<<<<<<< HEAD
 
 
 
@@ -555,15 +427,16 @@ public class VendorAddProductLocates {
 
 //buraya kadar zeynep
 
+=======
+>>>>>>> main
     @FindBy(linkText = "Store Manager")
     public WebElement storemanager;
-
 
     @FindBy(xpath = "(//h2)[1]")
     public WebElement storeManagerText;
 
     @FindBy(css = "a[class='wcfm_menu_item active']")
-    public WebElement products;
+    public WebElement products2;
 
     @FindBy(xpath = "//*[text()='Products']")
     public WebElement productsText;
@@ -572,17 +445,6 @@ public class VendorAddProductLocates {
     @FindBy(xpath = "//*[@id='product_type']")
     public WebElement dropDown;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 //buraya kadar zeynep
