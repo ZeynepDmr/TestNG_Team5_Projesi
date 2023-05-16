@@ -165,6 +165,7 @@ bekle(3);
         bekle(10);
 
         customerRegesterPage.E_Mail_Input.clear();
+        customerRegesterPage.Singup_Button.click();
         Driver.closeDriver();
     }
 
