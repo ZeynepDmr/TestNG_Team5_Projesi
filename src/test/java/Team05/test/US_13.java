@@ -20,8 +20,8 @@ public class US_13 {
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
         VendorAddressLocates vendorAddressLocates = new VendorAddressLocates();
         vendorAddressLocates.signIn.click();
-        vendorAddressLocates.userName.sendKeys("emily.dontay");
-        vendorAddressLocates.passWord.sendKeys("ryfUYEtr3p3fEbw");
+        vendorAddressLocates.userName.sendKeys(ConfigReader.getProperty("Vendor_Username"));
+        vendorAddressLocates.passWord.sendKeys(ConfigReader.getProperty("Vendor_Password"));
         vendorAddressLocates.singInButton.click();
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         WebElement submitStatus = wait.until(ExpectedConditions.visibilityOf(vendorAddressLocates.loginSuccessful));
@@ -37,15 +37,21 @@ public class US_13 {
         Assert.assertTrue(pageTitle.contains("My Account"));
         vendorAddressLocates.addresses.click();
         vendorAddressLocates.addShippingAddress.click();
+        vendorAddressLocates.clearField(vendorAddressLocates.shippingAddressFirstName);
         vendorAddressLocates.shippingAddressFirstName.sendKeys("Ali");
+        vendorAddressLocates.clearField(vendorAddressLocates.shippingAddressLastName);
         vendorAddressLocates.shippingAddressLastName.sendKeys("Veli");
         Select select = new Select(vendorAddressLocates.shippingAddressCountry);
         select.selectByValue("TR");
+        vendorAddressLocates.clearField(vendorAddressLocates.shippingAddressAddressLine);
         vendorAddressLocates.shippingAddressAddressLine.sendKeys("Istiklal Caddesi No:10");
+        vendorAddressLocates.clearField(vendorAddressLocates.shippingAddressPostcode);
         vendorAddressLocates.shippingAddressPostcode.sendKeys("55000");
+        vendorAddressLocates.clearField(vendorAddressLocates.shippingAddressCity);
         vendorAddressLocates.shippingAddressCity.sendKeys("Ilkadim");
         Select selectProvince = new Select(vendorAddressLocates.shippingAddressProvince);
         selectProvince.selectByVisibleText("Samsun");
+        ReusableMethods.tumSayfaResmi();
         Driver.closeDriver();
 
     }
@@ -55,8 +61,8 @@ public class US_13 {
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
         VendorAddressLocates vendorAddressLocates = new VendorAddressLocates();
         vendorAddressLocates.signIn.click();
-        vendorAddressLocates.userName.sendKeys("emily.dontay");
-        vendorAddressLocates.passWord.sendKeys("ryfUYEtr3p3fEbw");
+        vendorAddressLocates.userName.sendKeys(ConfigReader.getProperty("Vendor_Username"));
+        vendorAddressLocates.passWord.sendKeys(ConfigReader.getProperty("Vendor_Password"));
         vendorAddressLocates.singInButton.click();
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         WebElement submitStatus = wait.until(ExpectedConditions.visibilityOf(vendorAddressLocates.loginSuccessful));
@@ -72,16 +78,22 @@ public class US_13 {
         Assert.assertTrue(pageTitle.contains("My Account"));
         vendorAddressLocates.addresses.click();
         vendorAddressLocates.addShippingAddress.click();
+        vendorAddressLocates.clearField(vendorAddressLocates.shippingAddressFirstName);
         vendorAddressLocates.shippingAddressFirstName.sendKeys("Ali");
+        vendorAddressLocates.clearField(vendorAddressLocates.shippingAddressLastName);
         vendorAddressLocates.shippingAddressLastName.sendKeys("Veli");
         Select select = new Select(vendorAddressLocates.shippingAddressCountry);
         select.selectByValue("TR");
+        vendorAddressLocates.clearField(vendorAddressLocates.shippingAddressAddressLine);
         vendorAddressLocates.shippingAddressAddressLine.sendKeys("Istiklal Caddesi No:10");
+        vendorAddressLocates.clearField(vendorAddressLocates.shippingAddressPostcode);
         vendorAddressLocates.shippingAddressPostcode.sendKeys("55000");
+        vendorAddressLocates.clearField(vendorAddressLocates.shippingAddressCity);
         vendorAddressLocates.shippingAddressCity.sendKeys("Ilkadim");
         Select selectProvince = new Select(vendorAddressLocates.shippingAddressProvince);
         selectProvince.selectByVisibleText("Samsun");
         actions.moveToElement(vendorAddressLocates.shippingAddressSaveAddress).click().build().perform();
+        ReusableMethods.tumSayfaResmi();
         Driver.closeDriver();
 
     }
