@@ -138,16 +138,25 @@ public class ReusableMethods {
     //ExtentReport
     public static void extentReport() {
         extentReports = new ExtentReports();
-        String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
-        String dosyaYolu = "TestOutput/reports/extentReport_" + tarih + ".html";
+        String tarih = new SimpleDateFormat("HH:mm_ddMMyyyy").format(new Date());
+        String className = Thread.currentThread().getStackTrace()[2].getClassName();
+        className = className.replace("test.", "");
+        String dosyaYolu = "TestOutput/reports/" + className + "_" + tarih + ".html";
         extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
         extentReports.attachReporter(extentHtmlReporter);
 
-        //Raporda gözükmesini istediğimiz bilgiler için
+        // Raporda gözükmesini istediğimiz bilgiler için
         extentReports.setSystemInfo("Browser", "Chrome");
-        extentReports.setSystemInfo("Tester", "Erol");
+        extentReports.setSystemInfo("Tester", "Team05");
         extentHtmlReporter.config().setDocumentTitle("Extent Report");
         extentHtmlReporter.config().setReportName("Smoke Test Raporu");
+    }
+
+    public static ExtentReports getExtentReports() {
+        if (extentReports == null) {
+            throw new IllegalStateException("ExtentReports oluşturulmamış.");
+        }
+        return extentReports;
     }
 
     //WebTable
@@ -246,5 +255,18 @@ public class ReusableMethods {
 
         }
 
+    }
+
+    public static void tumSayfaResmiC(String testCaseName) {
+        String callingClassName = Thread.currentThread().getStackTrace()[2].getClassName();
+        callingClassName = callingClassName.substring(callingClassName.lastIndexOf('.') + 1);
+        String tarih = new SimpleDateFormat("HH:mm_ddMMyyyy").format(new Date());
+        String dosyaYolu = "TestOutput/screenshot/"+ callingClassName + "_" + testCaseName + "_" + tarih + ".png";
+        TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
+        try {
+            FileUtils.copyFile(ts.getScreenshotAs(OutputType.FILE), new File(dosyaYolu));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
