@@ -84,7 +84,7 @@ public class US_12 {
         String emailAddress = js.executeScript("return document.getElementById('billing_email').value").toString();
         Assert.assertTrue(emailAddress.contains(ConfigReader.getProperty("Vendor_Username")));
         ReusableMethods.tumSayfaResmi();
-        //Driver.closeDriver();
+        Driver.closeDriver();
 
     }
 
