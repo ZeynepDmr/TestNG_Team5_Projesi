@@ -138,16 +138,25 @@ public class ReusableMethods {
     //ExtentReport
     public static void extentReport() {
         extentReports = new ExtentReports();
-        String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
-        String dosyaYolu = "TestOutput/reports/extentReport_" + tarih + ".html";
+        String tarih = new SimpleDateFormat("HH:mm_ddMMyyyy").format(new Date());
+        String className = Thread.currentThread().getStackTrace()[2].getClassName();
+        className = className.replace("test.", "");
+        String dosyaYolu = "TestOutput/reports/" + className + "_" + tarih + ".html";
         extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
         extentReports.attachReporter(extentHtmlReporter);
 
-        //Raporda gözükmesini istediğimiz bilgiler için
+        // Raporda gözükmesini istediğimiz bilgiler için
         extentReports.setSystemInfo("Browser", "Chrome");
-        extentReports.setSystemInfo("Tester", "Erol");
+        extentReports.setSystemInfo("Tester", "Team05");
         extentHtmlReporter.config().setDocumentTitle("Extent Report");
         extentHtmlReporter.config().setReportName("Smoke Test Raporu");
+    }
+
+    public static ExtentReports getExtentReports() {
+        if (extentReports == null) {
+            throw new IllegalStateException("ExtentReports oluşturulmamış.");
+        }
+        return extentReports;
     }
 
     //WebTable
@@ -167,7 +176,7 @@ public class ReusableMethods {
     }
 
     //JS Scroll
-    public static void scroll(WebElement element) {
+    public static void scroll(int element) {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
@@ -208,32 +217,78 @@ public class ReusableMethods {
   email, username, password, firsmane,lastname, copon  olarak ( "customerRegesterPage.User_Name_Input.sendKeys(fakerInput("coupon"));" gibi)
   seçim yaptığınız taktirde ilgili konuda random oluşumlar yapacaktır.
      */
-    public static String fakerInput(String faker2){
+    public static String fakerInput(String faker2) {
         Faker faker = new Faker();
-        if(faker2=="email"){
+        if (faker2 == "email") {
             String fakeEmail = faker.internet().emailAddress();
             return fakeEmail;
-        } else if (faker2=="username") {
+        } else if (faker2 == "username") {
             String fakeUsername = faker.name().username();
             return fakeUsername;
-        }
-        else if (faker2=="password"){
+        } else if (faker2 == "password") {
             String fakePassword = faker.internet().password();
             return fakePassword;
 
-        } else if (faker2=="firsname") {
+        } else if (faker2 == "firsname") {
             String fakerFirstName = faker.name().firstName();
             return fakerFirstName;
-        }
-        else if (faker2=="lastname"){
+        } else if (faker2 == "lastname") {
 
             String fakerLastName = faker.name().lastName();
             return fakerLastName;
-        }
-        else {
+        } else if (faker2 == "coupon") {
             String fakerCoupon = faker.code().asin();
             return fakerCoupon;
+        } else if (faker2=="biography"){
+
+            String biography;
+            String name = faker.name().fullName();
+            String job = faker.job().title();
+            String company = faker.company().name();
+            String country = faker.country().name();
+            String quote = faker.shakespeare().hamletQuote();
+
+            biography = name+ " "+ job +"olarak" + company +"'da çalışıyor. "+ country+"'da yaşıyor ve şöyle diyor:"+ quote;
+
+
+            return biography;
+
+        } else if (faker2=="company") {
+
+            String fakerCompany = faker.company().name();
+            return  fakerCompany;
+        } else if (faker2=="street") {
+
+            String fakerStreet = faker.address().streetPrefix();
+            return fakerStreet;
+        } else if (faker2=="towncity") {
+            String fakerTownCity = faker.address().cityName();
+            return fakerTownCity;
+        } else if (faker2=="zipcode") {
+
+            String fakerZipcode = faker.address().zipCodeByState("ZIP CODE");
+            return fakerZipcode;
+
+        } else {
+
+            String fakePhoneNumber = faker.phoneNumber().phoneNumber();
+            return fakePhoneNumber;
+
         }
 
+
+    }
+
+    public static void tumSayfaResmiC(String testCaseName) {
+        String callingClassName = Thread.currentThread().getStackTrace()[2].getClassName();
+        callingClassName = callingClassName.substring(callingClassName.lastIndexOf('.') + 1);
+        String tarih = new SimpleDateFormat("HH:mm_ddMMyyyy").format(new Date());
+        String dosyaYolu = "TestOutput/screenshot/"+ callingClassName + "_" + testCaseName + "_" + tarih + ".png";
+        TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
+        try {
+            FileUtils.copyFile(ts.getScreenshotAs(OutputType.FILE), new File(dosyaYolu));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

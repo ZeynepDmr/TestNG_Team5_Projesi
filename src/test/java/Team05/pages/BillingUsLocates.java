@@ -11,17 +11,18 @@ public class BillingUsLocates {
         PageFactory.initElements(Driver.getDriver(), this);
 
     }
-        @FindBy(xpath = "//*[text()='Sign In']")
-        public WebElement signInButonu;
 
-        @FindBy(xpath = "(//input[@type='text'])[1]")
-        public WebElement userName;
+    @FindBy(xpath = "//*[text()='Sign In']")
+    public WebElement signInButonu;
 
-        @FindBy(id ="password")
-        public WebElement password;
+    @FindBy(xpath = "(//input[@type='text'])[1]")
+    public WebElement userName;
 
-       @FindBy(xpath ="//a[@href='https://hubcomfy.com/my-account-2/']")
-       public WebElement myAccount;
+    @FindBy(id = "password")
+    public WebElement password;
+
+    @FindBy(xpath = "//a[@href='https://hubcomfy.com/my-account-2/']")
+    public WebElement myAccount;
 
        @FindBy(xpath = "//a[@ href='https://hubcomfy.com/my-account-2/edit-address/']")
        public WebElement addresses;
@@ -39,14 +40,44 @@ public class BillingUsLocates {
        @FindBy(xpath ="//input[@name='billing_company']")
       public  WebElement companyKutusu;
 
-       @FindBy(id ="select2-billing_country-container")
-       public WebElement countrDdm;
+        @FindBy(xpath ="//*[@id='billing_country']")
+        public WebElement countryDdm;
+
 
        @FindBy(xpath ="//input[@name='billing_address_1']")
        public WebElement houseNstreetName;
 
-       @FindBy(xpath ="//span[@tittle='Nederlands']")
-       public WebElement nederlandsddm;
+
+      @FindBy(xpath ="//input[@name='billing_address_1']")
+       public WebElement houseNumStrName;
+
+      @FindBy(xpath ="//input[@name='billing_address_2']")
+      public WebElement apartmanNo;
+
+      @FindBy(xpath ="//input[@id='billing_city']")
+      public WebElement townCity;
+
+      //State kutusu locate almam gerekiyor DropDown
+
+
+      @FindBy(xpath ="//input[@id='billing_postcode']")
+      public WebElement zipCodeKutus;
+
+      @FindBy(xpath ="//input[@id='billing_phone']")
+      public WebElement phoneKutusu;
+
+      @FindBy(xpath ="//input[@value='vefasonmezams4@gmail.com']")
+      public WebElement emailAssert;
+
+      @FindBy(xpath ="//button[@class='btn btn-dark btn-rounded btn-sm']")
+      public WebElement saveAdressKtusu;
+
+      @FindBy(xpath ="(//table[@class='address-table'])[1]")
+      public  WebElement billingscontains;
+
+      @FindBy(xpath ="//a[@href='https://hubcomfy.com/my-account-2/edit-address/shipping/']")
+      public WebElement shippingBill;
+
 
 
 

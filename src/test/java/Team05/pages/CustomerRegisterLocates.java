@@ -13,9 +13,14 @@ public class CustomerRegisterLocates {
     }
 
     @FindBy(xpath = "//*[@id='header']/div/div/div/div/div/div[9]/div/div/a[2]/span")
+
     public WebElement Register_Button;
 
-    @FindBy(xpath = "//*[@id='reg_username']")
+    @FindBy(xpath = "/html/body/div[2]/header/div/div/div/div/div/div[9]/div/div/a[1]")
+
+    public WebElement sign_In_Buton;
+
+    @FindBy(id = "reg_username")
     public WebElement User_Name_Input;
 
     @FindBy(xpath = "//*[@id='reg_email']")
@@ -35,6 +40,7 @@ public class CustomerRegisterLocates {
 
     @FindBy(xpath = "//*[@id='main']/div/div/div/div/div/div/nav/ul/li[10]/a")
     public WebElement Sing_Out;
+
 
 
 }
