@@ -236,10 +236,10 @@ public class ReusableMethods {
 
             String fakerLastName = faker.name().lastName();
             return fakerLastName;
-        } else if (faker2 == "Coupon") {
+        } else if (faker2 == "coupon") {
             String fakerCoupon = faker.code().asin();
             return fakerCoupon;
-        } else {
+        } else if (faker2=="biography"){
 
             String biography;
             String name = faker.name().fullName();
@@ -253,7 +253,29 @@ public class ReusableMethods {
 
             return biography;
 
+        } else if (faker2=="company") {
+
+            String fakerCompany = faker.company().name();
+            return  fakerCompany;
+        } else if (faker2=="street") {
+
+            String fakerStreet = faker.address().streetPrefix();
+            return fakerStreet;
+        } else if (faker2=="towncity") {
+            String fakerTownCity = faker.address().cityName();
+            return fakerTownCity;
+        } else if (faker2=="zipcode") {
+
+            String fakerZipcode = faker.address().zipCodeByState("ZIP CODE");
+            return fakerZipcode;
+
+        } else {
+
+            String fakePhoneNumber = faker.phoneNumber().phoneNumber();
+            return fakePhoneNumber;
+
         }
+
 
     }
 
