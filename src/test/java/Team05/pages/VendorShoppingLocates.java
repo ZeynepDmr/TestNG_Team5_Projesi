@@ -63,4 +63,10 @@ public class VendorShoppingLocates {
 
     @FindBy(xpath = "//li[@class='woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--orders']")
     public WebElement ordersClick;
+
+    @FindBy(xpath = "//input[@id='coupon_code']")
+    public WebElement couponCode;
+
+    @FindBy(xpath = "//button[@name='apply_coupon']")
+    public WebElement applyCoupon;
 }
