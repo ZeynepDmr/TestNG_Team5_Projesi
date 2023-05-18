@@ -31,18 +31,19 @@ public class VendorRegisterLocates {
 @FindBy(xpath = "//*[@id='passoword']")
     public WebElement VendorPassword;
 
-@FindBy(xpath = "//*[@id='confirm_pwd']")
+@FindBy(xpath = "//*[@class='wcfm-text wcfm_email_verified_input']")
     public WebElement VendorConfirm;
 
 @FindBy(xpath = "//*[@id='wcfm_membership_register_button']")
     public WebElement RegisterButton;
 
-    @FindBy(xpath = "//div[@class='wcfm-message email_verification_message'")
-    public WebElement Thisfieldisrequired; //E-posta Doğrulama Kodu: Bu alan zorunludur. kismi
+    @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-error']")
+    public WebElement Uyarı; //Geçerli mail girin uyarısı
 
-    @FindBy(xpath = "//div[@class='wcfm-message wcfm-error']")
-//Lütfen geçerli bir e-posta adresi girin. kismi @ veya.com denmedigigde
-    public WebElement gecerliEpostaDogrulama;
+    @FindBy(xpath = "//*[@class='wcfm-message email_verification_message wcfm-success']")
+    public WebElement Uyarı2; //Kod gönderildi uyarısı
+
+
 
 
 
@@ -50,7 +51,7 @@ public class VendorRegisterLocates {
     public WebElement Copy;
 
 
-    @FindBy(xpath = "//*[text()='Too short']")//passwordda kisa oldu dogrulama
+    @FindBy(xpath = "//*[@id='password_strength']")//passwordda kisa oldu dogrulama
     public WebElement tooShort;
 
 

@@ -123,6 +123,7 @@ public class ReusableMethods {
         }
     }
 
+
     //WebElement ScreenShot
     public static void webElementResmi(WebElement element) {
         String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
@@ -244,7 +245,6 @@ public class ReusableMethods {
 
             return biography;
 
-        }
+        } } }
 
-    }
-}
+
