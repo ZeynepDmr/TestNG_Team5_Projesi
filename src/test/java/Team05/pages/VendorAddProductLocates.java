@@ -277,9 +277,7 @@ public class VendorAddProductLocates {
 
 
 
-    public VendorAddProductLocates(){
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
+
 
     @FindBy(css = "div[class='account']")
     public WebElement siginlogin;
@@ -290,13 +288,13 @@ public class VendorAddProductLocates {
     @FindBy(xpath = "//*[@id='username']")
     public WebElement email;
 
-    @FindBy(xpath = "//*[@id='password']")
-    public WebElement password;
+//    @FindBy(xpath = "//*[@id='password']")
+//    public WebElement password;
 
     @FindBy(xpath = "(//*[@type='submit'])[1]")
     public WebElement sigin;
-    @FindBy(xpath= "//li[@id='menu-item-1079']")
-    public WebElement myAccount;
+//    @FindBy(xpath= "//li[@id='menu-item-1079']")
+//    public WebElement myAccount;
 
     @FindBy(xpath = "(//[h2])[1]")
     public WebElement myAccountText;
@@ -307,16 +305,16 @@ public class VendorAddProductLocates {
     @FindBy(xpath = "(//h2)[1]")
     public WebElement storeManagerText;
 
-    @FindBy(xpath = "(//*[@class='wcfm_menu_item '])[3]")
-    public WebElement products;
+//    @FindBy(xpath = "(//*[@class='wcfm_menu_item '])[3]")
+//    public WebElement products;
 
     @FindBy(xpath = "//*[text()='Products']")
     public WebElement productsText;
     @FindBy(xpath = "(//*[h2])[2]")
     public WebElement addProductText;
 
-    @FindBy(xpath = "//*[@id='add_new_product_dashboard']")
-    public WebElement addNew;
+//    @FindBy(xpath = "//*[@id='add_new_product_dashboard']")
+//    public WebElement addNew;
 
     @FindBy(xpath = "//*[@class='wcfm-tabWrap']")
     public WebElement menu;
@@ -329,8 +327,8 @@ public class VendorAddProductLocates {
     @FindBy(xpath = "//*[@id='__wp-uploader-id-1']")
     public WebElement selectFiles;
 
-    @FindBy(xpath = "//*[@id='pro_title']")
-    public WebElement productTitle;
+//    @FindBy(xpath = "//*[@id='pro_title']")
+//    public WebElement productTitle;
 
     @FindBy(xpath = "body[data-id='excerpt']")
     public WebElement shortDescription;
@@ -411,12 +409,12 @@ public class VendorAddProductLocates {
     public  WebElement shippingClass;
     @FindBy(css = "select[id='_wcfmmp_processing_time']")
     public  WebElement processingTime;
-    @FindBy(css = "div[id='wcfm_products_manage_form_attribute_head']")
-    public  WebElement attributes;
-    @FindBy(css = "input[id='attributes_is_active_1']")
-    public  WebElement color;
-    @FindBy(css = "input[id='attributes_is_active_2']")
-    public  WebElement size;
+//    @FindBy(css = "div[id='wcfm_products_manage_form_attribute_head']")
+//    public  WebElement attributes;
+//    @FindBy(css = "input[id='attributes_is_active_1']")
+//    public  WebElement color;
+//    @FindBy(css = "input[id='attributes_is_active_2']")
+//    public  WebElement size;
     @FindBy(css = "div[id='wcfm_products_manage_form_linked_head']")
     public  WebElement linked;
     @FindBy(css = "select[id='upsell_ids']")
@@ -486,11 +484,11 @@ public class VendorAddProductLocates {
 
 //buraya kadar zeynep
 
-    @FindBy(linkText = "Store Manager")
-    public WebElement storemanager;
+//    @FindBy(linkText = "Store Manager")
+//    public WebElement storemanager;
 
-    @FindBy(xpath = "(//h2)[1]")
-    public WebElement storeManagerText;
+//    @FindBy(xpath = "(//h2)[1]")
+//    public WebElement storeManagerText;
 
 
     //DropDown
