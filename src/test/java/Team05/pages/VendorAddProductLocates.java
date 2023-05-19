@@ -8,10 +8,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class VendorAddProductLocates {
 
-<<<<<<< HEAD
 
 
-    /*
+
+
 
     //US_14_18
   // public VendorAddProductLocates() {
@@ -27,16 +27,16 @@ public class VendorAddProductLocates {
 
 
 
-=======
->>>>>>> main
+
+
     //US_14_18
     public VendorAddProductLocates() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> main
+
+
+
 
     //AddNew locator(zeynep)
     @FindBy(xpath = "(//*[text()='Add New'])[1]")
@@ -82,11 +82,8 @@ public class VendorAddProductLocates {
     @FindBy(xpath = "//*[@data-name='default_attribute_pa_size']")
     public WebElement anySize;
 
-<<<<<<< HEAD
 
    // public WebElement anySize; }
-=======
->>>>>>> main
 
 
 
@@ -228,18 +225,18 @@ public class VendorAddProductLocates {
 
 
 
-<<<<<<< HEAD
 
 
 
 
 
 
-=======
->>>>>>> main
 
-=======
->>>>>>> main
+
+
+
+
+
 //Buraya kadar Tuba
 
 
@@ -310,8 +307,6 @@ public class VendorAddProductLocates {
     @FindBy(xpath = "(//img[@*='presentation'])[1]")
     public WebElement productLastImage;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
 
@@ -348,7 +343,6 @@ public class VendorAddProductLocates {
 
 
 
-*/
 
 
 
@@ -368,8 +362,9 @@ public class VendorAddProductLocates {
 
 
 
-=======
->>>>>>> main
+
+
+
 
 
 
@@ -441,11 +436,8 @@ public class VendorAddProductLocates {
 
 //buraya kadar zeynep
 
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> main
+
+
     @FindBy(linkText = "Store Manager")
     public WebElement storemanager;
 

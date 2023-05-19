@@ -60,7 +60,7 @@ public class US_02 {
             Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
             CustomerRegisterLocates customerRegesterPage = new CustomerRegisterLocates();
 
-            customerRegesterPage.Register_Button.click();
+          //  customerRegesterPage.Register_Button.click();
             bekle(3);
             customerRegesterPage.User_Name_Input.sendKeys(ConfigReader.getProperty("Customer_Username"));
             bekle(3);

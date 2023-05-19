@@ -14,7 +14,7 @@ import java.security.Key;
 
 public class US_16 {
 
-           /*
+  /*
 Kullanici url'e gider
 Kullanici sign in butonuna tiklar
 Kullanici gecerli email ve password girer
@@ -29,7 +29,8 @@ Price ve Sale Price yazılabilmeli
 US14 ve US15 deki işlemler yapılabilmeli
 Ürünün eklendiğini Product kısmında görebilmeli
 
-            */
+     */
+
            WebDriver driver;
            Actions actions;
            VendorAddProductLocates vendorAddProductLocates;

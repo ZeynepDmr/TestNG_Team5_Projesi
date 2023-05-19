@@ -12,9 +12,9 @@ public class CustomerRegisterLocates {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//*[@id='header']/div/div/div/div/div/div[9]/div/div/a[2]/span")
+   @FindBy(xpath = "//*[@id='header']/div/div/div/div/div/div[9]/div/div/a[2]/span")
 
-    public WebElement Register_Button;
+   public WebElement Register_Button;
 
     @FindBy(id = "reg_username")
     public WebElement User_Name_Input;

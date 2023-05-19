@@ -45,7 +45,7 @@ public class US_06 extends ReusableMethods {
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
         //Kullanıcı login olur
         CustomerShoppingLocates costumerShopping = new CustomerShoppingLocates();
-        VendorCouponsLocates vendorCouponsLocates=new VendorCouponsLocates();
+        VendorCouponsLocates vendorCouponsLocates = new VendorCouponsLocates();
         costumerShopping.signInButonu.click();
 
         costumerShopping.Customer_Username.sendKeys(ConfigReader.getProperty("Customer_Username"), Keys.TAB);
