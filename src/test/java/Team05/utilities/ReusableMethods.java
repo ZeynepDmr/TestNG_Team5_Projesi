@@ -1,5 +1,6 @@
 package Team05.utilities;
 
+import Team05.pages.VendorAddProductLocates;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
@@ -17,6 +18,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 public class ReusableMethods {
 
@@ -54,6 +56,7 @@ public class ReusableMethods {
         Driver.getDriver().switchTo().alert().sendKeys(text);
     }
 
+
     //DropDown VisibleText
     /*
         Select select2 = new Select(gun);
@@ -83,6 +86,12 @@ public class ReusableMethods {
         List<String> tumWindowHandles = new ArrayList<String>(Driver.getDriver().getWindowHandles());
         Driver.getDriver().switchTo().window(tumWindowHandles.get(sayi));
     }
+
+
+
+
+
+
 
     //SwitchToWindow2
     public static void window(int sayi) {
@@ -138,25 +147,16 @@ public class ReusableMethods {
     //ExtentReport
     public static void extentReport() {
         extentReports = new ExtentReports();
-        String tarih = new SimpleDateFormat("HH:mm_ddMMyyyy").format(new Date());
-        String className = Thread.currentThread().getStackTrace()[2].getClassName();
-        className = className.replace("test.", "");
-        String dosyaYolu = "TestOutput/reports/" + className + "_" + tarih + ".html";
+        String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
+        String dosyaYolu = "TestOutput/reports/extentReport_" + tarih + ".html";
         extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
         extentReports.attachReporter(extentHtmlReporter);
 
-        // Raporda gözükmesini istediğimiz bilgiler için
+        //Raporda gözükmesini istediğimiz bilgiler için
         extentReports.setSystemInfo("Browser", "Chrome");
-        extentReports.setSystemInfo("Tester", "Team05");
+        extentReports.setSystemInfo("Tester", "Erol");
         extentHtmlReporter.config().setDocumentTitle("Extent Report");
         extentHtmlReporter.config().setReportName("Smoke Test Raporu");
-    }
-
-    public static ExtentReports getExtentReports() {
-        if (extentReports == null) {
-            throw new IllegalStateException("ExtentReports oluşturulmamış.");
-        }
-        return extentReports;
     }
 
     //WebTable
@@ -236,10 +236,10 @@ public class ReusableMethods {
 
             String fakerLastName = faker.name().lastName();
             return fakerLastName;
-        } else if (faker2 == "coupon") {
+        } else if (faker2 == "Coupon") {
             String fakerCoupon = faker.code().asin();
             return fakerCoupon;
-        } else if (faker2=="biography"){
+        } else {
 
             String biography;
             String name = faker.name().fullName();
@@ -248,47 +248,31 @@ public class ReusableMethods {
             String country = faker.country().name();
             String quote = faker.shakespeare().hamletQuote();
 
-            biography = name+ " "+ job +"olarak" + company +"'da çalışıyor. "+ country+"'da yaşıyor ve şöyle diyor:"+ quote;
+            biography = name + " " + job + "olarak" + company + "'da çalışıyor. " + country + "'da yaşıyor ve şöyle diyor:" + quote;
 
 
             return biography;
 
-        } else if (faker2=="company") {
-
-            String fakerCompany = faker.company().name();
-            return  fakerCompany;
-        } else if (faker2=="street") {
-
-            String fakerStreet = faker.address().streetPrefix();
-            return fakerStreet;
-        } else if (faker2=="towncity") {
-            String fakerTownCity = faker.address().cityName();
-            return fakerTownCity;
-        } else if (faker2=="zipcode") {
-
-            String fakerZipcode = faker.address().zipCodeByState("ZIP CODE");
-            return fakerZipcode;
-
-        } else {
-
-            String fakePhoneNumber = faker.phoneNumber().phoneNumber();
-            return fakePhoneNumber;
-
         }
+    }
 
+    public static void sendKeysColor(String  sendColor){
+
+        Random random = new Random();
+        int randomSayi= random.nextInt();
+        VendorAddProductLocates vendorAddProductLocates =new VendorAddProductLocates();
+        Driver.getDriver().switchTo().alert().sendKeys(sendColor+randomSayi);
 
     }
 
-    public static void tumSayfaResmiC(String testCaseName) {
-        String callingClassName = Thread.currentThread().getStackTrace()[2].getClassName();
-        callingClassName = callingClassName.substring(callingClassName.lastIndexOf('.') + 1);
-        String tarih = new SimpleDateFormat("HH:mm_ddMMyyyy").format(new Date());
-        String dosyaYolu = "TestOutput/screenshot/"+ callingClassName + "_" + testCaseName + "_" + tarih + ".png";
-        TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
-        try {
-            FileUtils.copyFile(ts.getScreenshotAs(OutputType.FILE), new File(dosyaYolu));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+    public static void sendKeysSize(String sendSize ){
+
+        Random random = new Random();
+        int randomSayi= random.nextInt();
+        VendorAddProductLocates vendorAddProductLocates=new VendorAddProductLocates();
+        Driver.getDriver().switchTo().alert().sendKeys(sendSize+randomSayi);
+
     }
+
+
 }
