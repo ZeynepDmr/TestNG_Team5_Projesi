@@ -1,4 +1,74 @@
 
+//
+//package Team05.pages;
+//
+//import Team05.utilities.Driver;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.support.FindBy;
+//import org.openqa.selenium.support.PageFactory;
+//
+//public class VendorAddProductLocates {}
+//    //US_14_18
+//  // public VendorAddProductLocates() {
+////        PageFactory.initElements(Driver.getDriver(), this);
+//
+//
+//
+//
+//
+////    }
+///*
+//
+//
+//    }
+//
+//
+//
+//
+//    //AddNew locator(zeynep)
+//    @FindBy(xpath = "(//*[text()='Add New'])[1]")
+//    public WebElement addNew;
+//
+//    //Virtual tıklama(zeynep)
+//    @FindBy(xpath = "//*[@id='is_virtual']")
+//    public WebElement virtual;
+//
+//    //is_downloadable tıklama(zeynep)
+//    @FindBy(xpath = "//*[@id='is_downloadable']")
+//    public WebElement is_downloadable;
+//
+//    //price kutucugu (zeynep)
+//    @FindBy(xpath = "//*[@id='regular_price']")
+//    public WebElement price;
+//
+//    //sale price kutucugu(zeynep)
+//    @FindBy(xpath = "//*[@id='sale_price']")
+//    public WebElement salePrice;
+//
+//    //variableProduct secimi(zeynep)
+//    @FindBy(xpath = "//*[@id='product_type']")
+//    public WebElement variableProduct;
+//
+//    //color secimi(zeynep)
+//    @FindBy(xpath = "//*[@id='is_virtual']")
+//    public WebElement color;
+//
+//    //size secimi(zeynep)
+//    @FindBy(xpath = "//*[@id='attributes_is_active_2']")
+//    public WebElement size;
+//
+//    // Variations'a tıkla(zeynep)
+//    @FindBy(xpath = "(//*[@class='page_collapsible_content_holder'])[6]")
+//    public WebElement variations;
+//
+//    //Any Color tıkla(zeynep)
+//    @FindBy(xpath = "//*[@data-name='default_attribute_pa_color']")
+//    public WebElement anyColor;
+//
+//    // Any size tıkla(zeynep)
+//    @FindBy(xpath = "//*[@data-name='default_attribute_pa_size']")
+
+
 package Team05.pages;
 
 import Team05.utilities.Driver;
@@ -15,22 +85,6 @@ public class VendorAddProductLocates {
     //AddNew locator(zeynep)
     @FindBy(xpath = "(//*[text()='Add New'])[1]")
     public WebElement addNew;
-
-    //Virtual tıklama(zeynep)
-    @FindBy(xpath = "//*[@id='is_virtual']")
-    public WebElement virtual;
-
-    //is_downloadable tıklama(zeynep)
-    @FindBy(xpath = "//*[@id='is_downloadable']")
-    public WebElement is_downloadable;
-
-    //price kutucugu (zeynep)
-    @FindBy(xpath = "//*[@id='regular_price']")
-    public WebElement price;
-
-    //sale price kutucugu(zeynep)
-    @FindBy(xpath = "//*[@id='sale_price']")
-    public WebElement salePrice;
 
     //color secimi(zeynep)
     @FindBy(css = "input[id='attributes_is_active_1']")
@@ -53,10 +107,6 @@ public class VendorAddProductLocates {
     @FindBy(xpath = "//*[@id='wcfm_products_manage_form_variations_head']")
     public WebElement variations;
 
-    //Any Color tıkla(zeynep)
-    @FindBy(xpath = "//*[@data-name='default_attribute_pa_color']")
-    public WebElement anyColor;
-
     // Any size tıkla(zeynep)
     @FindBy(xpath = "//*[@data-name='default_attribute_pa_size']")
     public WebElement anySize;
@@ -70,6 +120,7 @@ public class VendorAddProductLocates {
     @FindBy(xpath ="(//div[@class='thumbnail'])[3]")
     public WebElement siyahAyakkabi1;
 
+
     @FindBy(id="featured_img_display")
     public WebElement buyukProductImageEkleme;
     //   @FindBy(id = "[id='menu-item-browse']")
@@ -79,17 +130,9 @@ public class VendorAddProductLocates {
     @FindBy(xpath = "//*[@id='username']")
     public WebElement userName;
 
-    @FindBy(xpath = "//*[@id='password']")
-    public WebElement password;
-
-    @FindBy(xpath = "(//*[text()='Sign In'])[2]")
-    public WebElement signin;
-
     @FindBy(linkText = "My Account")
     public static WebElement myAccount;
 
-    @FindBy(linkText = "Store Manager")
-    public static WebElement storeManager;
 
     @FindBy(xpath = "//*[@class='wcfm_menu_items wcfm_menu_wcfm-products']")
     public WebElement products;
@@ -100,8 +143,11 @@ public class VendorAddProductLocates {
     @FindBy(css = "input[id='pro_title']")
     public WebElement productTitle;
 
+
+
     @FindBy(id = "attributes_value_1")
     public WebElement blue;
+
 
     @FindBy(xpath = "//*[@class='select2-selection__choice']")
     public WebElement sizevalue;
@@ -110,11 +156,14 @@ public class VendorAddProductLocates {
     public WebElement addNewColor;
 
 
+
     // @FindBy(xpath = "(//*[@class='button wcfm_add_attribute_term wcfm_add_attributes_new_term'])[2]")
     // public WebElement addNewSize;
 
+
     @FindBy(xpath = "(//*[@type='button'])[48]")
     public WebElement addNewSize;
+
 
 
     @FindBy(xpath = "(//*[@type='button'])[47]")
@@ -127,6 +176,32 @@ public class VendorAddProductLocates {
     public WebElement draft;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //variableProduct secimi(zeynep)
     @FindBy(xpath = "//*[@id='product_type']")
     public static WebElement variableProduct;
@@ -137,15 +212,143 @@ public class VendorAddProductLocates {
 
 
 
-    @FindBy(xpath = "(//input[@*='submit'])[3]")
-    public WebElement submitButton;
 
-    @FindBy(xpath = "//input[@value='View']")
-    public WebElement viewButton;
 
-    @FindBy(xpath = "(//img[@*='presentation'])[1]")
-    public WebElement productLastImage;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Store Manager
+    @FindBy(xpath= "//*[@href='https://hubcomfy.com/store-manager/']")
+    public WebElement storeManager0;
+
+    //Store Manager Text
+    @FindBy(xpath= "//h2[1]")
+    public WebElement storeManagerText0;
+
+    @FindBy(xpath= "//*[text()='Downloads'])[1]")
+    public WebElement downloads;
 
 //buraya kadar zeynep
 
@@ -157,9 +360,76 @@ public class VendorAddProductLocates {
     public WebElement storeManagerText;
 
 
+
+    @FindBy(xpath = "//*[text()='Sign In']")
+    public WebElement signInLogin;
+
+    @FindBy(xpath = "//*[@id='username']")
+    public WebElement email;
+
+    @FindBy(xpath = "//*[@id='password']")
+    public WebElement password;
+
+    @FindBy(xpath = "(//button[@type='submit'])[1]")
+    public WebElement signIn2;
+
+  @FindBy(xpath= "//li[@id='menu-item-1079']")
+  public WebElement myAccount0;
+
+  @FindBy(xpath= "//*[@class='page-title']")
+  public WebElement myAccount2;
+
+    //Product
+    @FindBy(xpath= "//*[@class='wcfm_menu_items wcfm_menu_wcfm-products']")
+    public WebElement products0;
+
+  //Product Text
+    @FindBy(xpath= "//*[text()='Products Dashboard']")
+    public WebElement productText;
+
+  //Add New
+    @FindBy(xpath= "//*[@href='https://hubcomfy.com/store-manager/products-manage/']")
+  public WebElement addNew0;
+
+  //Add New Text
+  @FindBy(xpath= "//*[text()='Add Product']")
+  public WebElement addNewText;
+
+
     //DropDown
     @FindBy(xpath = "//*[@id='product_type']")
     public WebElement dropDown;
+
+
+    // Product Title
+    @FindBy(xpath = "//*[@id='pro_title']")
+    public WebElement productTitle0;
+
+  // URL
+  @FindBy(xpath = "//*[@id='product_url']")
+  public WebElement URL0;
+
+  // Button Text
+  @FindBy(xpath = "//*[@id='button_text']")
+  public WebElement buttonText0;
+
+  // Price
+  @FindBy(xpath = "//*[@id='regular_price']")
+  public WebElement price0;
+
+  // Sale Price
+  @FindBy(xpath = "//*[@id='sale_price']")
+  public WebElement salePrice0;
+
+  // Short Description
+  @FindBy(xpath = "//*[@id='tinymce'][1]")
+  public WebElement shortDescription0;
+
+  //Product Dashboard Text
+
+  @FindBy(xpath = "//*[text()='Products Dashboard']")
+  public WebElement productDashboardText0;
+
 
     @FindBy(xpath = "//*[@data-name='default_attribute_pa_color']")
     public WebElement dropDown2;
@@ -198,58 +468,37 @@ public class VendorAddProductLocates {
     @FindBy(id="variations_description_0") public WebElement descriptionVari;
 
 
+  //Girilen Ürünü arama:Search
+  @FindBy(xpath = "(//input[@type='search'])[2]")
+  public WebElement searchKutusu0;
+
+
+  //Girilen Ürün
+
+  @FindBy(xpath = "//*[@alt='Red Apple']")
+  public WebElement girilenProduct0;
+
+
+
 }
 
 
 
+
+//
+//    public WebElement anySize;
+//
+//    public WebElement anySize; }
+//
+//
+//}
+//
+//
+//   public WebElement anySize;
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+//*/
 //
 //
 //
@@ -484,33 +733,73 @@ public class VendorAddProductLocates {
 //
 //
 //
+//    }
+//    @FindBy(xpath = "//*[text()='Sign In']")
+//    public WebElement login;
+//    @FindBy(xpath="//*[@id='username']")
+//    public WebElement userName;
 //
+//    @FindBy(xpath = "//*[@id='password']")
+//    public WebElement password;
 //
+//    @FindBy(xpath = "(//*[text()='Sign In'])[2]")
+//    public WebElement signin;
 //
 //
+//   // @FindBy(xpath= "//li[@id='menu-item-1079']")
+//   // public WebElement myAccount;
 //
 //
+//    @FindBy(linkText = "My Account")
+//    public static WebElement myAccount;
 //
+//    @FindBy(linkText = "Store Manager")
+//    public static WebElement storeManager;
 //
 //
+//    @FindBy(xpath= "//*[@class='wcfm_menu_items wcfm_menu_wcfm-products']")
+//    public WebElement products;
 //
+//    @FindBy(xpath = "(//*[text()='Add New'])[1]")
+//    public WebElement addNew;
 //
+//    @FindBy(xpath = "//*[@id='product_type']")
+//    public WebElement simpleProduct;
 //
 //
+//    //Virtual tıklama(zeynep)
+//    @FindBy(css="input[id='is_virtual']")
+//    public WebElement virtual;
 //
+//    //is_downloadable tıklama(zeynep)
+//    @FindBy(css = "input[id='is_downloadable']")
+//    public WebElement is_downloadable;
 //
+//    @FindBy(css = "input[id='pro_title']")
+//    public WebElement productTitle;
 //
 //
+//    //price kutucugu (zeynep)
+//    @FindBy(xpath = "//*[@id='regular_price']")
+//    public WebElement price;
 //
+//    //sale price kutucugu(zeynep)
+//  //  @FindBy(xpath = "//*[@id='sale_price']")
+//  //  public WebElement salePrice;
 //
 //
 //
+//    @FindBy(css = "input[id='wcfm_products_simple_draft_button']")
+//    public WebElement draft;
 //
 //
 //
 //
 //
 //
+//    //variableProduct secimi(zeynep)
+//   // @FindBy(xpath = "//*[@id='product_type']")
+//   // public static WebElement variableProduct;
 //
 //
 //
@@ -532,13 +821,27 @@ public class VendorAddProductLocates {
 //
 //
 //
+//    @FindBy(xpath="//img[@id='featured_img_display']")
+//    public WebElement imageBuyuk;
 //
 //
+//    @FindBy(xpath = "//img[@id='gallery_img_gimage_0_display']")
+//    public WebElement imageKucuk;
 //
+//    @FindBy(xpath = "(//*[@*='228'])[2]")
+//    public WebElement homeGarden;
 //
+//    @FindBy(xpath = "//input[@*='252']")
+//    public WebElement homeDesign;
 //
+//    @FindBy(xpath = "(//input[@*='submit'])[3]")
+//    public WebElement submitButton;
 //
+//    @FindBy(xpath = "//input[@value='View']")
+//    public WebElement viewButton;
 //
+//    @FindBy(xpath = "(//img[@*='presentation'])[1]")
+//    public WebElement productLastImage;
 //
 //
 //
@@ -576,6 +879,115 @@ public class VendorAddProductLocates {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+////buraya kadar zeynep
+//
+//    @FindBy(linkText = "Store Manager")
+//    public WebElement storemanager;
+//
+//
+//    @FindBy(xpath = "(//h2)[1]")
+//    public WebElement storeManagerText;
+//
+//    @FindBy(css = "a[class='wcfm_menu_item active']")
+//    public WebElement products;
+//
+//    @FindBy(xpath = "//*[text()='Products']")
+//    public WebElement productsText;
+//
+//    //DropDown
+//    @FindBy(xpath = "//*[@id='product_type']")
+//    public WebElement dropDown;
+//}
 //
 //
 //
@@ -590,5 +1002,450 @@ public class VendorAddProductLocates {
 //
 //
 ////buraya kadar zeynep
-
+////package Team05.pages;
+////
+////import Team05.utilities.Driver;
+////import org.openqa.selenium.WebElement;
+////import org.openqa.selenium.support.FindBy;
+////import org.openqa.selenium.support.PageFactory;
+////
+////public class VendorAddProductLocates {
+////    //US_14_18
+////    public VendorAddProductLocates() {
+////        PageFactory.initElements(Driver.getDriver(), this);
+////
+////    }
+////    //AddNew locator(zeynep)
+////    @FindBy(xpath = "(//*[text()='Add New'])[1]")
+////    public WebElement addNew;
+////
+////    //Virtual tıklama(zeynep)
+////    @FindBy(xpath = "//*[@id='is_virtual']")
+////    public WebElement virtual;
+////
+////    //is_downloadable tıklama(zeynep)
+////    @FindBy(xpath = "//*[@id='is_downloadable']")
+////    public WebElement is_downloadable;
+////
+////    //price kutucugu (zeynep)
+////    @FindBy(xpath = "//*[@id='regular_price']")
+////    public WebElement price;
+////
+////    //sale price kutucugu(zeynep)
+////    @FindBy(xpath = "//*[@id='sale_price']")
+////    public WebElement salePrice;
+////
+////    //variableProduct secimi(zeynep)
+////    @FindBy(xpath = "//*[@id='product_type']")
+////    public WebElement variableProduct;
+////
+////    //color secimi(zeynep)
+////    @FindBy(xpath = "//*[@id='is_virtual']")
+////    public WebElement color;
+////
+////    //size secimi(zeynep)
+////    @FindBy(xpath = "//*[@id='attributes_is_active_2']")
+////    public WebElement size;
+////
+////    // Variations'a tıkla(zeynep)
+////    @FindBy(xpath = "(//*[@class='page_collapsible_content_holder'])[6]")
+////    public WebElement variations;
+////
+////    // Any Color tıkla(zeynep)
+////    @FindBy(xpath = "//*[@data-name='default_attribute_pa_color']")
+////    public WebElement anyColor;
+////
+////    // Any size tıkla(zeynep)
+////   // @FindBy(xpath = "//*[@data-name='default_attribute_pa_size']")
+////    //public WebElement anySize;
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+//////Buraya kadar Tuba
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+////
+//////buraya kadar zeynep
+//
+//
 
