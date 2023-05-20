@@ -75,7 +75,6 @@ public class VendorAddProductLocates {
     public WebElement siyahAyakkabi1;
 
 
-
     @FindBy(id="featured_img_display")
     public WebElement buyukProductImageEkleme;
     //   @FindBy(id = "[id='menu-item-browse']")
@@ -109,12 +108,6 @@ public class VendorAddProductLocates {
     @FindBy(css = "input[id='pro_title']")
     public WebElement productTitle;
 
-    @FindBy(id = "attributes_value_1")
-    public WebElement blue;
-
-    @FindBy(xpath = "//*[@class='select2-selection__choice']")
-    public WebElement sizevalue;
-
     @FindBy(xpath = "//*[@class='button wcfm_add_attribute_term wcfm_add_attributes_new_term']")
     public WebElement addNewColor;
 
@@ -145,15 +138,6 @@ public class VendorAddProductLocates {
     public WebElement imageBuyuk;
 
 
-
-    @FindBy(xpath = "(//input[@*='submit'])[3]")
-    public WebElement submitButton;
-
-    @FindBy(xpath = "//input[@value='View']")
-    public WebElement viewButton;
-
-    @FindBy(xpath = "(//img[@*='presentation'])[1]")
-    public WebElement productLastImage;
 
     @FindBy(linkText = "Store Manager")
     public WebElement storemanager;
@@ -594,6 +578,6 @@ public class VendorAddProductLocates {
 //
 //
 //
-////buraya kadar zeynep
+
 
 

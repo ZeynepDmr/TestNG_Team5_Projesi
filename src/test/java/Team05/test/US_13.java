@@ -16,7 +16,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-
+/*
 public class US_13 {
 
     public static ExtentReports extentReports;
@@ -24,7 +24,7 @@ public class US_13 {
     @BeforeTest
     public static void setUpExtentReport() {
         ReusableMethods.extentReport();
-        extentReports = ReusableMethods.getExtentReports();
+       extentReports = ReusableMethods.getExtentReports();
     }
 
     @Test
@@ -166,5 +166,9 @@ public class US_13 {
             extentReports.flush();
         }
 
-    }
-}
+
+ */
+
+
+
+

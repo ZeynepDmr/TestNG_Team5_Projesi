@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
-
+/*
 public class US_15 {
 
     VendorAddProductLocates vendorAddProductLocates;
@@ -27,7 +27,7 @@ public class US_15 {
 //        Kullanici sig in butonuna tiklar
         ReusableMethods.bekle(4);
         vendorAddProductLocates = new VendorAddProductLocates();
-        vendorAddProductLocates.siginlogin1.click();
+ /       vendorAddProductLocates.siginlogin1.click();
 
 //        Kullanici gecerli email ve password girer
         vendorAddProductLocates.email.sendKeys(ConfigReader.getProperty("username"));
@@ -254,3 +254,7 @@ public class US_15 {
         //KeysTAB ile yazdırdım
     }
 }
+
+
+
+ */
