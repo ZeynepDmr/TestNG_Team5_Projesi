@@ -189,7 +189,7 @@ public class US_14 {
 
 //        Kullanici ADD butonuna tiklar
         ReusableMethods.bekle(3);
-      / vendorAddProductLocates.categoryAdd.click();
+       vendorAddProductLocates.categoryAdd.click();
 
 
 //        Kullanici yeni category ekledigini gorur

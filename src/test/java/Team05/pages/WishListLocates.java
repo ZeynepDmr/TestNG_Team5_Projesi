@@ -11,63 +11,92 @@ public class WishListLocates {
     }
 
     //US_08
-    @FindBy(xpath = "//*[@id='header']/div/div/div/div/div/div[9]/div/div/a[1]")
-    public WebElement signInButon;
 
-    @FindBy(xpath = "//input[@id='username']")
-    public WebElement userName;
+    @FindBy(xpath = "//a[@data-product-id='16275']")
+    public WebElement wishListIsareti;
 
-    @FindBy(id = "password")
-    public WebElement password;
+    @FindBy(xpath = "//*[@data-product-id='16269']")
+    public WebElement wishListIsareti2;
 
-    @FindBy(xpath = "//*[@id=\"menu-item-3832\"]/a")
-    public WebElement electronics;
+    @FindBy(xpath = "//*[@class='wishlist block-type']")
+    public WebElement wishListSayfasi;
 
-    @FindBy(xpath = "//*[@id=\"main\"]/div/div/div/div[4]/ul/li[1]/div/figure/a/img[2]")
-    public WebElement productClick;
+    @FindBy(xpath = "(//input[@type='search'])[1]")
+    public WebElement searchButton;
 
-    @FindBy(xpath = "//*[@id='product-13230']/div[2]/div/div[4]/div[2]/div/a")
-    public WebElement addWishList;
+    @FindBy(xpath = "(//a[text()='Xiaomi Phone -4'])[1]")
+    public WebElement urun1;
 
-    @FindBy(xpath = "//i[@class='w-icon-heart']")
-    public WebElement goToWishList;
+    @FindBy(xpath = "(//a[text()='Xiaomi Phone -4'])[2]")
+    public WebElement urun2;
 
-    @FindBy(xpath = "//*[@id=yith-wcwl-row-13230]/td[5]/div/a")
+    @FindBy(xpath = "//*[text()='Product']")
+    public WebElement productYazisi;
+
+    @FindBy(xpath = "//*[text()='Quick View']")
+    public WebElement quickViewButonu;
+
+    @FindBy(xpath = "//button[@value='16275']")//wishlist'te quickview sayfasi acilinca cikan "addtocard"
     public WebElement addToCard;
 
-    @FindBy(xpath = "//a[@class='button wc-forward' and text()='View cart']")
-    public WebElement goToCard;
+    @FindBy(xpath = "//h2")
+    public WebElement baslik;//quickview aclinca cikan baslik
 
-    @FindBy(xpath = "//*[@id=main]/div/div/div/div/div/div[2]/div[2]/div/div/div/div/div/a")
-    public WebElement goToPayment;
-}
+    @FindBy(xpath = "//button[@type='button']")//quickview sayfasini kapatmak icin
+    public WebElement kapat;
 
-public class WishListLocates {
+    @FindBy(xpath = "//*[@class='wishlist-in-stock']")//stock yazisi
+    public WebElement stockYazisi;
 
-    public WishListLocates() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
-    //US_08
-    @FindBy(xpath = "/html/body/div[2]/header/div/div/div/div/div/div[9]/div/div/a[1]")
+    @FindBy(xpath = "//*[@class='woocommerce-Price-currencySymbol']")//stock yazisi
+    public WebElement priceYazisi;
 
-    public WebElement sign_In_Buton;
+    @FindBy(xpath = "(//a[text()='Add to cart'])[1]")
+    public WebElement addToCard2;
 
-    @FindBy(xpath = "//input[@id='username']")
-    public WebElement userName;
-    @FindBy(id = "password")
-    public WebElement password;
-    @FindBy(xpath = "//*[@id=menu-item-3832]/a")
-    public WebElement electronics;
-    @FindBy(xpath = "//*[@id='main']/div/div/div/div[4]/ul/li[1]/div/figure/div/div/div/a")
-    public WebElement addWishList;
-    @FindBy(xpath = "//i[@class='w-icon-heart']")
-    public WebElement goToWishList;
-    @FindBy(xpath = "//*[@id=yith-wcwl-row-13230]/td[5]/div/a")
-    public WebElement addToCard;
-    @FindBy(xpath = "//a[@class='button wc-forward' and text()='View cart']")
-    public WebElement goToCard;
-    @FindBy(xpath = "//*[@id=main]/div/div/div/div/div/div[2]/div[2]/div/div/div/div/div/a")
-    public WebElement goToPayment;
+    @FindBy(xpath = "//*[@class='cart-label']")
+    public WebElement cardTusu;
+
+    @FindBy(xpath = "//a[@class='button checkout wc-forward']")
+    public WebElement checkout;
+
+    @FindBy(xpath = "//input[@name='billing_first_name'] ")
+    public WebElement name;
+
+    @FindBy(xpath = "//a[@data-product_id='16275']")
+    public WebElement addToCard3;
+
+    @FindBy(xpath = "//button[@name='add-to-cart']")
+    public WebElement add;
+
+    @FindBy(xpath = "//a[@class='button checkout wc-forward']")
+    public WebElement add2;
+
+    @FindBy(xpath = "//*[@id='select2-billing_country-container']")
+    public WebElement ddm;
+
+    @FindBy(xpath = "//input[@id='billing_address_1']")
+    public WebElement adress;
+
+    @FindBy(xpath = "//input[@name='billing_postcode']")
+    public WebElement zipCode;
+
+    @FindBy(xpath = "//li[@class='wc_payment_method payment_method_cod']")
+    public WebElement payAtTheDoor;
+
+    @FindBy(xpath = "//div[@class='woocommerce-terms-and-conditions-wrapper pt-6']")
+    public  WebElement placeOrder;
+
+    //span[text()='Create an account?']
+    @FindBy(xpath = "//span[text()='Create an account?']")
+    public WebElement createAccount;
+
+    @FindBy(xpath = "//input[@id='account_username']")
+    public WebElement user;
+
+    @FindBy(xpath = "//p[@class='woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received order-success']")
+    public WebElement siparisinizKaydoldu;
+
 }
 
 

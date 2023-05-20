@@ -27,7 +27,7 @@ public class US_15 {
 //        Kullanici sig in butonuna tiklar
         ReusableMethods.bekle(4);
         vendorAddProductLocates = new VendorAddProductLocates();
- /       vendorAddProductLocates.siginlogin1.click();
+       vendorAddProductLocates.siginlogin1.click();
 
 //        Kullanici gecerli email ve password girer
         vendorAddProductLocates.email.sendKeys(ConfigReader.getProperty("username"));
