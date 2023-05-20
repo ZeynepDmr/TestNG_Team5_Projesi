@@ -12,11 +12,20 @@ public class WishListLocates {
 
     //US_08
 
-    @FindBy(xpath = "//a[@data-product-id='16275']")
-    public WebElement wishListIsareti;
+    @FindBy(xpath = "//div[@class='yith-wcwl-add-to-wishlist add-to-wishlist-18752  btn-product-icon wishlist-fragment on-first-load']//a[1]")
+    public WebElement wishListIsareti1;
 
-    @FindBy(xpath = "//*[@data-product-id='16269']")
+    @FindBy(xpath = "//div[@class='yith-wcwl-add-to-wishlist add-to-wishlist-19218  btn-product-icon wishlist-fragment on-first-load']//a[1]")
     public WebElement wishListIsareti2;
+
+    @FindBy(xpath = "//div[@class='yith-wcwl-add-to-wishlist add-to-wishlist-19221  btn-product-icon wishlist-fragment on-first-load']//a[1]")
+    public WebElement wishListIsareti3;
+
+    @FindBy(xpath = "//div[@class='yith-wcwl-add-to-wishlist add-to-wishlist-25232  btn-product-icon wishlist-fragment on-first-load']//a[1]")
+    public WebElement wishListIsareti4;
+
+    @FindBy(xpath = "//div[@class='yith-wcwl-add-to-wishlist add-to-wishlist-19329  btn-product-icon wishlist-fragment on-first-load']//a[1]")
+    public WebElement wishListIsareti5;
 
     @FindBy(xpath = "//*[@class='wishlist block-type']")
     public WebElement wishListSayfasi;
@@ -51,6 +60,9 @@ public class WishListLocates {
     @FindBy(xpath = "//*[@class='woocommerce-Price-currencySymbol']")//stock yazisi
     public WebElement priceYazisi;
 
+    @FindBy(xpath = "//a[@data-product_id='19218']")
+    public WebElement addToCard1;
+
     @FindBy(xpath = "(//a[text()='Add to cart'])[1]")
     public WebElement addToCard2;
 
@@ -84,7 +96,7 @@ public class WishListLocates {
     @FindBy(xpath = "//li[@class='wc_payment_method payment_method_cod']")
     public WebElement payAtTheDoor;
 
-    @FindBy(xpath = "//div[@class='woocommerce-terms-and-conditions-wrapper pt-6']")
+    @FindBy(xpath = "//button[@id='place_order']")
     public  WebElement placeOrder;
 
     //span[text()='Create an account?']
