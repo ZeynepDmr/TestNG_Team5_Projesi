@@ -69,6 +69,7 @@ public class US_20 {
         //    Kullanıcı açılan sayfada Description kısmına veri yazabilmeli
         ReusableMethods.bekle(3);
         action.sendKeys(Keys.PAGE_DOWN).perform();
+
         vendorCouponsLocates.codeClick.sendKeys("000101",Keys.TAB,"Hediye");
 
     //    Kullanıcı açılan sayfada Discount Type kısmına Percentage discount veya Fixed Product Discount olarak seçilebilmeli
