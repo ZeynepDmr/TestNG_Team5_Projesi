@@ -4,6 +4,7 @@ import Team05.pages.ProductCompareLocates;
 import Team05.utilities.ConfigReader;
 import Team05.utilities.Driver;
 import Team05.utilities.ReusableMethods;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -26,7 +27,7 @@ public class US_07 {
     @Test
     public void test01() {
 
-        ReusableMethods.extentReportParametreli("Kubra Simsek", "US-07 TC01-01");
+        ReusableMethods.extentReportParametreli("Ali Kaya", "US-07 TC01-01");
         ProductCompareLocates ProductCompareLocates = new ProductCompareLocates();
         ReusableMethods.extentTest.info("Kullanici Anasayfaya gider");
         //Kulanici sayfaya gider
@@ -131,8 +132,8 @@ public class US_07 {
     }
 
     @Test
-    public void test01() throws InterruptedException {
-        ReusableMethods.extentReportParametreli("Kubra Simsek", "US-07 TC02-01");
+    public void test03() throws InterruptedException {
+        ReusableMethods.extentReportParametreli("Ali Kaya", "US-07 TC02-01");
         ProductCompareLocates = new ProductCompareLocates();
         Driver.getDriver().get(ConfigReader.getProperty("pearly_Url"));
         ReusableMethods.extentTest.info("Kullanici Anasayfaya gider");
@@ -201,7 +202,7 @@ public class US_07 {
     }
 
     @Test
-    public void test01(){
+    public void test04(){
         //kullanici "pearly.com" sayfasina gider
         //Electronics dropdown menusunu secer
         //"xaiomi phone -4" urununu aratir ve karsilastirma isaretine basar
@@ -211,7 +212,7 @@ public class US_07 {
         //bu yukardaki step jira da gecerli, burda adimlarini yazmadim
         //Kullanici "Clean all" tusunu gorur ve tiklar
 
-        ReusableMethods.extentReportParametreli("Kubra Simsek", "US-07 TC03-01");
+        ReusableMethods.extentReportParametreli("Ali Kaya", "US-07 TC03-01");
         ProductCompareLocates ProductCompareLocates = new ProductCompareLocates();
         Driver.getDriver().get(ConfigReader.getProperty("pearly_Url"));
         List<WebElement> tumListe = Driver.getDriver().findElements(By.xpath("//*[@id='menu-item-3832']"));
@@ -288,11 +289,11 @@ public class US_07 {
     }
 
     @Test
-    public void test02(){
+    public void test05(){
         //Compare Product kisminada silinen urunlerin yerine "+" isaretine tiklayarak yeni urun ekler
         //Kullanici "Clean all" tusunu gorur ve tiklar
 
-        ReusableMethods.extentReportParametreli("Kubra Simsek", "US-07 TC03-02");
+        ReusableMethods.extentReportParametreli("Ali Kaya", "US-07 TC03-02");
         Driver.getDriver().navigate().to(ConfigReader.getProperty("pearly_Url"));
 
         List<WebElement> ddmKids = Driver.getDriver().findElements(By.xpath("//*[@id='menu-item-12999']"));
@@ -355,9 +356,9 @@ public class US_07 {
 
     }
     @Test
-    public void test01(){
+    public void test06(){
         Driver.getDriver().navigate().to(ConfigReader.getProperty("pearly_Url"));
-        ReusableMethods.extentReportParametreli("Kubra Simsek", "US-07 TC04-01");
+        ReusableMethods.extentReportParametreli("Ali Kaya", "US-07 TC04-01");
 
         List<WebElement> ddmKids = Driver.getDriver().findElements(By.xpath("//*[@id='menu-item-12999']"));
         ddmKids.get(0).click();
@@ -400,9 +401,9 @@ public class US_07 {
         Driver.closeDriver();
     }
     @Test
-    public void test01(){
+    public void test07(){
 
-        ReusableMethods.extentReportParametreli("Kubra Simsek", "US-07 TC05-01");
+        ReusableMethods.extentReportParametreli("Ali Kaya", "US-07 TC05-01");
         ProductCompareLocates ProductCompareLocates = new ProductCompareLocates();
         Driver.getDriver().get(ConfigReader.getProperty("pearly_Url"));
         List<WebElement> tumListe = Driver.getDriver().findElements(By.xpath("//*[@id='menu-item-3832']"));
