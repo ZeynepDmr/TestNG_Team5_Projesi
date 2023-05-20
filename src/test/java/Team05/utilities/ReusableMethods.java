@@ -154,6 +154,16 @@ public class ReusableMethods {
         extentReports.setSystemInfo("Tester", "Team05");
         extentHtmlReporter.config().setDocumentTitle("Extent Report");
         extentHtmlReporter.config().setReportName("Smoke Test Raporu");
+
+
+    }
+
+
+    public static ExtentReports getExtentReports() {
+        if (extentReports == null) {
+            throw new IllegalStateException("ExtentReports oluşturulmamış.");
+        }
+        return extentReports;
     }
 
     public static ExtentReports getExtentReports() {

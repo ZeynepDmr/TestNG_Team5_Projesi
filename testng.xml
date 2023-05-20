@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/Zeyne/IdeaProjects/TestNG_Team05/src/test/java/Team05/test/US_16.java"><classes><class name="Team05.test.US_16"><methods><include name="test1"/></methods></class></classes></test></suite>

@@ -74,6 +74,7 @@ public class VendorAddProductLocates {
     public WebElement productTitle;
 
 
+
     @FindBy(id = "attributes_value_1")
     public WebElement blue;
 
@@ -138,8 +139,6 @@ public class VendorAddProductLocates {
 
     @FindBy(xpath = "//img[@id='featured_img_display']")
     public WebElement imageBuyuk;
-
-
 
 
 
@@ -803,6 +802,6 @@ public class VendorAddProductLocates {
 //
 //
 //
-////buraya kadar zeynep
+
 
 

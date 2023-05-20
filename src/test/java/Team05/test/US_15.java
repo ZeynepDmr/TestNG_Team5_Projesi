@@ -27,7 +27,7 @@ public class US_15 {
 //        Kullanici sig in butonuna tiklar
         ReusableMethods.bekle(4);
         vendorAddProductLocates = new VendorAddProductLocates();
-        vendorAddProductLocates.siginlogin1.click();
+ /       vendorAddProductLocates.siginlogin1.click();
 
 //        Kullanici gecerli email ve password girer
         vendorAddProductLocates.email.sendKeys(ConfigReader.getProperty("username"));
@@ -217,8 +217,8 @@ public class US_15 {
         Driver.getDriver();
         ReusableMethods.bekle(2);
         ReusableMethods.ddmValue(vendorAddProductLocates.pieceType,"Carton");
-//        Select select =new Select(vendorAddProductLocates.select1);
-//        select.selectByIndex(2);
+        Select select =new Select(vendorAddProductLocates.select1);
+       select.selectByIndex(2);
 
         // select.selectByVisibleText("Carton");
         // vendorAddProductLocates.select1.click();
@@ -254,3 +254,6 @@ public class US_15 {
         //KeysTAB ile yazdırdım
     }
 }
+
+
+

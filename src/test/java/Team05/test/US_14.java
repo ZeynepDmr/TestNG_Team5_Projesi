@@ -38,7 +38,7 @@ public class US_14 {
 
 //    Kullanici gecerli email ve password girer
 
-        vendorAddProductLocates.email.sendKeys(ConfigReader.getProperty("username"), Keys.TAB, ConfigReader.getProperty("password"));
+       vendorAddProductLocates.email.sendKeys(ConfigReader.getProperty("username"), Keys.TAB, ConfigReader.getProperty("password"));
         ReusableMethods.bekle(3);
         vendorAddProductLocates.sigin.click();
 //    Kullanici my account yazisini goruntuler
@@ -48,7 +48,7 @@ public class US_14 {
         ReusableMethods.bekle(10);
         Driver.getDriver();
         vendorAddProductLocates.myAccount.click();
-        // ReusableMethods.click(vendorAddProductLocates.myAccount);
+         ReusableMethods.click(vendorAddProductLocates.myAccount);
 
         ReusableMethods.bekle(3);
         Assert.assertTrue(vendorAddProductLocates.myAccount.isDisplayed());
@@ -67,8 +67,8 @@ public class US_14 {
         ReusableMethods.bekle(3);
         ReusableMethods.click(vendorAddProductLocates.products);
 
-//        ReusableMethods.bekle(3);
-//        Assert.assertTrue(vendorAddProductLocates.productsText.isDisplayed());
+        ReusableMethods.bekle(3);
+        Assert.assertTrue(vendorAddProductLocates.productsText.isDisplayed());
 
 
     }
@@ -105,7 +105,7 @@ public class US_14 {
 //        Kullanici Add Product sayfasina gider
         Assert.assertTrue(vendorAddProductLocates.addProductText.isDisplayed());
 //        Kullanici Choose Image kutucuguna tiklar
-        vendorAddProductLocates.image.click();
+       vendorAddProductLocates.image.click();
 
 //        Kullanici select files kısmına  tiklar
         ReusableMethods.bekle(3);
@@ -116,7 +116,7 @@ public class US_14 {
 //        Kullanici dosyadan resim secer
         //"C:\Users\CASPER\Downloads\books.png"
         WebElement selectFiles = vendorAddProductLocates.selectFiles;
-        selectFiles.sendKeys(System.getProperty("user.home") + "/Downloads/books.png");
+       selectFiles.sendKeys(System.getProperty("user.home") + "/Downloads/books.png");
 
     }
 
@@ -174,7 +174,7 @@ public class US_14 {
         vendorAddProductLocates.addNew.click();
 
 //        Kullanici Add Product sayfasina gider
-        Assert.assertTrue(vendorAddProductLocates.addProductText.isDisplayed());
+       Assert.assertTrue(vendorAddProductLocates.addProductText.isDisplayed());
 
 //        Kullanici  Add new category secegine tiklar
         actions = new Actions(Driver.getDriver());
@@ -189,7 +189,7 @@ public class US_14 {
 
 //        Kullanici ADD butonuna tiklar
         ReusableMethods.bekle(3);
-        vendorAddProductLocates.categoryAdd.click();
+      / vendorAddProductLocates.categoryAdd.click();
 
 
 //        Kullanici yeni category ekledigini gorur
@@ -201,7 +201,7 @@ public class US_14 {
         System.out.println("yeni category eklenemedi");
 
         Driver.closeDriver();
-    }
+   }
 
     @Test
     public void test06() {
@@ -217,7 +217,7 @@ public class US_14 {
         ReusableMethods.bekle(3);
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN).perform();
-        vendorAddProductLocates.productBrands.click();
+       vendorAddProductLocates.productBrands.click();
 
         Driver.closeDriver();
 
@@ -237,13 +237,13 @@ public class US_14 {
         ReusableMethods.bekle(3);
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN);
-        vendorAddProductLocates.productBrands.click();
+       vendorAddProductLocates.productBrands.click();
 
 //        Kullanici Product brands name alanına bir data girer
         ReusableMethods.bekle(3);
         actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN);
-        vendorAddProductLocates.productBrandsName.sendKeys("casper");
-//        Kullanici ADD butonuna tiklar
+      vendorAddProductLocates.productBrandsName.sendKeys("casper");
+        //        Kullanici ADD butonuna tiklar
 
         ReusableMethods.bekle(3);
         vendorAddProductLocates.productAdd.click();
@@ -272,13 +272,13 @@ public class US_14 {
         ReusableMethods.bekle(3);
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN, Keys.PAGE_DOWN);
-        vendorAddProductLocates.Choosetags.click();
+       vendorAddProductLocates.Choosetags.click();
 
 //        Kullanici seceneklerden ekleme yapar
         ReusableMethods.bekle(3);
         actions.sendKeys(Keys.PAGE_DOWN);
         vendorAddProductLocates.secimChooseTags.click();
-        //  Driver.getDriver();
+          Driver.getDriver();
     }
 
     @Test
