@@ -115,7 +115,7 @@ public class ReusableMethods {
     }
 
     //Tüm Sayfa ScreenShot
-    public static String tumSayfaResmi() {
+    public static void tumSayfaResmi() {
         String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
         String dosyaYolu = "TestOutput/screenshot/screenshot" + tarih + ".png";
         TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
@@ -124,7 +124,6 @@ public class ReusableMethods {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return tarih;
     }
 
     //WebElement ScreenShot
@@ -142,7 +141,7 @@ public class ReusableMethods {
     //ExtentReport
     public static void extentReport() {
         extentReports = new ExtentReports();
-        String tarih = new SimpleDateFormat("HH:mm_ddMMyyyy").format(new Date());
+        String tarih = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
         String className = Thread.currentThread().getStackTrace()[2].getClassName();
         className = className.replace("test.", "");
         String dosyaYolu = "TestOutput/reports/" + className + "_" + tarih + ".html";
@@ -154,16 +153,6 @@ public class ReusableMethods {
         extentReports.setSystemInfo("Tester", "Team05");
         extentHtmlReporter.config().setDocumentTitle("Extent Report");
         extentHtmlReporter.config().setReportName("Smoke Test Raporu");
-
-
-    }
-
-
-    public static ExtentReports getExtentReports() {
-        if (extentReports == null) {
-            throw new IllegalStateException("ExtentReports oluşturulmamış.");
-        }
-        return extentReports;
     }
 
     public static ExtentReports getExtentReports() {
