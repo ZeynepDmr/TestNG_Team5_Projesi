@@ -51,13 +51,13 @@ public class AccountDetailsLocates {
    @FindBy(css= "#tinymce > p > br")
    public WebElement biographyText;
 
-    @FindBy(xpath = "//*[@id=\"password_current\"]")
+    @FindBy(xpath = "//*[@id='password_current']")
     public WebElement oldPasword;
 
-    @FindBy(xpath = "//*[@id=\"password_1\"]")
+    @FindBy(xpath = "//*[@id='password_1']")
     public WebElement newPasword1;
 
-    @FindBy(xpath = "//*[@id=\"password_2\"]")
+    @FindBy(xpath = "//*[@id='password_2']")
     public WebElement newPasword2;
 
     @FindBy(xpath = "//*[text()='Save changes']")
