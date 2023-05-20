@@ -138,10 +138,11 @@ public class ReusableMethods {
     //ExtentReport
     public static void extentReport() {
         extentReports = new ExtentReports();
-        String tarih = new SimpleDateFormat("HH:mm_ddMMyyyy").format(new Date());
+        String tarih = new SimpleDateFormat("dd_MM_yyyy__HH.mm.ss").format(new Date());
         String className = Thread.currentThread().getStackTrace()[2].getClassName();
         className = className.replace("test.", "");
-        String dosyaYolu = "TestOutput/reports/" + className + "_" + tarih + ".html";
+
+        String dosyaYolu = "TestOutput/reports/" + className +"_"+ tarih + ".html";
         extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
         extentReports.attachReporter(extentHtmlReporter);
 
