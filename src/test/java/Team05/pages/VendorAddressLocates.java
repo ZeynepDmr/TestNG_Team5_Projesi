@@ -73,6 +73,9 @@ public class VendorAddressLocates {
     @FindBy(xpath = "//button[@name='save_address']")
     public WebElement billingAddressSaveAddress;
 
+    @FindBy(xpath = "//div[@role='alert']")
+    public WebElement addressSaveAlert;
+
 
     //Shipping Address Locates
     @FindBy(xpath = "(//a[@class='edit btn btn-link btn-primary btn-underline mb-4'])[2]")
@@ -101,6 +104,12 @@ public class VendorAddressLocates {
 
     @FindBy(xpath = "//button[@name='save_address']")
     public WebElement shippingAddressSaveAddress;
+
+    public void clearField(WebElement field) {
+        if (!field.getAttribute("value").isEmpty()) {
+            field.clear();
+        }
+    }
 
 
 }
