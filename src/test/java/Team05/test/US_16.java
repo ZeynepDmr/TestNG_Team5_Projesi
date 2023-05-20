@@ -32,8 +32,8 @@ Virtual ve Downloadable seçilebilmeli
 Price ve Sale Price yazılabilmeli
 US14 ve US15 deki işlemler yapılabilmeli
 Ürünün eklendiğini Product kısmında görebilmeli
-
      */
+
     WebDriver driver;
     Actions actions;
     VendorAddProductLocates vendorAddProductLocates;
@@ -54,7 +54,6 @@ US14 ve US15 deki işlemler yapılabilmeli
         ExtentTest extentTest;
         extentTest=extentReports.createTest("TC02");
 
-
         //  Kullanici "https://hubcomfy.com" adresine gider
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
         extentTest.pass(ConfigReader.getProperty("Hubcomfy_Url") + " adresine gidildi");
@@ -63,8 +62,11 @@ US14 ve US15 deki işlemler yapılabilmeli
         VendorAddProductLocates vendorAddProductLocates = new VendorAddProductLocates();
         vendorAddProductLocates.login.click();
         extentTest.pass("SignIn linkine tiklandi");
+
+        vendorAddProductLocates.signInLogin.click();
+
         //Kullanici gecerli email ve password girer
-        vendorAddProductLocates.userName.sendKeys(ConfigReader.getProperty("Vendor_Username"), Keys.ENTER);
+        vendorAddProductLocates.email.sendKeys(ConfigReader.getProperty("Vendor_Username"), Keys.ENTER);
         vendorAddProductLocates.password.sendKeys(ConfigReader.getProperty("Vendor_Password"), Keys.ENTER);
         extentTest.pass("Kullanici adi ve sifresi girilip signin butonuna tiklandi");
 
