@@ -18,7 +18,6 @@ public class US_01 {
         CustomerRegisterLocates customerRegesterPage = new CustomerRegisterLocates();
         String username = fakerInput("username");
         String email = fakerInput("email");
-
         String password = fakerInput("password");
 
 

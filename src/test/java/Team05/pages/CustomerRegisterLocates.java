@@ -16,6 +16,10 @@ public class CustomerRegisterLocates {
 
    public WebElement Register_Button;
 
+    @FindBy(xpath = "/html/body/div[2]/header/div/div/div/div/div/div[9]/div/div/a[1]")
+
+    public WebElement sign_In_Buton;
+
     @FindBy(id = "reg_username")
     public WebElement User_Name_Input;
 
