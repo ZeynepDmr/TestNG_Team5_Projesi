@@ -10,9 +10,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class US_22 {
+public class US_22 extends ReusableMethods {
     @Test
     public void testCase1() {
+        extentReport();
+        extentTest=extentReports.createTest("ExtentTest","Test Raporu");
         /*
         Kullanıcı ana sayfaya gider
         Kullanıcı Sign in butonunu tıklar
@@ -26,7 +28,7 @@ public class US_22 {
 
      //   Kullanıcı ana sayfaya gider
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
-
+        extentTest.info("Hubcomfy sitesine gidildi");
      //   Kullanıcı Sign in butonunu tıklar
         VendorShoppingLocates vendorShoppingLocates = new VendorShoppingLocates();
         vendorShoppingLocates.signIn.click();
@@ -47,6 +49,7 @@ public class US_22 {
      //   Kullanıcı açılan sayfada Add To Cart seçeneğini tıklayarak seçtiği ürünü sepete ekler
         ReusableMethods.bekle(3);
         vendorShoppingLocates.addToCart.click();
+        extentTest.info("add to cart a gidildi");
 
      //   Kullanıcı cart seçeneğini tıklayarak sepetin güncellendiğini ve eklediği ürünün sepette olduğunu kontrol eder
         ReusableMethods.bekle(3);
@@ -65,5 +68,7 @@ public class US_22 {
         vendorShoppingLocates.couponCode.sendKeys("000100");
         vendorShoppingLocates.applyCoupon.click();
 
+        extentTest.pass("test sonlandırıldı");
+        extentReports.flush();
     }
 }
