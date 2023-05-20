@@ -24,7 +24,7 @@ public class US_13 {
     @BeforeTest
     public static void setUpExtentReport() {
         ReusableMethods.extentReport();
-       extentReports = ReusableMethods.getExtentReports();
+        extentReports = ReusableMethods.getExtentReports();
     }
 
     @Test
@@ -81,7 +81,7 @@ public class US_13 {
             Select selectProvince = new Select(vendorAddressLocates.shippingAddressProvince);
             selectProvince.selectByVisibleText("Samsun");
             test.pass("Province bilgisi girildi");
-            ReusableMethods.tumSayfaResmiC("TC-01");
+            ReusableMethods.tumSayfaResmi();
             test.pass("Test Basarili!");
             Driver.closeDriver();
             extentReports.flush();
@@ -155,7 +155,7 @@ public class US_13 {
             String expectedAlert = "Address changed successfully.";
             Assert.assertTrue(actualAlert.contains(expectedAlert));
             test.pass("Kayit basarili");
-            ReusableMethods.tumSayfaResmiC("TC-02");
+            ReusableMethods.tumSayfaResmi();
             test.pass("Test Basarili!");
             Driver.closeDriver();
             extentReports.flush();
@@ -167,8 +167,6 @@ public class US_13 {
         }
 
 
-
-
-
-
+    }
+}
 

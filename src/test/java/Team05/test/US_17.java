@@ -170,7 +170,7 @@ public class US_17 {
         Driver.getDriver().switchTo().alert().accept();
         ReusableMethods.bekle(8);
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-        vendorAddProductLocates.sizeOpenDropDown.click();
+        vendorAddProductLocates.size.click();
         ReusableMethods.bekle(3);
         vendorAddProductLocates.addNewSizeButton.click();
         ReusableMethods.bekle(3);
@@ -182,7 +182,7 @@ public class US_17 {
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         extentTest.pass("Secilen ürüne color ve size eklenir ");
-        ReusableMethods.click(vendorAddProductLocates.submit);
+        ReusableMethods.click(vendorAddProductLocates.submitProduct);
         ReusableMethods.bekle(3);
         ReusableMethods.tumSayfaResmi();
 
