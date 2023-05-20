@@ -87,7 +87,7 @@ public class US_12 {
             vendorAddressLocates.clearField(vendorAddressLocates.billingAddressPhone);
             vendorAddressLocates.billingAddressPhone.sendKeys("03621234567");
             test.pass("Phone bilgisi girildi");
- //           ReusableMethods.tumSayfaResmiC("TC-01");
+            ReusableMethods.tumSayfaResmiC("TC-01");
             test.pass("Test Basarili!");
             Driver.closeDriver();
             extentReports.flush();
@@ -136,7 +136,7 @@ public class US_12 {
             String emailAddress = js.executeScript("return document.getElementById('billing_email').value").toString();
             Assert.assertTrue(emailAddress.contains(ConfigReader.getProperty("Vendor_Username")));
             test.pass((ConfigReader.getProperty("Vendor_Username")) + " mail adresi goruntulendi");
-//            ReusableMethods.tumSayfaResmiC("TC-02");
+           ReusableMethods.tumSayfaResmiC("TC-02");
             test.pass("Test Basarili!");
             Driver.closeDriver();
             extentReports.flush();
@@ -214,7 +214,7 @@ public class US_12 {
             String expectedAlert = "Address changed successfully.";
             Assert.assertTrue(actualAlert.contains(expectedAlert));
             test.pass("Kayit basarili");
- //           ReusableMethods.tumSayfaResmiC("TC-03");
+           ReusableMethods.tumSayfaResmiC("TC-03");
             test.pass("Test Basarili!");
             Driver.closeDriver();
             extentReports.flush();

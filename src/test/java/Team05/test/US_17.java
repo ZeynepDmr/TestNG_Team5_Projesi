@@ -71,33 +71,29 @@ public class US_17 {
         extentTest=extentReports.createTest("TC01");
 
         //  Kullanici "https://hubcomfy.com" adresine gider
-      Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
-       extentTest.pass(ConfigReader.getProperty("Hubcomfy_Url") + " adresine gidildi");
+        Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
+        extentTest.pass(ConfigReader.getProperty("Hubcomfy_Url") + " adresine gidildi");
 
-       //  Kullanici sign in butonuna tiklar
-       VendorAddProductLocates vendorAddProductLocates = new VendorAddProductLocates();
-       vendorAddProductLocates.login.click();
+        // Kullanici sign in butonuna tiklar
+        VendorAddProductLocates vendorAddProductLocates = new VendorAddProductLocates();
+        vendorAddProductLocates.login.click();
         extentTest.pass("SignIn linkine tiklandi");
         //Kullanici gecerli email ve password girer
-       vendorAddProductLocates.userName.sendKeys(ConfigReader.getProperty("Vendor_Username"), Keys.ENTER);
-       vendorAddProductLocates.password.sendKeys(ConfigReader.getProperty("Vendor_Password"), Keys.ENTER);
-
+        vendorAddProductLocates.userName.sendKeys(ConfigReader.getProperty("Vendor_Username"), Keys.ENTER);
+        vendorAddProductLocates.password.sendKeys(ConfigReader.getProperty("Vendor_Password"), Keys.ENTER);
         extentTest.pass("Kullanici adi ve sifresi girilip signin butonuna tiklandi");
 
-        // Kullanici my account yazisini goruntuler
-
+        //Kullanici my account yazisini goruntuler
         ReusableMethods.bekle(5);
         ReusableMethods.scrollEnd();
         Driver.getDriver();
-
         ReusableMethods.bekle(3);
         vendorAddProductLocates.myAccount.click();
+        extentTest.pass("My Account Linkine tıklandı ");
 
-       extentTest.pass("My Account Linkine tıklandı ");
         // Kullanici store manager menusune tiklar
         ReusableMethods.bekle(2);
         vendorAddProductLocates.storeManager.click();
-
 
         // Kullanici store manager sayfasina gider
         Assert.assertTrue(vendorAddProductLocates.storeManager.isDisplayed());
@@ -116,7 +112,7 @@ public class US_17 {
         //Kullanıcı Add New butonuna tıklar
         ReusableMethods.bekle(2);
         vendorAddProductLocates.addNew.click();
-       extentTest.pass("Vendor olarak yeni ürün ekleme butonuna tıklanır");
+        extentTest.pass("Vendor olarak yeni ürün ekleme butonuna tıklanır");
 
 
         // Variable Product seçilebilmeli
@@ -141,7 +137,7 @@ public class US_17 {
         vendorAddProductLocates.siyahAyakkabi1.click();
         vendorAddProductLocates.imageSelectButton.click();
 
-      extentTest.pass("Ürüne resim eklenir");
+        extentTest.pass("Ürüne resim eklenir");
         vendorAddProductLocates.categoriesCheckBox.click();
         actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN, Keys.PAGE_DOWN);
         jse.executeScript("arguments[0].scrollIntoView(true);", vendorAddProductLocates.productBrandscheckBox);
@@ -185,7 +181,7 @@ public class US_17 {
         ReusableMethods.bekle(3);
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-       extentTest.pass("Secilen ürüne color ve size eklenir ");
+        extentTest.pass("Secilen ürüne color ve size eklenir ");
         ReusableMethods.click(vendorAddProductLocates.submit);
         ReusableMethods.bekle(3);
         ReusableMethods.tumSayfaResmi();
@@ -246,10 +242,10 @@ public class US_17 {
         ReusableMethods.click(vendorAddProductLocates.products);
         ReusableMethods.bekle(3);
         actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN).perform();
-        //  ReusableMethods.tumSayfaResmi();
-       extentTest.pass("Product sayfasında eklediginiz ürünün doğru bir şekilde listelendigi dogrulanır");
+        ReusableMethods.tumSayfaResmi();
+        extentTest.pass("Product sayfasında eklediginiz ürünün doğru bir şekilde listelendigi dogrulanır");
         Driver.closeDriver();
-       extentTest.info("Test Basarılı");
+        extentTest.info("Test Basarılı");
         extentReports.flush();
     }
 }

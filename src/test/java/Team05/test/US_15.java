@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
-/*
+
 public class US_15 {
 
     VendorAddProductLocates vendorAddProductLocates;
@@ -217,8 +217,8 @@ public class US_15 {
         Driver.getDriver();
         ReusableMethods.bekle(2);
         ReusableMethods.ddmValue(vendorAddProductLocates.pieceType,"Carton");
-//        Select select =new Select(vendorAddProductLocates.select1);
-//        select.selectByIndex(2);
+        Select select =new Select(vendorAddProductLocates.select1);
+       select.selectByIndex(2);
 
         // select.selectByVisibleText("Carton");
         // vendorAddProductLocates.select1.click();
@@ -257,4 +257,3 @@ public class US_15 {
 
 
 
- */
