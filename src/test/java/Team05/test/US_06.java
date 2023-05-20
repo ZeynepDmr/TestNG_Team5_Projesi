@@ -58,6 +58,8 @@ public class US_06 extends ReusableMethods {
 
         //Kullanıcı login olur
 
+        CustomerShoppingLocates costumerShopping = new CustomerShoppingLocates();
+        VendorCouponsLocates vendorCouponsLocates = new VendorCouponsLocates();
         costumerShopping.signInButonu.click();
 
         costumerShopping.Customer_Username.sendKeys(ConfigReader.getProperty("Customer_Username"), Keys.TAB);

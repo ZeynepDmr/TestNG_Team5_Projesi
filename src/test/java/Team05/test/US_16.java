@@ -29,15 +29,14 @@ Virtual ve Downloadable seçilebilmeli
 Price ve Sale Price yazılabilmeli
 US14 ve US15 deki işlemler yapılabilmeli
 Ürünün eklendiğini Product kısmında görebilmeli
-
      */
+
     WebDriver driver;
     Actions actions;
     VendorAddProductLocates vendorAddProductLocates;
 
     @Test
     public void test1() {
-
 
 
         //  Kullanici "https://hubcomfy.com" adresine gider

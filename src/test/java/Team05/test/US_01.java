@@ -21,7 +21,7 @@ public class US_01 {
         String password = fakerInput("password");
 
 
-        customerRegesterPage.Register_Button.click();
+     //   customerRegesterPage.Register_Button.click();
         bekle(3);
         Assert.assertTrue(customerRegesterPage.E_Mail_Input.isEnabled());
         customerRegesterPage.User_Name_Input.sendKeys(username);
@@ -35,10 +35,10 @@ public class US_01 {
         Assert.assertTrue(customerRegesterPage.Register_Policy_Check.isEnabled());
         customerRegesterPage.Register_Policy_Check.click();
         bekle(3);
-Assert.assertTrue(customerRegesterPage.Singup_Button.isEnabled());
+        Assert.assertTrue(customerRegesterPage.Singup_Button.isEnabled());
         customerRegesterPage.Singup_Button.click();
         bekle(3);
-       Assert.assertTrue(customerRegesterPage.Profile.isEnabled());
+        Assert.assertTrue(customerRegesterPage.Profile.isEnabled());
         customerRegesterPage.Profile.click();
        bekle(3);
 
@@ -54,7 +54,7 @@ Assert.assertTrue(customerRegesterPage.Singup_Button.isEnabled());
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
         CustomerRegisterLocates customerRegesterPage = new CustomerRegisterLocates();
 
-        customerRegesterPage.Register_Button.click();
+      //  customerRegesterPage.Register_Button.click();
         bekle(3);
 
         customerRegesterPage.E_Mail_Input.sendKeys(fakerInput("email"));
@@ -98,7 +98,7 @@ Assert.assertTrue(customerRegesterPage.Singup_Button.isEnabled());
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
         CustomerRegisterLocates customerRegesterPage = new CustomerRegisterLocates();
 
-        customerRegesterPage.Register_Button.click();
+      //  customerRegesterPage.Register_Button.click();
         bekle(3);
         customerRegesterPage.User_Name_Input.sendKeys(fakerInput("username"));
         bekle(3);
@@ -120,7 +120,7 @@ Assert.assertTrue(customerRegesterPage.Singup_Button.isEnabled());
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
         CustomerRegisterLocates customerRegesterPage = new CustomerRegisterLocates();
 
-        customerRegesterPage.Register_Button.click();
+     //   customerRegesterPage.Register_Button.click();
         bekle(3);
         customerRegesterPage.User_Name_Input.sendKeys(fakerInput("username"));
         bekle(3);
@@ -161,7 +161,7 @@ Assert.assertTrue(customerRegesterPage.Singup_Button.isEnabled());
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
         CustomerRegisterLocates customerRegesterPage = new CustomerRegisterLocates();
 
-        customerRegesterPage.Register_Button.click();
+      //  customerRegesterPage.Register_Button.click();
         bekle(3);
         customerRegesterPage.User_Name_Input.sendKeys(fakerInput("username"));
         bekle(3);

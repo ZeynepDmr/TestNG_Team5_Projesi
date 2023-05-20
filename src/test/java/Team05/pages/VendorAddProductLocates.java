@@ -7,7 +7,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class VendorAddProductLocates {
-
     //US_14_18
     public VendorAddProductLocates() {
         PageFactory.initElements(Driver.getDriver(), this);
@@ -33,8 +32,6 @@ public class VendorAddProductLocates {
     @FindBy(xpath = "//*[@id='sale_price']")
     public WebElement salePrice;
 
-
-
     //color secimi(zeynep)
     @FindBy(css = "input[id='attributes_is_active_1']")
     public WebElement color;
@@ -52,9 +49,6 @@ public class VendorAddProductLocates {
     // @FindBy(css = "li[class='select2-selection__choice']")
     // public WebElement black;
 
-
-
-
     // Variations'a tıkla(zeynep)
     @FindBy(xpath = "//*[@id='wcfm_products_manage_form_variations_head']")
     public WebElement variations;
@@ -68,13 +62,13 @@ public class VendorAddProductLocates {
     public WebElement anySize;
 
 
+
+   // public WebElement anySize; }
     @FindBy(xpath = "//*[@id='wcfm_products_manage_form_attribute_head']")
     public WebElement attributes;
 
     @FindBy(xpath ="(//div[@class='thumbnail'])[3]")
     public WebElement siyahAyakkabi1;
-
-
 
     @FindBy(id="featured_img_display")
     public WebElement buyukProductImageEkleme;
@@ -91,14 +85,11 @@ public class VendorAddProductLocates {
     @FindBy(xpath = "(//*[text()='Sign In'])[2]")
     public WebElement signin;
 
-
-
     @FindBy(linkText = "My Account")
     public static WebElement myAccount;
 
     @FindBy(linkText = "Store Manager")
     public static WebElement storeManager;
-
 
     @FindBy(xpath = "//*[@class='wcfm_menu_items wcfm_menu_wcfm-products']")
     public WebElement products;
@@ -154,6 +145,10 @@ public class VendorAddProductLocates {
 
     @FindBy(xpath = "(//img[@*='presentation'])[1]")
     public WebElement productLastImage;
+
+
+//buraya kadar zeynep
+
 
     @FindBy(linkText = "Store Manager")
     public WebElement storemanager;
