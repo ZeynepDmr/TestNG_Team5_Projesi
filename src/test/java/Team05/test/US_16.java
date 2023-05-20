@@ -45,10 +45,10 @@ US14 ve US15 deki işlemler yapılabilmeli
 
         //  Kullanici sign in butonuna tiklar
         VendorAddProductLocates vendorAddProductLocates = new VendorAddProductLocates();
-        vendorAddProductLocates.login.click();
+        vendorAddProductLocates.signInLogin.click();
 
         //Kullanici gecerli email ve password girer
-        vendorAddProductLocates.userName.sendKeys(ConfigReader.getProperty("Vendor_Username"), Keys.ENTER);
+        vendorAddProductLocates.email.sendKeys(ConfigReader.getProperty("Vendor_Username"), Keys.ENTER);
         vendorAddProductLocates.password.sendKeys(ConfigReader.getProperty("Vendor_Password"), Keys.ENTER);
 
 

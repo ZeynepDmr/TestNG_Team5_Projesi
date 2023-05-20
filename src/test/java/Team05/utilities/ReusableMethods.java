@@ -112,7 +112,7 @@ public class ReusableMethods {
     }
 
     //Tüm Sayfa ScreenShot
-    public static void tumSayfaResmi() {
+    public static String tumSayfaResmi() {
         String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
         String dosyaYolu = "TestOutput/screenshot/screenshot" + tarih + ".png";
         TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
@@ -121,6 +121,7 @@ public class ReusableMethods {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        return tarih;
     }
 
     //WebElement ScreenShot
@@ -247,4 +248,5 @@ public class ReusableMethods {
         }
 
     }
+
 }
