@@ -1,5 +1,4 @@
 package Team05.test;
-
 import Team05.pages.VendorAddProductLocates;
 import Team05.utilities.ConfigReader;
 import Team05.utilities.Driver;
@@ -21,7 +20,6 @@ import java.security.Key;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-
 public class US_14 {
     VendorAddProductLocates vendorAddProductLocates;
     Actions actions;
@@ -39,32 +37,32 @@ public class US_14 {
         //     Kullanici url'e gider
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
         extentTest.info("Hubcomfy sayfasina gidildi");
-//      Kullanici sigin tiklar
+//     Kullanici sigin tiklar
         vendorAddProductLocates = new VendorAddProductLocates();
         vendorAddProductLocates.login23.click();
         extentTest.info("Sing in butonuna tiklandi");
-//      Kullanici gecerli email ve password girer
+//        Kullanici gecerli email ve password girer
         vendorAddProductLocates.email23.sendKeys(ConfigReader.getProperty("Vendor_Username"));
         vendorAddProductLocates.password23.sendKeys(ConfigReader.getProperty("Vendor_Password"));
         vendorAddProductLocates.signin23.click();
         extentTest.info(" siteye vendor olarak giriş yapildi");
-//      Kullanici my account tiklar
+//        Kullanici my account tiklar
         ReusableMethods.bekle(4);
         ReusableMethods.scrollEnd();
         ReusableMethods.bekle(3);
         Driver.getDriver();
         vendorAddProductLocates.myAccount23.click();
         extentTest.info("my account tiklandi");
-//      Kullanici store manager menusune tiklar
+//        Kullanici store manager menusune tiklar
         ReusableMethods.bekle(2);
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.ARROW_DOWN).perform();
         vendorAddProductLocates.storemanager23.click();
         extentTest.info("store manage tiklandi");
-//      Kullanici store manage yazisini gorur
+//     Kullanici store manage yazisini gorur
         Assert.assertTrue(vendorAddProductLocates.storeManagerText23.isDisplayed());
         extentTest.info("store manage sayfasi goruntulendi");
-//      Kullanici products menusune tiklar
+//        Kullanici products menusune tiklar
         ReusableMethods.bekle(3);
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN).perform();
@@ -81,89 +79,11 @@ public class US_14 {
             System.out.println(w.getText());
         }
         extentTest.info("All Products Types tiklandi");
-
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-
-import java.security.Key;
-import java.util.List;
-
-public class US_14 {
-
-    VendorAddProductLocates vendorAddProductLocates;
-    Actions actions;
-    Select select;
-
-    @BeforeMethod
-    public void setUp() {
-
-//    Kullanici url'e gider
-
-        Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
-
-
-//    Kullanici sig in butonuna tiklar
-        vendorAddProductLocates = new VendorAddProductLocates();
-        vendorAddProductLocates.siginlogin.click();
-
-
-//    Kullanici gecerli email ve password girer
-
-       vendorAddProductLocates.email.sendKeys(ConfigReader.getProperty("username"), Keys.TAB, ConfigReader.getProperty("password"));
-        ReusableMethods.bekle(3);
-        vendorAddProductLocates.sigin.click();
-//    Kullanici my account yazisini goruntuler
-        ReusableMethods.bekle(4);
-        // actions.scrollToElement(vendorAddProductLocates.myAccount).perform();
-        ReusableMethods.scrollEnd();
-        ReusableMethods.bekle(10);
-        Driver.getDriver();
-        vendorAddProductLocates.myAccount.click();
-         ReusableMethods.click(vendorAddProductLocates.myAccount);
-
-        ReusableMethods.bekle(3);
-        Assert.assertTrue(vendorAddProductLocates.myAccount.isDisplayed());
-
-//    Kullanici store manager menusune tiklar
-        ReusableMethods.bekle(3);
-        vendorAddProductLocates.storemanager.click();
-//    Kullanici store manager sayfasina gider
-        Assert.assertTrue(vendorAddProductLocates.storeManagerText.isDisplayed());
-
-
-        //    Kullanici products menusune tiklar
-        ReusableMethods.bekle(2);
-        actions = new Actions(Driver.getDriver());
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        ReusableMethods.bekle(3);
-        ReusableMethods.click(vendorAddProductLocates.products);
-
-        ReusableMethods.bekle(3);
-        Assert.assertTrue(vendorAddProductLocates.productsText.isDisplayed());
-
-
-    }
-
-    @Test
-    public void test01() {
-
-//    Kullanici All Products Types secegine tiklar
-        select = new Select(vendorAddProductLocates.allproducttypes);
-        List<WebElement> selectList = select.getOptions();
-        for (WebElement w : selectList) {
-            System.out.println(w.getText());
-
-        }
-        selectList.forEach(t -> System.out.println(t.getText()));
-
-
-
 //    Kullanici Simple Product, Variable Product, Grouped Product, External - Affiliate Product seçeneklerini görür
         Assert.assertEquals("Simple Product", selectList.get(1).getText());
         Assert.assertEquals("Variable Product", selectList.get(4).getText());
         Assert.assertEquals("Grouped Product", selectList.get(5).getText());
         Assert.assertEquals("External/Affiliate Product", selectList.get(6).getText());
-
         extentTest.info("menu goruntulendi");
         Driver.closeDriver();
         extentTest.pass("Test basarili bir sekilde sonlandirildi");
@@ -224,29 +144,10 @@ public class US_14 {
         ReusableMethods.click(vendorAddProductLocates.image23);
         vendorAddProductLocates.selectFiles23.click();
         extentTest.info("Choose Image tiklandi");
-
-
-
-    }
-
-    @Test
-    public void test02() {
-//        Kullanici add new butonuna tiklar
-        vendorAddProductLocates = new VendorAddProductLocates();
-        vendorAddProductLocates.addNew.click();
-
-
-//        Kullanici Add Product sayfasina gider
-        Assert.assertTrue(vendorAddProductLocates.addProductText.isDisplayed());
-//        Kullanici Choose Image kutucuguna tiklar
-       vendorAddProductLocates.image.click();
-
-
 //        Kullanici select files kısmına  tiklar
         ReusableMethods.bekle(3);
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN).perform();
-
         ReusableMethods.click(vendorAddProductLocates.image23);
         extentTest.info("select files tiklandi");
 //        Kullanici dosyadan resim secer
@@ -511,114 +412,10 @@ public class US_14 {
 //        Kullanici Add Product sayfasina gider
         Assert.assertTrue(vendorAddProductLocates.addProductText23.isDisplayed());
         extentTest.info("Add  Product sayfasi goruntulendi");
-        ReusableMethods.click(vendorAddProductLocates.image);
-
-//        Kullanici dosyadan resim secer
-        //"C:\Users\CASPER\Downloads\books.png"
-        WebElement selectFiles = vendorAddProductLocates.selectFiles;
-       selectFiles.sendKeys(System.getProperty("user.home") + "/Downloads/books.png");
-
-    }
-
-    @Test
-    public void test03() {
-
-//        Kullanici add new butonuna tiklar
-        vendorAddProductLocates = new VendorAddProductLocates();
-        vendorAddProductLocates.addNew.click();
-
-//        Kullanici Add Product sayfasina gider
-        Assert.assertTrue(vendorAddProductLocates.addProductText.isDisplayed());
-
-//        Kullanici product title alanına bir data girer
-        vendorAddProductLocates.productTitle.sendKeys("iphone");
-
-//        Kullanici Short Description alanına bir data girer
-        ReusableMethods.bekle(3);
-        actions = new Actions(Driver.getDriver());
-        actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN).perform();
-        Driver.getDriver().switchTo().frame(0);
-        vendorAddProductLocates.shortDescription.sendKeys("waterproof");
-
-        Driver.getDriver().switchTo().defaultContent();
-//        Kullanici  Description alanına bir data girer
-
-        actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN);
-        Driver.getDriver().switchTo().frame(1);
-        vendorAddProductLocates.Description.sendKeys("quality");
-
-
-    }
-
-    @Test
-    public void test04() {
-//        Kullanici add new butonuna tiklar
-        vendorAddProductLocates = new VendorAddProductLocates();
-        vendorAddProductLocates.addNew.click();
-
-
-//        Kullanici Add Product sayfasina gider
-        Assert.assertTrue(vendorAddProductLocates.addProductText.isDisplayed());
-
-//        Kullanici categories menusunden secim yapar
-        vendorAddProductLocates.categories.click();
-        Driver.closeDriver();
-
-    }
-
-    @Test
-    public void test05() {
-
-//        Kullanici add new butonuna tiklar
-        vendorAddProductLocates = new VendorAddProductLocates();
-        vendorAddProductLocates.addNew.click();
-
-//        Kullanici Add Product sayfasina gider
-       Assert.assertTrue(vendorAddProductLocates.addProductText.isDisplayed());
-
-//        Kullanici  Add new category secegine tiklar
-        actions = new Actions(Driver.getDriver());
-        actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN).perform();
-        vendorAddProductLocates.addNewcategory.click();
-
-
-//        Kullanici category name alanına bir data girer
-        ReusableMethods.bekle(3);
-        actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN).perform();
-        vendorAddProductLocates.Namecategory.sendKeys("Elektronic");
-
-//        Kullanici ADD butonuna tiklar
-        ReusableMethods.bekle(3);
-      / vendorAddProductLocates.categoryAdd.click();
-
-
-//        Kullanici yeni category ekledigini gorur
-        ReusableMethods.bekle(3);
-
-        if (vendorAddProductLocates.categoryVerify.isSelected()) {
-            System.out.println("yeni category eklendi");
-        }
-        System.out.println("yeni category eklenemedi");
-
-        Driver.closeDriver();
-   }
-
-    @Test
-    public void test06() {
-//        Kullanici add new butonuna tiklar
-        vendorAddProductLocates = new VendorAddProductLocates();
-        vendorAddProductLocates.addNew.click();
-
-
-//        Kullanici Add Product sayfasina gider
-        Assert.assertTrue(vendorAddProductLocates.addProductText.isDisplayed());
-
-
 //        Kullanici Product brands  menusunden secim yapar
         ReusableMethods.bekle(3);
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN).perform();
-
         vendorAddProductLocates.productBrands23.click();
         extentTest.info("Product brands secimi yapildi");
         Driver.closeDriver();
@@ -674,24 +471,6 @@ public class US_14 {
 //        Kullanici Add Product sayfasina gider
         Assert.assertTrue(vendorAddProductLocates.addProductText23.isDisplayed());
         extentTest.info("Add  Product sayfasi goruntulendi");
-
-       vendorAddProductLocates.productBrands.click();
-
-        Driver.closeDriver();
-
-    }
-
-    @Test
-    public void test07() {
-//        Kullanici add new butonuna tiklar
-        vendorAddProductLocates = new VendorAddProductLocates();
-        vendorAddProductLocates.addNew.click();
-
-
-//        Kullanici Add Product sayfasina gider
-        Assert.assertTrue(vendorAddProductLocates.addProductText.isDisplayed());
-
-
 //        Kullanici Add new Product brands secegine tiklar
         ReusableMethods.bekle(3);
         actions = new Actions(Driver.getDriver());
@@ -767,44 +546,10 @@ public class US_14 {
 //        Kullanici Add Product sayfasina gider
         Assert.assertTrue(vendorAddProductLocates.addProductText23.isDisplayed());
         extentTest.info("Add Product sayfasi goruntulendi");
-
-       vendorAddProductLocates.productBrands.click();
-
-//        Kullanici Product brands name alanına bir data girer
-        ReusableMethods.bekle(3);
-        actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN);
-      vendorAddProductLocates.productBrandsName.sendKeys("casper");
-        //        Kullanici ADD butonuna tiklar
-
-        ReusableMethods.bekle(3);
-        vendorAddProductLocates.productAdd.click();
-
-        //        Kullanici yeni product brands ekledigini gorur
-        ReusableMethods.bekle(3);
-        if (vendorAddProductLocates.productBrandsVerify.isSelected()) {
-            System.out.println("Yeni product brands eklendi");
-        }
-        System.out.println("Yeni product brands eklenemedi");
-
-
-        Driver.closeDriver();
-
-    }
-
-    @Test
-    public void test08() {
-//        Kullanici add new butonuna tiklar
-        vendorAddProductLocates = new VendorAddProductLocates();
-        vendorAddProductLocates.addNew.click();
-
-//        Kullanici Add Product sayfasina gider
-        Assert.assertTrue(vendorAddProductLocates.addProductText.isDisplayed());
-
 //        Kullanici Choose from the most used tags tiklar
         ReusableMethods.bekle(3);
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN, Keys.PAGE_DOWN);
-
         vendorAddProductLocates.Choosetags23.click();
         extentTest.info("Choose from the most used tags tiklandi");
 //        Kullanici seceneklerden ekleme yapar
@@ -865,25 +610,6 @@ public class US_14 {
 //      Kullanici Add Product sayfasina gider
         Assert.assertTrue(vendorAddProductLocates.addProductText23.isDisplayed());
         extentTest.info("Add product  sayfasi goruntulendi");
-       vendorAddProductLocates.Choosetags.click();
-
-//        Kullanici seceneklerden ekleme yapar
-        ReusableMethods.bekle(3);
-        actions.sendKeys(Keys.PAGE_DOWN);
-        vendorAddProductLocates.secimChooseTags.click();
-          Driver.getDriver();
-    }
-
-    @Test
-    public void test09() {
-//              Kullanici add new butonuna tiklar
-        vendorAddProductLocates = new VendorAddProductLocates();
-        vendorAddProductLocates.addNew.click();
-
-//      Kullanici Add Product sayfasina gider
-        Assert.assertTrue(vendorAddProductLocates.addProductText.isDisplayed());
-
-
 //        Kullanici Catalog visibility secenegini gorur
         ReusableMethods.bekle(3);
         actions = new Actions(Driver.getDriver());
@@ -891,10 +617,6 @@ public class US_14 {
         ReusableMethods.bekle(3);
         Assert.assertTrue(vendorAddProductLocates.catalogVisibility23.isDisplayed());
         extentTest.info("Catalog visibility goruntulendi");
-        Assert.assertTrue(vendorAddProductLocates.catalogVisibility.isDisplayed());
-
-
-
 //        Kullanici shop and search result secenegine tiklar
         ReusableMethods.bekle(3);
         actions = new Actions(Driver.getDriver());
@@ -907,27 +629,13 @@ public class US_14 {
         selectList.forEach(t -> System.out.println(t.getText()));
         extentTest.info("shop and search result  tiklandi");
 //        Kullanici Shop and search results, Shop only, Search results only, Hidden seceneklerinden birini secer
-        select = new Select(vendorAddProductLocates.shopResult);
-        List<WebElement> selectList = select.getOptions();
-        for (WebElement w : selectList) {
-            System.out.println(w.getText());
-
-        }
-        selectList.forEach(t -> System.out.println(t.getText()));
-
-
-//        Kullanici Shop and search results, Shop only, Search results only, Hidden seceneklerinden birini secer
-
-
         Assert.assertEquals("Shop and search results", selectList.get(0).getText());
         Assert.assertEquals("Shop only", selectList.get(1).getText());
         Assert.assertEquals("Search results only", selectList.get(2).getText());
         Assert.assertEquals("Hidden", selectList.get(3).getText());
-
         extentTest.info("hop and search results, Shop only, Search results only, Hidden seceneklerinden biri secildi");
         Driver.closeDriver();
         extentTest.pass("Test basarili bir sekilde sonlandirildi");
         extentReports.flush();
-
     }
 }
