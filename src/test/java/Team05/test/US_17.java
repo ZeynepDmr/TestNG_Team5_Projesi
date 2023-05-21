@@ -135,8 +135,9 @@ public class US_17 {
         ReusableMethods.bekle(2);
         vendorAddProductLocates.mediaLibrary.click();
         vendorAddProductLocates.siyahAyakkabi1.click();
+        ReusableMethods.bekle(2);
         vendorAddProductLocates.imageSelectButton.click();
-
+        ReusableMethods.bekle(2);
         extentTest.pass("Ürüne resim eklenir");
         vendorAddProductLocates.categoriesCheckBox.click();
         actions.sendKeys(Keys.PAGE_DOWN, Keys.PAGE_DOWN, Keys.PAGE_DOWN);
