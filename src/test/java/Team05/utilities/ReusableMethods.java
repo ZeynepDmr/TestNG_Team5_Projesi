@@ -1,5 +1,6 @@
 package Team05.utilities;
 
+import Team05.pages.VendorAddProductLocates;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
@@ -10,6 +11,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -17,6 +21,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
+
 
 public class ReusableMethods {
 
@@ -138,10 +144,10 @@ public class ReusableMethods {
     //ExtentReport
     public static void extentReport() {
         extentReports = new ExtentReports();
-        String tarih = new SimpleDateFormat("HH:mm_ddMMyyyy").format(new Date());
+        String tarih = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
         String className = Thread.currentThread().getStackTrace()[2].getClassName();
         className = className.replace("test.", "");
-        String dosyaYolu = "TestOutput/reports/" + className + "_" + tarih + ".html";
+        String dosyaYolu = "TestOutput/reports/" + className + "_"+tarih+ ".html";
         extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
         extentReports.attachReporter(extentHtmlReporter);
 
@@ -239,7 +245,7 @@ public class ReusableMethods {
         } else if (faker2 == "coupon") {
             String fakerCoupon = faker.code().asin();
             return fakerCoupon;
-        } else if (faker2=="biography"){
+        } else if (faker2 == "biography") {
 
             String biography;
             String name = faker.name().fullName();
@@ -248,23 +254,23 @@ public class ReusableMethods {
             String country = faker.country().name();
             String quote = faker.shakespeare().hamletQuote();
 
-            biography = name+ " "+ job +"olarak" + company +"'da çalışıyor. "+ country+"'da yaşıyor ve şöyle diyor:"+ quote;
+            biography = name + " " + job + "olarak" + company + "'da çalışıyor. " + country + "'da yaşıyor ve şöyle diyor:" + quote;
 
 
             return biography;
 
-        } else if (faker2=="company") {
+        } else if (faker2 == "company") {
 
             String fakerCompany = faker.company().name();
-            return  fakerCompany;
-        } else if (faker2=="street") {
+            return fakerCompany;
+        } else if (faker2 == "street") {
 
             String fakerStreet = faker.address().streetPrefix();
             return fakerStreet;
-        } else if (faker2=="towncity") {
+        } else if (faker2 == "towncity") {
             String fakerTownCity = faker.address().cityName();
             return fakerTownCity;
-        } else if (faker2=="zipcode") {
+        } else if (faker2 == "zipcode") {
 
             String fakerZipcode = faker.address().zipCodeByState("ZIP CODE");
             return fakerZipcode;
@@ -283,7 +289,7 @@ public class ReusableMethods {
         String callingClassName = Thread.currentThread().getStackTrace()[2].getClassName();
         callingClassName = callingClassName.substring(callingClassName.lastIndexOf('.') + 1);
         String tarih = new SimpleDateFormat("HH:mm_ddMMyyyy").format(new Date());
-        String dosyaYolu = "TestOutput/screenshot/"+ callingClassName + "_" + testCaseName + "_" + tarih + ".png";
+        String dosyaYolu = "TestOutput/screenshot/" + callingClassName + "_" + testCaseName + "_" + tarih + ".png";
         TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
         try {
             FileUtils.copyFile(ts.getScreenshotAs(OutputType.FILE), new File(dosyaYolu));
@@ -291,4 +297,57 @@ public class ReusableMethods {
             throw new RuntimeException(e);
         }
     }
-}
+
+    public static void sendKeysColor(String sendColor) {
+
+        Random random = new Random();
+        int randomSayi = random.nextInt();
+        VendorAddProductLocates vendorAddProductLocates = new VendorAddProductLocates();
+        Driver.getDriver().switchTo().alert().sendKeys(sendColor + randomSayi);
+
+    }
+
+    public static void sendKeysSize(String sendSize) {
+
+        Random random = new Random();
+        int randomSayi = random.nextInt();
+        VendorAddProductLocates vendorAddProductLocates = new VendorAddProductLocates();
+        Driver.getDriver().switchTo().alert().sendKeys(sendSize + randomSayi);
+
+    }
+
+
+    public static void uploadFilePath(String filePath) {
+        try {
+            ReusableMethods.bekle(3);
+//            Dosyayi bulmak icin kullanilir
+            StringSelection stringSelection = new StringSelection(filePath);
+            Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+//            ROBOT CLASS MASAUSTU UYGULAMARI ILE ILETISIME GECMEK ICIN KULLANILIT
+            Robot robot = new Robot();
+//          CONTROL TUSUNA BAS
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            ReusableMethods.bekle(3);
+//            V TUSUNA BAS
+            robot.keyPress(KeyEvent.VK_V);
+            ReusableMethods.bekle(3);
+            //releasing ctrl+v
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+            ReusableMethods.bekle(3);
+            robot.keyRelease(KeyEvent.VK_V);
+            ReusableMethods.bekle(3);
+            System.out.println("YAPISTIRMA ISLEMI : PASSED");
+            //pressing enter
+            ReusableMethods.bekle(3);
+            robot.keyPress(KeyEvent.VK_ENTER);
+            ReusableMethods.bekle(3);
+            //releasing enter
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            ReusableMethods.bekle(3);
+            System.out.println("DOSYA YUKLENDI.");
+        } catch (Exception e) {
+
+        }
+        }
+    }
+

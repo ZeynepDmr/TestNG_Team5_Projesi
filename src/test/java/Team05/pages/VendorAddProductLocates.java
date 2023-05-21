@@ -35,14 +35,14 @@ public class VendorAddProductLocates {
     public WebElement salePrice;
 
     //color secimi(zeynep)
-    @FindBy(css = "input[id='attributes_is_active_1']")
+    @FindBy(css = "div[class='multi_input_block wcfm_attributes_blocks wcfm_defined_attributes wcfm_attributes_block_pa_color ui-sortable-handle']")
     public WebElement color;
 
     @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]")
     public WebElement colorBox;
 
 
-    @FindBy(css = "input[id='attributes_is_active_2']")
+    @FindBy(css = "div[class='multi_input_block wcfm_attributes_blocks wcfm_defined_attributes wcfm_attributes_block_pa_size ui-sortable-handle']")
     public WebElement size;
 
     @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]")
@@ -197,35 +197,29 @@ public class VendorAddProductLocates {
 
 
 
-
-
-
-
-
-
-
-
-//Buraya kadar Tuba
-
-    @FindBy(xpath = "//*[text()='Sign In']")
+    //Buraya kadar Tuba
+    @FindBy(css = "div[class='account']")
     public WebElement login;
+    @FindBy(css = "div[class='account']")
+    public WebElement login23;
     @FindBy(xpath = "//*[@id='username']")
     public WebElement userName;
+    @FindBy(xpath = "//*[@id='username']")
+    public WebElement userName23;
 
     @FindBy(xpath = "//*[@id='password']")
     public WebElement password;
+    @FindBy(xpath = "//*[@id='password']")
+    public WebElement password23;
 
     @FindBy(xpath = "(//*[text()='Sign In'])[2]")
-    public WebElement signin;
-
-
+    public WebElement signin23;
 
     @FindBy(linkText = "My Account")
     public static WebElement myAccount;
 
-    @FindBy(linkText = "Store Manager")
+    @FindBy(css = "li[class='woocommerce-MyAccount-navigation-link woocommerce-MyAccount-navigation-link--wcfm-store-manager']")
     public static WebElement storeManager;
-
 
     @FindBy(xpath = "//*[@class='wcfm_menu_items wcfm_menu_wcfm-products']")
     public WebElement products;
@@ -236,20 +230,15 @@ public class VendorAddProductLocates {
     @FindBy(css = "input[id='pro_title']")
     public WebElement productTitle;
 
-
     @FindBy(css = "input[id='wcfm_products_simple_draft_button']")
     public WebElement draft;
-
 
     //variableProduct secimi(zeynep)
     @FindBy(xpath = "//*[@id='product_type']")
     public static WebElement variableProduct;
 
-
     @FindBy(xpath = "//img[@id='featured_img_display']")
     public WebElement imageBuyuk;
-
-
 
     @FindBy(xpath = "(//input[@*='submit'])[3]")
     public WebElement submitButton;
@@ -260,25 +249,6 @@ public class VendorAddProductLocates {
     @FindBy(xpath = "(//img[@*='presentation'])[1]")
     public WebElement productLastImage;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @FindBy(css = "div[class='account']")
     public WebElement siginlogin;
 
@@ -286,166 +256,149 @@ public class VendorAddProductLocates {
     public WebElement siginlogin1;
 
     @FindBy(xpath = "//*[@id='username']")
-    public WebElement email;
+    public WebElement email23;
 
 //    @FindBy(xpath = "//*[@id='password']")
 //    public WebElement password;
-
     @FindBy(xpath = "(//*[@type='submit'])[1]")
     public WebElement sigin;
-//    @FindBy(xpath= "//li[@id='menu-item-1079']")
-//    public WebElement myAccount;
-
-    @FindBy(xpath = "(//[h2])[1]")
+   @FindBy(css = "li[id='menu-item-1079']")
+    public WebElement myAccount23;
+    @FindBy(xpath = "(//*[text()='My Account'])[2]")
     public WebElement myAccountText;
 
     @FindBy(linkText = "Store Manager")
-    public WebElement storemanager;
+    public WebElement storemanager23;
 
     @FindBy(xpath = "(//h2)[1]")
-    public WebElement storeManagerText;
+    public WebElement storeManagerText23;
 
-//    @FindBy(xpath = "(//*[@class='wcfm_menu_item '])[3]")
-//    public WebElement products;
-
+   @FindBy(xpath = "(//*[@class='wcfm_menu_item '])[3]")
+    public WebElement products23;
     @FindBy(xpath = "//*[text()='Products']")
-    public WebElement productsText;
+    public WebElement productsText23;
     @FindBy(xpath = "(//*[h2])[2]")
-    public WebElement addProductText;
-
-//    @FindBy(xpath = "//*[@id='add_new_product_dashboard']")
-//    public WebElement addNew;
-
+    public WebElement addProductText23;
+  @FindBy(xpath = "//*[@id='add_new_product_dashboard']")
+  public WebElement addNew23;
     @FindBy(xpath = "//*[@class='wcfm-tabWrap']")
-    public WebElement menu;
-
+    public WebElement menu23;
     @FindBy(xpath = "//*[@id='dropdown_product_type']")
-    public WebElement allproducttypes;
-
+    public WebElement allproducttypes23;
     @FindBy(xpath = "//*[@id='featured_img_display']")
-    public WebElement image;
+    public WebElement image23;
     @FindBy(xpath = "//*[@id='__wp-uploader-id-1']")
-    public WebElement selectFiles;
-
-//    @FindBy(xpath = "//*[@id='pro_title']")
-//    public WebElement productTitle;
-
+    public WebElement selectFiles23;
+    @FindBy(xpath = "(//*[text()='Select'])[2]")
+    public WebElement select23;
+    @FindBy(xpath = "//*[@id='pro_title']")
+   public WebElement productTitle23;
     @FindBy(xpath = "body[data-id='excerpt']")
-    public WebElement shortDescription;
+    public WebElement shortDescription23;
     @FindBy(css = "body[data-id='description']")
-    public WebElement Description;
+    public WebElement Description23;
 
     @FindBy(xpath = "(//*[@name='product_cats[]'])[2]")
     public WebElement categories;
 
-    //     @FindBy(xpath = "(//*[@class='wcfm-checkbox checklist_type_product_cat '])[1]")
-//      public WebElement categories;
+      @FindBy(xpath = "(//*[@class='wcfm-checkbox checklist_type_product_cat '])[1]")
+     public WebElement categories23;
     @FindBy(xpath = "//*[text()='+Add new category']")
-    public WebElement addNewcategory;
+    public WebElement addNewcategory23;
     @FindBy(css = "input[@id='wcfm_new_cat']")
-    public WebElement Namecategory;
+    public WebElement Namecategory23;
 
-    //    @FindBy(xpath = "(//*[text()='Add'])[1]")
-//     public WebElement categoryAdd;
+       @FindBy(xpath = "(//*[text()='Add'])[1]")
+    public WebElement categoryAdd23;
     @FindBy(xpath = "(//*[@class='button wcfm_add_category_bt wcfm_add_taxonomy_bt'])[1]")
     public WebElement categoryAdd;
 
     @FindBy(css = "li[class='product_cats_checklist_item checklist_item_707']")
-    public WebElement categoryVerify;
+    public WebElement categoryVerify23;
 
     @FindBy(xpath = "(//*[@class='wcfm-checkbox checklist_type_product_brand '])[3]")
-    public WebElement productBrands;
+    public WebElement productBrands23;
 
-    //    @FindBy(xpath = "(//*[@name='product_custom_taxonomies[product_brand][]'])[2]")
-//     public WebElement productBrands1;
     @FindBy(xpath = "//*[text()='+Add new Product brands']")
-    public WebElement addNewProductBrands;
+    public WebElement addNewProductBrands23;
 
     @FindBy(css = "input[id='wcfm_new_product_brand']")
-    public WebElement productBrandsName;
+    public WebElement productBrandsName23;
 
     @FindBy(xpath = "(//*[text()='Add'])[2]")
-    public WebElement productAdd;
+    public WebElement productAdd23;
     @FindBy(css = "li[class='product_cats_checklist_item checklist_item_712']")
-    public WebElement productBrandsVerify;
+    public WebElement productBrandsVerify23;
     @FindBy(css = "p[class='description wcfm_full_ele wcfm_side_tag_cloud wcfm_fetch_tag_cloud']")
-    public WebElement Choosetags;
+    public WebElement Choosetags23;
 
     @FindBy(xpath = "(//*[@role='button'])[36]")
-    public WebElement secimChooseTags;
+    public WebElement secimChooseTags23;
 
     @FindBy(css = "p[class='catalog_visibility wcfm_title  wcfm_full_ele catalog_visibility_ele']")
-    public WebElement catalogVisibility;
+    public WebElement catalogVisibility23;
     @FindBy(xpath = "//*[@id='catalog_visibility']")
-    public WebElement shopResult;
-
+    public WebElement shopResult23;
     @FindBy(css = "div[id='wcfm_products_manage_form_inventory_head']")
-    public WebElement inventory;
-
+    public WebElement inventory23;
     @FindBy(css = "input[id='sku']")
-    public  WebElement sku;
-
+    public  WebElement sku23;
     @FindBy(css = "input[id='manage_stock']")
-    public  WebElement manageStock;
+    public  WebElement manageStock23;
     @FindBy(css = "input[id='stock_qty']")
-    public  WebElement stockqty;
-
+    public  WebElement stockqty23;
     @FindBy(css = "select[id='stock_status']")
-    public  WebElement stockStatus;
+    public  WebElement stockStatus23;
     @FindBy(css = "input[id='sold_individually']")
-    public  WebElement soldIndividually;
+    public  WebElement soldIndividually23;
     @FindBy(css = "div[id='wcfm_products_manage_form_shipping_head']")
-    public  WebElement shipping;
+    public  WebElement shipping23;
     @FindBy(css = "input[id='weight']")
-    public  WebElement weight;
+    public  WebElement weight23;
     @FindBy(css = "input[id='length']")
-    public  WebElement lenghtDimensions;
-
-    //@FindBy(css = "input[id='width']")
-//public  WebElement widthDimensions;
-//@FindBy(css = "input[id='height']")
-//public  WebElement heightDimensions;
+    public  WebElement lenghtDimensions23;
+    @FindBy(css = "input[id='width']")
+    public  WebElement widthDimensions23;
+    @FindBy(css = "input[id='height']")
+    public  WebElement heightDimensions23;
     @FindBy(css = "select[id='shipping_class']")
-    public  WebElement shippingClass;
+    public  WebElement shippingClass23;
     @FindBy(css = "select[id='_wcfmmp_processing_time']")
-    public  WebElement processingTime;
-//    @FindBy(css = "div[id='wcfm_products_manage_form_attribute_head']")
-//    public  WebElement attributes;
-//    @FindBy(css = "input[id='attributes_is_active_1']")
-//    public  WebElement color;
-//    @FindBy(css = "input[id='attributes_is_active_2']")
-//    public  WebElement size;
+    public  WebElement processingTime23;
+    @FindBy(css = "div[id='wcfm_products_manage_form_attribute_head']")
+    public  WebElement attributes23;
+    @FindBy(css = "input[id='attributes_is_active_1']")
+    public  WebElement color23;
+    @FindBy(css = "input[id='attributes_is_active_2']")
+    public  WebElement size23;
     @FindBy(css = "div[id='wcfm_products_manage_form_linked_head']")
-    public  WebElement linked;
+    public  WebElement linked23;
     @FindBy(css = "select[id='upsell_ids']")
-    public  WebElement upsell;
+    public  WebElement upsell23;
     @FindBy(css = "select[id='crosssell_ids']")
-    public  WebElement crosssels;
+    public  WebElement crosssels23;
     @FindBy(css = "div[id='wcfm_products_manage_form_yoast_head']")
-    public  WebElement seo;
+    public  WebElement seo23;
     @FindBy(css = "input[id='yoast_wpseo_focuskw_text_input']")
-    public  WebElement enterfocuskeyword;
+    public  WebElement enterfocuskeyword23;
     @FindBy(css = "textarea[id='yoast_wpseo_metadesc']")
-    public  WebElement metadescription;
+    public  WebElement metadescription23;
     @FindBy(css = "div[id='wcfm_products_manage_form_toptan-urun-gosterme-ayarlari_head']")
-    public WebElement urunAyarlari;
-    //@FindBy(css = "select[id='piecetype']")
-    //public  WebElement select1;
+    public WebElement urunAyarlari23;
     @FindBy(xpath = "//*[@id='piecetype']")
-    public  WebElement pieceType;
+    public  WebElement pieceType23;
     @FindBy(css = "input[id='unitpercart']")
-    public  WebElement unitsPerPiece;
-
+    public  WebElement unitsPerPiece23;
     @FindBy(css = "input[id='minorderqtytr']")
-    public  WebElement minOrderQuantity;
+    public  WebElement minOrderQuantity23;
     @FindBy(css = "div[id='wcfm_products_manage_form_advanced_head']")
-    public  WebElement advanced;
+    public  WebElement advanced23;
     @FindBy(css = "input[id='enable_reviews']")
-    public  WebElement enablereviews;
+    public  WebElement enablereviews23;
     @FindBy(css = "input[id='menu_order']")
-    public  WebElement menuOrder;
+    public  WebElement menuOrder23;
     @FindBy(css = "textarea[id='purchase_note']")
-    public  WebElement purchaseNote;
+    public  WebElement purchaseNote23;
 
 
 
