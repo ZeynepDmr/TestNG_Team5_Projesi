@@ -1,9 +1,6 @@
 package Team05.test;
 
 
-public class US_08 {
-
-
 import Team05.pages.ProductCompareLocates;
 import Team05.pages.WishListLocates;
 import Team05.utilities.ConfigReader;
@@ -16,6 +13,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 import static org.testng.Assert.assertTrue;
+
 
 public class US_08 extends ReusableMethods {
 
