@@ -11,9 +11,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.awt.*;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -144,10 +141,10 @@ public class ReusableMethods {
     //ExtentReport
     public static void extentReport() {
         extentReports = new ExtentReports();
-        String tarih = new SimpleDateFormat("dd_mm_yyyy__hh.mm.ss").format(new Date());
+        String tarih = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
         String className = Thread.currentThread().getStackTrace()[2].getClassName();
         className = className.replace("test.", "");
-        String dosyaYolu = "TestOutput/reports/" + className + tarih + "_"+ ".html";
+        String dosyaYolu = "TestOutput/reports/" + className + "_" + tarih + ".html";
         extentHtmlReporter = new ExtentHtmlReporter(dosyaYolu);
         extentReports.attachReporter(extentHtmlReporter);
 
@@ -245,7 +242,7 @@ public class ReusableMethods {
         } else if (faker2 == "coupon") {
             String fakerCoupon = faker.code().asin();
             return fakerCoupon;
-        } else if (faker2 == "biography") {
+        } else if (faker2=="biography"){
 
             String biography;
             String name = faker.name().fullName();
@@ -254,23 +251,23 @@ public class ReusableMethods {
             String country = faker.country().name();
             String quote = faker.shakespeare().hamletQuote();
 
-            biography = name + " " + job + "olarak" + company + "'da çalışıyor. " + country + "'da yaşıyor ve şöyle diyor:" + quote;
+            biography = name+ " "+ job +"olarak" + company +"'da çalışıyor. "+ country+"'da yaşıyor ve şöyle diyor:"+ quote;
 
 
             return biography;
 
-        } else if (faker2 == "company") {
+        } else if (faker2=="company") {
 
             String fakerCompany = faker.company().name();
-            return fakerCompany;
-        } else if (faker2 == "street") {
+            return  fakerCompany;
+        } else if (faker2=="street") {
 
             String fakerStreet = faker.address().streetPrefix();
             return fakerStreet;
-        } else if (faker2 == "towncity") {
+        } else if (faker2=="towncity") {
             String fakerTownCity = faker.address().cityName();
             return fakerTownCity;
-        } else if (faker2 == "zipcode") {
+        } else if (faker2=="zipcode") {
 
             String fakerZipcode = faker.address().zipCodeByState("ZIP CODE");
             return fakerZipcode;
@@ -289,7 +286,7 @@ public class ReusableMethods {
         String callingClassName = Thread.currentThread().getStackTrace()[2].getClassName();
         callingClassName = callingClassName.substring(callingClassName.lastIndexOf('.') + 1);
         String tarih = new SimpleDateFormat("HH:mm_ddMMyyyy").format(new Date());
-        String dosyaYolu = "TestOutput/screenshot/" + callingClassName + "_" + testCaseName + "_" + tarih + ".png";
+        String dosyaYolu = "TestOutput/screenshot/"+ callingClassName + "_" + testCaseName + "_" + tarih + ".png";
         TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
         try {
             FileUtils.copyFile(ts.getScreenshotAs(OutputType.FILE), new File(dosyaYolu));
@@ -298,9 +295,23 @@ public class ReusableMethods {
         }
     }
 
+    public static void sendKeysColor(String  sendColor){
 
+        Random random = new Random();
+        int randomSayi= random.nextInt();
+        VendorAddProductLocates vendorAddProductLocates =new VendorAddProductLocates();
+        Driver.getDriver().switchTo().alert().sendKeys(sendColor+randomSayi);
+
+    }
+
+    public static void sendKeysSize(String sendSize ){
+
+        Random random = new Random();
+        int randomSayi= random.nextInt();
+        VendorAddProductLocates vendorAddProductLocates=new VendorAddProductLocates();
+        Driver.getDriver().switchTo().alert().sendKeys(sendSize+randomSayi);
 
     }
 
 
-
+}
