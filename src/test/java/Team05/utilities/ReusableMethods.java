@@ -1,5 +1,6 @@
 package Team05.utilities;
 
+import Team05.pages.VendorAddProductLocates;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
@@ -17,6 +18,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
+
 
 public class ReusableMethods {
 
@@ -177,7 +180,7 @@ public class ReusableMethods {
     }
 
     //JS Scroll
-    public static void scroll(int element) {
+    public static void scroll(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
@@ -292,4 +295,24 @@ public class ReusableMethods {
             throw new RuntimeException(e);
         }
     }
+
+    public static void sendKeysColor(String  sendColor){
+
+        Random random = new Random();
+        int randomSayi= random.nextInt();
+        VendorAddProductLocates vendorAddProductLocates =new VendorAddProductLocates();
+        Driver.getDriver().switchTo().alert().sendKeys(sendColor+randomSayi);
+
+    }
+
+    public static void sendKeysSize(String sendSize ){
+
+        Random random = new Random();
+        int randomSayi= random.nextInt();
+        VendorAddProductLocates vendorAddProductLocates=new VendorAddProductLocates();
+        Driver.getDriver().switchTo().alert().sendKeys(sendSize+randomSayi);
+
+    }
+
+
 }

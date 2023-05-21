@@ -63,8 +63,10 @@ public class US_02  extends ReusableMethods {
             extentTest.info("Hubcomfy a gidildi.");
             CustomerRegisterLocates customerRegesterPage = new CustomerRegisterLocates();
 
+
             customerRegesterPage.Register_Button.click();
             extentTest.info("Register butonuna tıklandı.");
+
             bekle(3);
             customerRegesterPage.User_Name_Input.sendKeys(ConfigReader.getProperty("Customer_Username"));
             extentTest.info("kullanıcı adı properties ile  yazıldı.");

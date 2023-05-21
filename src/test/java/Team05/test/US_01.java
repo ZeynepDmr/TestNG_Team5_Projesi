@@ -27,8 +27,10 @@ public class US_01 extends ReusableMethods {
 
 
 
+
         customerRegesterPage.Register_Button.click();
         extentTest.info("Register butonuna tıklanır olduğu görüldü.");
+
         bekle(3);
 
         Assert.assertTrue(customerRegesterPage.User_Name_Input.isEnabled());
@@ -49,12 +51,25 @@ public class US_01 extends ReusableMethods {
         customerRegesterPage.Register_Policy_Check.click();
         extentTest.info("register alanının tıklanır olduğu görüldü.");
         bekle(5);
+
+        Assert.assertTrue(customerRegesterPage.Singup_Button.isEnabled());
         customerRegesterPage.Singup_Button.click();
         extentTest.info("Sing Up butonunun tıklanır olduğu görüldü.");
         bekle(3);
+
         Driver.closeDriver();
         extentTest.pass("US_1 (TC_1) sonlandı.");
         extentReports.flush();
+
+        Assert.assertTrue(customerRegesterPage.Profile.isEnabled());
+        customerRegesterPage.Profile.click();
+       bekle(3);
+
+        customerRegesterPage.Sing_Out.click();
+       bekle(3);
+       Driver.closeDriver();
+
+
     }
 
     @Test
@@ -68,6 +83,7 @@ public class US_01 extends ReusableMethods {
 
         customerRegesterPage.Register_Button.click();
         extentTest.info("Register butonuna tıklandı.");
+
         bekle(3);
 
         customerRegesterPage.E_Mail_Input.sendKeys(fakerInput("email"));
@@ -132,6 +148,7 @@ public class US_01 extends ReusableMethods {
         extentTest.info("Hubcomfy a gidildi");
         CustomerRegisterLocates customerRegesterPage = new CustomerRegisterLocates();
 
+
         customerRegesterPage.Register_Button.click();
 
         bekle(3);
@@ -166,8 +183,10 @@ public class US_01 extends ReusableMethods {
         extentTest.info("Hubcomfy a gidildi");
         CustomerRegisterLocates customerRegesterPage = new CustomerRegisterLocates();
 
+
         customerRegesterPage.Register_Button.click();
         extentTest.info("Register butonuna tıklandı.");
+
         bekle(3);
         customerRegesterPage.User_Name_Input.sendKeys(fakerInput("username"));
         extentTest.info("kullanıcı adı faker methodu ile yazıldı.");
@@ -235,6 +254,7 @@ public class US_01 extends ReusableMethods {
 
         customerRegesterPage.Register_Button.click();
         extentTest.info("Register butonuna tıklandı.");
+
         bekle(3);
         customerRegesterPage.User_Name_Input.sendKeys(fakerInput("username"));
         extentTest.info("kullanıcı adı faker methodu ile yazıldı.");

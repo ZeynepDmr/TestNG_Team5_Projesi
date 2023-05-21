@@ -12,7 +12,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-public class US_20 {
+public class US_20 extends ReusableMethods {
+
     /*
         Kullanıcı ana sayfaya gider
         Kullanıcı Sign in butonunu tıklar
@@ -33,9 +34,11 @@ public class US_20 {
 
     @Test
     public void testCase01() {
+        extentReport();
+        extentTest=extentReports.createTest("ExtentTest","Test Raporu");
     //    Kullanıcı ana sayfaya gider
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
-
+        extentTest.info("Hubcomfy sitesine gidildi");
     //    Kullanıcı Sign in butonunu tıklar
         VendorShoppingLocates vendorShoppingLocates = new VendorShoppingLocates();
         vendorShoppingLocates.signIn.click();
@@ -69,7 +72,8 @@ public class US_20 {
         //    Kullanıcı açılan sayfada Description kısmına veri yazabilmeli
         ReusableMethods.bekle(3);
         action.sendKeys(Keys.PAGE_DOWN).perform();
-        vendorCouponsLocates.codeClick.sendKeys("000101",Keys.TAB,"Hediye");
+
+        vendorCouponsLocates.codeClick.sendKeys(fakerInput("Coupon"),Keys.TAB,"Hediye");
 
     //    Kullanıcı açılan sayfada Discount Type kısmına Percentage discount veya Fixed Product Discount olarak seçilebilmeli
         ReusableMethods.bekle(3);
@@ -96,11 +100,16 @@ public class US_20 {
         vendorCouponsLocates.showOnStore.click();
         ReusableMethods.bekle(1);
         vendorCouponsLocates.freeShipping.click();
+        extentTest.pass("test sonlandırıldı");
+        extentReports.flush();
         Driver.closeDriver();
+
     }
 
     @Test
     public void testCase2() {
+        extentReport();
+        extentTest=extentReports.createTest("ExtentTest","Test Raporu");
         /*
         Kullanıcı ana sayfaya gider
         Kullanıcı Sign in butonunu tıklar
@@ -112,7 +121,7 @@ public class US_20 {
 
     //    Kullanıcı ana sayfaya gider
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
-
+        extentTest.info("Hubcomfy sitesine gidildi");
     //    Kullanıcı Sign in butonunu tıklar
         VendorShoppingLocates vendorShoppingLocates = new VendorShoppingLocates();
         vendorShoppingLocates.signIn.click();
@@ -140,7 +149,7 @@ public class US_20 {
         vendorCouponsLocates.addNewClick.click();
         ReusableMethods.bekle(3);
         action.sendKeys(Keys.PAGE_DOWN).perform();
-        vendorCouponsLocates.codeClick.sendKeys("000101",Keys.TAB,"Hediye");
+        vendorCouponsLocates.codeClick.sendKeys(fakerInput("Coupon"),Keys.TAB,"Hediye");
         WebElement discountType = Driver.getDriver().findElement(By.xpath("//select[@id='discount_type']"));
         Select select = new Select(discountType);
         select.selectByVisibleText("Fixed Product Discount");
@@ -152,6 +161,8 @@ public class US_20 {
         vendorCouponsLocates.freeShipping.click();
         action.sendKeys(Keys.PAGE_DOWN,Keys.PAGE_DOWN).perform();
         vendorCouponsLocates.submitClick.click();
+        extentTest.pass("test sonlandırıldı");
+        extentReports.flush();
         Driver.closeDriver();
 
 
