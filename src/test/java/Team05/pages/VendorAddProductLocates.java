@@ -298,7 +298,6 @@ public class VendorAddProductLocates {
     public WebElement selectFile;
 
 
-
     @FindBy(xpath = "//*[@id='password']")
     public WebElement password;
     @FindBy(xpath = "//*[@id='password']")
@@ -317,7 +316,6 @@ public class VendorAddProductLocates {
     public WebElement addNew0;
 
 
-
     // Product Title
     @FindBy(xpath = "//*[@id='pro_title']")
     public WebElement productTitle0;
@@ -325,6 +323,7 @@ public class VendorAddProductLocates {
     // URL
     @FindBy(xpath = "//*[@id='product_url']")
     public WebElement URL0;
+}
 
 
 
