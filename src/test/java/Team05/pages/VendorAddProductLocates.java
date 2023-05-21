@@ -321,9 +321,6 @@ public class VendorAddProductLocates {
     @FindBy(xpath = "//h2[1]")
     public WebElement storeManagerText0;
 
-    @FindBy(xpath = "//*[text()='Downloads'])[1]")
-    public WebElement downloads;
-
     @FindBy(linkText = "Store Manager")
     public WebElement storemanager;
 
