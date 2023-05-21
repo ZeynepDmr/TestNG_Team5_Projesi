@@ -330,20 +330,11 @@ public class VendorAddProductLocates {
     @FindBy(xpath = "//*[text()='Sign In']")
     public WebElement signInLogin0;
 
-    @FindBy(xpath = "//*[@id='username']")
-    public WebElement email;
-
-    @FindBy(xpath = "//*[@id='password']")
-    public WebElement password;
-
     @FindBy(xpath = "(//button[@type='submit'])[1]")
     public WebElement signIn0;
 
     @FindBy(xpath = "//li[@id='menu-item-1079']")
     public WebElement myAccount0;
-
-    @FindBy(xpath = "//*[@class='page-title']")
-    public WebElement myAccount2;
 
     //Product(Mehmet)
     @FindBy(xpath = "//*[@class='wcfm_menu_items wcfm_menu_wcfm-products']")
@@ -368,10 +359,6 @@ public class VendorAddProductLocates {
     // Product Title(Mehmet)
     @FindBy(xpath = "//*[@id='pro_title']")
     public WebElement productTitle0;
-
-    // URL(Mehmet)
-    @FindBy(xpath = "//*[@id='product_url']")
-    public WebElement URL0;
 
     // Button Text(Mehmet)
     @FindBy(xpath = "//*[@id='button_text']")
