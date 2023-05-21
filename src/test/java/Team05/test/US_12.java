@@ -26,7 +26,7 @@ public class US_12 {
     @BeforeTest
     public static void setUpExtentReport() {
         ReusableMethods.extentReport();
- //       extentReports = ReusableMethods.getExtentReports();
+        extentReports = ReusableMethods.getExtentReports();
     }
 
 
