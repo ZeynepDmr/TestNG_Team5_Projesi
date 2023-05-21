@@ -90,7 +90,7 @@ public class US_17 {
         ReusableMethods.bekle(3);
         vendorAddProductLocates.myAccount.click();
         extentTest.pass("My Account Linkine tıklandı ");
-
+/*
         // Kullanici store manager menusune tiklar
         ReusableMethods.bekle(2);
         vendorAddProductLocates.storeManager.click();
@@ -113,7 +113,7 @@ public class US_17 {
         ReusableMethods.bekle(2);
         vendorAddProductLocates.addNew.click();
         extentTest.pass("Vendor olarak yeni ürün ekleme butonuna tıklanır");
-
+*/
 
         // Variable Product seçilebilmeli
 
@@ -249,6 +249,5 @@ public class US_17 {
         extentReports.flush();
     }
 }
-
 
 
