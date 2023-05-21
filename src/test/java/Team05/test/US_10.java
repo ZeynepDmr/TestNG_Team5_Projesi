@@ -14,6 +14,7 @@ import static Team05.utilities.ReusableMethods.bekle;
 
 public class US_10 {
 
+
     protected ExtentReports extentReports;
 
     @BeforeMethod
@@ -147,4 +148,5 @@ public class US_10 {
         bekle(3);
         vendorRegisterLocates.VendorPassword.clear();
     }
+
 }

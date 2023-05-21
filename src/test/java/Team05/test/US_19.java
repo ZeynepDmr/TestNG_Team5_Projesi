@@ -12,7 +12,8 @@ import org.testng.annotations.Test;
 
 import static Team05.utilities.ReusableMethods.tumSayfaResmi;
 
-public class US_19 {
+public class US_19 extends ReusableMethods {
+
     /*
     Kullanıcı ana sayfaya gider
     Kullanıcı Sign in butonunu tıklar
@@ -26,9 +27,11 @@ public class US_19 {
 
     @Test
     public void testCase1() {
+        extentReport();
+        extentTest=extentReports.createTest("ExtentTest","Test Raporu");
         //  Kullanıcı ana sayfaya gider
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
-
+        extentTest.info("Hubcomfy sitesine gidildi");
         //  Kullanıcı Sign in butonunu tıklar
         VendorShoppingLocates vendorShoppingLocates = new VendorShoppingLocates();
         vendorShoppingLocates.signIn.click();
@@ -58,12 +61,16 @@ public class US_19 {
         String actualText = Driver.getDriver().findElement(By.xpath("//td[@class='product-name'] ")).getText();
         String expectedText = "Blue Ski Boots";
         Assert.assertEquals(expectedText, actualText);
+        extentTest.pass("test sonlandırıldı");
+        extentReports.flush();
         Driver.closeDriver();
 
     }
 
     @Test
     public void testCase2() {
+        extentReport();
+        extentTest=extentReports.createTest("ExtentTest","Test Raporu");
         /*
         Kullanıcı ana sayfaya gider
         Kullanıcı Sign in butonunu tıklar
@@ -76,7 +83,7 @@ public class US_19 {
 
      //   Kullanıcı ana sayfaya gider
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
-
+        extentTest.info("Hubcomfy sitesine gidildi");
      //   Kullanıcı Sign in butonunu tıklar
         VendorShoppingLocates vendorShoppingLocates = new VendorShoppingLocates();
         vendorShoppingLocates.signIn.click();
@@ -96,7 +103,8 @@ public class US_19 {
         String actualText = Driver.getDriver().findElement(By.xpath("//td[@class='product-name'] ")).getText();
         String expectedText = "Blue Ski Boots";
         Assert.assertEquals(expectedText, actualText);
-
+        extentTest.pass("test sonlandırıldı");
+        extentReports.flush();
         Driver.closeDriver();
 
 
@@ -104,6 +112,8 @@ public class US_19 {
 
     @Test
     public void testCase3() {
+        extentReport();
+        extentTest=extentReports.createTest("ExtentTest","Test Raporu");
         /*
         Kullanıcı ana sayfaya gider
         Kullanıcı Sign in butonunu tıklar
@@ -115,7 +125,7 @@ public class US_19 {
          */
     //    Kullanıcı ana sayfaya gider
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
-
+        Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
     //    Kullanıcı Sign in butonunu tıklar
         VendorShoppingLocates vendorShoppingLocates = new VendorShoppingLocates();
         vendorShoppingLocates.signIn.click();
@@ -141,11 +151,15 @@ public class US_19 {
         vendorShoppingLocates.billingFirstName.sendKeys("Deniz", Keys.TAB,
         "Karagöz", Keys.TAB, "Techproed",Keys.TAB,Keys.TAB,"İstanbul",Keys.TAB,Keys.TAB,
          "34600",Keys.TAB,"İstanbul",Keys.TAB,Keys.TAB,"05423322033",Keys.TAB,"team5vendor@hotmail.com");
+        extentTest.pass("test sonlandırıldı");
+        extentReports.flush();
         Driver.closeDriver();
     }
 
     @Test
     public void testCase4() {
+        extentReport();
+        extentTest=extentReports.createTest("ExtentTest","Test Raporu");
         /*
         Kullanıcı ana sayfaya gider
         Kullanıcı Sign in butonunu tıklar
@@ -157,6 +171,7 @@ public class US_19 {
 
     //    Kullanıcı ana sayfaya gider
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
+        extentTest.info("Hubcomfy sitesine gidildi");
 
     //    Kullanıcı Sign in butonunu tıklar
         VendorShoppingLocates vendorShoppingLocates = new VendorShoppingLocates();
@@ -176,12 +191,16 @@ public class US_19 {
         String actualText = Driver.getDriver().findElement(By.xpath("//tr[@class='order-total'] ")).getText();
         String expectedText = "Total $198.89";
         Assert.assertEquals(expectedText, actualText);
+        extentTest.pass("test sonlandırıldı");
+        extentReports.flush();
         Driver.closeDriver();
 
     }
 
     @Test
     public void testCase5() {
+        extentReport();
+        extentTest=extentReports.createTest("ExtentTest","Test Raporu");
         /*
         Kullanıcı ana sayfaya gider
         Kullanıcı Sign in butonunu tıklar
@@ -195,7 +214,7 @@ public class US_19 {
 
     //    Kullanıcı ana sayfaya gider
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
-
+        extentTest.info("Hubcomfy sitesine gidildi");
     //    Kullanıcı Sign in butonunu tıklar
         VendorShoppingLocates vendorShoppingLocates = new VendorShoppingLocates();
         vendorShoppingLocates.signIn.click();
@@ -227,12 +246,16 @@ public class US_19 {
         vendorShoppingLocates.paymentMethodClick.click();
         ReusableMethods.bekle(3);
         vendorShoppingLocates.wireTransferClick.click();
+        extentTest.pass("test sonlandırıldı");
+        extentReports.flush();
         Driver.closeDriver();
 
     }
 
     @Test
     public void testCase6() {
+        extentReport();
+        extentTest=extentReports.createTest("ExtentTest","Test Raporu");
         /*
         Kullanıcı ana sayfaya gider
         Kullanıcı Sign in butonunu tıklar
@@ -245,7 +268,7 @@ public class US_19 {
 
     //    Kullanıcı ana sayfaya gider
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
-
+        extentTest.info("Hubcomfy sitesine gidildi");
     //    Kullanıcı Sign in butonunu tıklar
         VendorShoppingLocates vendorShoppingLocates = new VendorShoppingLocates();
         vendorShoppingLocates.signIn.click();
@@ -275,12 +298,16 @@ public class US_19 {
         String actualText = Driver.getDriver().findElement(By.xpath("//p[@class='woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received order-success']")).getText();
         String expectedText = "Thank you. Your order has been received.";
         Assert.assertEquals(expectedText, actualText);
+        extentTest.pass("test sonlandırıldı");
+        extentReports.flush();
         Driver.closeDriver();
 
     }
 
     @Test
     public void testCase7() {
+        extentReport();
+        extentTest=extentReports.createTest("ExtentTest","Test Raporu");
         /*
         Kullanıcı ana sayfaya gider
         Kullanıcı Sign in butonunu tıklar
@@ -292,7 +319,7 @@ public class US_19 {
 
     //    Kullanıcı ana sayfaya gider
         Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
-
+        extentTest.info("Hubcomfy sitesine gidildi");
     //    Kullanıcı Sign in butonunu tıklar
         VendorShoppingLocates vendorShoppingLocates = new VendorShoppingLocates();
         vendorShoppingLocates.signIn.click();
@@ -315,6 +342,8 @@ public class US_19 {
         vendorShoppingLocates.ordersClick.click();
         action.sendKeys(Keys.PAGE_DOWN).perform();
         tumSayfaResmi();
+        extentTest.pass("test sonlandırıldı");
+        extentReports.flush();
         Driver.closeDriver();
     }
 }

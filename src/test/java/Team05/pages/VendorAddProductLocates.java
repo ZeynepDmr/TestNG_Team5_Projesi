@@ -1,4 +1,74 @@
 
+//
+//package Team05.pages;
+//
+//import Team05.utilities.Driver;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.support.FindBy;
+//import org.openqa.selenium.support.PageFactory;
+//
+//public class VendorAddProductLocates {}
+//    //US_14_18
+//  // public VendorAddProductLocates() {
+////        PageFactory.initElements(Driver.getDriver(), this);
+//
+//
+//
+//
+//
+////    }
+///*
+//
+//
+//    }
+//
+//
+//
+//
+//    //AddNew locator(zeynep)
+//    @FindBy(xpath = "(//*[text()='Add New'])[1]")
+//    public WebElement addNew;
+//
+//    //Virtual tıklama(zeynep)
+//    @FindBy(xpath = "//*[@id='is_virtual']")
+//    public WebElement virtual;
+//
+//    //is_downloadable tıklama(zeynep)
+//    @FindBy(xpath = "//*[@id='is_downloadable']")
+//    public WebElement is_downloadable;
+//
+//    //price kutucugu (zeynep)
+//    @FindBy(xpath = "//*[@id='regular_price']")
+//    public WebElement price;
+//
+//    //sale price kutucugu(zeynep)
+//    @FindBy(xpath = "//*[@id='sale_price']")
+//    public WebElement salePrice;
+//
+//    //variableProduct secimi(zeynep)
+//    @FindBy(xpath = "//*[@id='product_type']")
+//    public WebElement variableProduct;
+//
+//    //color secimi(zeynep)
+//    @FindBy(xpath = "//*[@id='is_virtual']")
+//    public WebElement color;
+//
+//    //size secimi(zeynep)
+//    @FindBy(xpath = "//*[@id='attributes_is_active_2']")
+//    public WebElement size;
+//
+//    // Variations'a tıkla(zeynep)
+//    @FindBy(xpath = "(//*[@class='page_collapsible_content_holder'])[6]")
+//    public WebElement variations;
+//
+//    //Any Color tıkla(zeynep)
+//    @FindBy(xpath = "//*[@data-name='default_attribute_pa_color']")
+//    public WebElement anyColor;
+//
+//    // Any size tıkla(zeynep)
+//    @FindBy(xpath = "//*[@data-name='default_attribute_pa_size']")
+
+
 package Team05.pages;
 
 import Team05.utilities.Driver;
@@ -7,9 +77,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class VendorAddProductLocates {
-
     //US_14_18
-
     public VendorAddProductLocates() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
@@ -18,213 +86,48 @@ public class VendorAddProductLocates {
     @FindBy(xpath = "(//*[text()='Add New'])[1]")
     public WebElement addNew;
 
-    //Virtual tıklama(zeynep)
-    @FindBy(xpath = "//*[@id='is_virtual']")
-    public WebElement virtual;
-
-    //is_downloadable tıklama(zeynep)
-    @FindBy(xpath = "//*[@id='is_downloadable']")
-    public WebElement is_downloadable;
-
-    //price kutucugu (zeynep)
-    @FindBy(xpath = "//*[@id='regular_price']")
-    public WebElement price;
-
-    //sale price kutucugu(zeynep)
-    @FindBy(xpath = "//*[@id='sale_price']")
-    public WebElement salePrice;
-
     //color secimi(zeynep)
-    @FindBy(css = "input[id='attributes_is_active_1']")
+    @FindBy(css = "div[class='multi_input_block wcfm_attributes_blocks wcfm_defined_attributes wcfm_attributes_block_pa_color ui-sortable-handle']")
     public WebElement color;
 
-    @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]")
+    @FindBy(xpath = "//*[@id='attributes_value_1']")
     public WebElement colorBox;
 
 
-    @FindBy(css = "input[id='attributes_is_active_2']")
+    @FindBy(css = "div[class='multi_input_block wcfm_attributes_blocks wcfm_defined_attributes wcfm_attributes_block_pa_size ui-sortable-handle']")
     public WebElement size;
 
-    @FindBy(xpath = "(//*[@class='select2-selection__rendered'])[2]")
+    @FindBy(xpath = "//*[@id='attributes_value_2']")
     public WebElement sizeBox;
 
-    // Variations'a tıkla(zeynep)
-    @FindBy(xpath = "(//*[@class='page_collapsible_content_holder'])[6]")
-    public WebElement variations;
+    // @FindBy(css = "li[class='select2-selection__choice']")
+    // public WebElement black;
 
-    //Any Color tıkla(zeynep)
-    @FindBy(xpath = "//*[@data-name='default_attribute_pa_color']")
-    public WebElement anyColor;
+    // Variations'a tıkla(zeynep)
+    @FindBy(xpath = "//*[@id='wcfm_products_manage_form_variations_head']")
+    public WebElement variations;
 
     // Any size tıkla(zeynep)
     @FindBy(xpath = "//*[@data-name='default_attribute_pa_size']")
     public WebElement anySize;
 
-    @FindBy(xpath = "//*[@id='wcfm_products_manage_form_attribute_head']")
-    public WebElement attributes;
 
+    // public WebElement anySize; }
+    // @FindBy(xpath = "//*[@id='wcfm_products_manage_form_attribute_head']")
+    // public WebElement attributes;
 
+    @FindBy(xpath = "(//div[@class='thumbnail'])[3]")
+    public WebElement siyahAyakkabi1;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Buraya kadar Tuba
-
+    @FindBy(id = "featured_img_display")
+    public WebElement buyukProductImageEkleme;
+    //   @FindBy(id = "[id='menu-item-browse']")
+    //   public WebElement media;
     @FindBy(xpath = "//*[text()='Sign In']")
     public WebElement login;
     @FindBy(xpath = "//*[@id='username']")
     public WebElement userName;
-
-    @FindBy(xpath = "//*[@id='password']")
-    public WebElement password;
-
-    @FindBy(xpath = "(//*[text()='Sign In'])[2]")
-    public WebElement signin;
-
-
-
-    @FindBy(linkText = "My Account")
-    public static WebElement myAccount;
-
-    @FindBy(linkText = "Store Manager")
-    public static WebElement storeManager;
 
 
     @FindBy(xpath = "//*[@class='wcfm_menu_items wcfm_menu_wcfm-products']")
@@ -237,262 +140,539 @@ public class VendorAddProductLocates {
     public WebElement productTitle;
 
 
+    @FindBy(id = "attributes_value_1")
+    public WebElement blue;
+
+
+    @FindBy(xpath = "//*[@class='select2-selection__choice']")
+    public WebElement sizevalue;
+
+    @FindBy(xpath = "//*[@class='button wcfm_add_attribute_term wcfm_add_attributes_new_term']")
+    public WebElement addNewColor;
+
+
+    // @FindBy(xpath = "(//*[@class='button wcfm_add_attribute_term wcfm_add_attributes_new_term'])[2]")
+    // public WebElement addNewSize;
+
+
+    @FindBy(xpath = "(//*[@type='button'])[48]")
+    public WebElement addNewSize;
+
+
+    @FindBy(xpath = "(//*[@type='button'])[47]")
+    public WebElement colorSelectAll;
+
+    @FindBy(xpath = "(//*[@type='button'])[50]")
+    public WebElement sizeSelectAll;
+
     @FindBy(css = "input[id='wcfm_products_simple_draft_button']")
     public WebElement draft;
 
 
-    //variableProduct secimi(zeynep)
-    @FindBy(xpath = "//*[@id='product_type']")
-    public static WebElement variableProduct;
+    @FindBy(xpath = "//span[text()='Register']")
+    public WebElement register;
+
+    @FindBy(xpath = "//span[text()='Sign In ']")
+    public WebElement signIn;
+
+    @FindBy(xpath = "//input[@id='reg_username']")
+    public WebElement registerUsername;
+
+    @FindBy(xpath = "//input[@id='username']")
+    public WebElement signInEmail;
+
+    @FindBy(xpath = "(//input[@type='search'])[1]")
+    public WebElement searchBox;
+
+    @FindBy(xpath = "//a[text()='Store Manager']")
+    public WebElement storeManager;
+
+    @FindBy(xpath = "(//a[text()='My Account'])[1]")
+    public WebElement myAccount;
+
+    @FindBy(xpath = "(//span[@class='text'])[4]")
+    public WebElement vendorProducts;
+
+    @FindBy(xpath = "//span[text()='Add New']")
+    public WebElement productAddNew;
+
+    //WebElement tumEyaletler = driver.findElement(By.cssSelector("select[id='state']"));
+    @FindBy(id = "product_type")
+    public WebElement productType;
+
+    //   @FindBy(id="pro_title")
+    //   public WebElement productTitle;
+
+    //   @FindBy(id="featured_img_display")
+    //   public WebElement buyukProductImageEkleme;
 
 
-    @FindBy(xpath = "//img[@id='featured_img_display']")
-    public WebElement imageBuyuk;
+    @FindBy(id = "__wp-uploader-id-1")
+    public WebElement productResimDosyasiSecme;
+
+    @FindBy(xpath = "//button[@id='menu-item-upload']")
+    public WebElement uploadImage;
+
+    @FindBy(xpath = "//select[@name='default_attributes[attribute_pa_color]']")
+    public WebElement variationsColor;
+    @FindBy(xpath = "//select[@name='variations[0][attribute_pa_color]']")
+    public WebElement variationAnyColor;
+    @FindBy(id = "variations_regular_price_0")
+    public WebElement regularPrice;
+    @FindBy(id = "variations_stock_status_0")
+    public WebElement stockStatus;
+    @FindBy(id = "variations_weight_0")
+    public WebElement weight;
+    @FindBy(id = "variations_length_0")
+    public WebElement length;
+    @FindBy(id = "variations_width_0")
+    public WebElement width;
+    @FindBy(id = "variations_height_0")
+    public WebElement height;
+    @FindBy(id = "variations_tax_class_0")
+    public WebElement tax;
+    @FindBy(id = "variations_description_0")
+    public WebElement descriptionVari;
+    @FindBy(xpath = "//button[text()='Media Library']")
+    public WebElement mediaLibrary;
+
+
+    @FindBy(xpath = "(//div[@class='thumbnail'])[4]")
+    public WebElement siyahAyakkabi2;
+
+
+    @FindBy(xpath = "(//button[text()='Add New'])[2]")
+    public WebElement addNewSizeButton;
+
+    @FindBy(xpath = "(//button[@type='button'])[87]")
+    public WebElement imageSelectButton;
+
+    @FindBy(xpath = "//input[@value='229']")
+    public WebElement categoriesCheckBox;
+
+    @FindBy(xpath = "//input[@value='417']")
+    public WebElement productBrandscheckBox;
+
+    @FindBy(xpath = "//textarea[@id='product_tags']")
+    public WebElement productTags;
+
+    @FindBy(xpath = "//select[@id='catalog_visibility']")
+    public WebElement catalogvisibility;
+
+    @FindBy(xpath = "//label[@class='wcfmfa fa-server']")
+    public WebElement attributes;
+
+    @FindBy(id = "attributes_is_active_1")
+    public WebElement attributesIsActive;
+
+    @FindBy(xpath = "//div[@class='multi_input_block wcfm_attributes_blocks wcfm_defined_attributes wcfm_attributes_block_pa_color ui-sortable-handle']")
+    public WebElement colorCercevesi;
+
+    @FindBy(xpath = "(//ul[@class='select2-selection__rendered'])[2]")
+    public WebElement selectColor;
+
+    @FindBy(xpath = "//li[@title='Black']")
+    public WebElement blackColor;
+
+    @FindBy(xpath = "//select[@id='attributes_value_2']")
+    public WebElement attributesIsActive2;
+
+    @FindBy(xpath = "(//ul[@class='select2-selection__rendered'])[3]")
+    public WebElement selectSize;
+
+    @FindBy(xpath = "//input[@value='Submit']")
+    public WebElement submitProduct;
+
+    //   @FindBy(xpath = "//div[text()='Variations']") public WebElement variations;
+    //   @FindBy(xpath ="//select[@name='default_attributes[attribute_pa_color]']") public WebElement variationsColor;
+
+    @FindBy(xpath = "//select[@name='default_attributes[attribute_pa_size]']")
+    public WebElement variationsSize;
+    @FindBy(xpath = "//select[@name='variations[0][attribute_pa_size]']")
+    public WebElement variationAnySize;
+    //    @FindBy(xpath = "//select[@name='variations[0][attribute_pa_color]']") public WebElement variationAnyColor;
+    @FindBy(xpath = "(//a[@class='wcfm_product_title'])[1]")
+    public WebElement assertProductTitle;
+    //    @FindBy(xpath = "(//input[@type='submit'])[1]") public WebElement draft;
+    @FindBy(id = "__wp-uploader-id-7")
+    public WebElement selectFile;
 
 
 
-    @FindBy(xpath = "(//input[@*='submit'])[3]")
-    public WebElement submitButton;
-
-    @FindBy(xpath = "//input[@value='View']")
-    public WebElement viewButton;
-
-    @FindBy(xpath = "(//img[@*='presentation'])[1]")
-    public WebElement productLastImage;
+    @FindBy(xpath = "//*[@id='password']")
+    public WebElement password;
+    @FindBy(xpath = "//*[@id='password']")
+    public WebElement password23;
 
 
+    @FindBy(xpath = "//*[@class='wcfm_menu_items wcfm_menu_wcfm-products']")
+    public WebElement products0;
 
+    //Product Text
+    @FindBy(xpath = "//*[text()='Products Dashboard']")
+    public WebElement productText;
 
-
-
-
-
-
-
+    //Add New
+    @FindBy(xpath = "//*[@href='https://hubcomfy.com/store-manager/products-manage/']")
+    public WebElement addNew0;
 
 
 
+    // Product Title
+    @FindBy(xpath = "//*[@id='pro_title']")
+    public WebElement productTitle0;
+
+    // URL
+    @FindBy(xpath = "//*[@id='product_url']")
+    public WebElement URL0;
 
 
 
 
 
 
-
-    @FindBy(css = "div[class='account']")
-    public WebElement siginlogin;
-
-    @FindBy(css = "a[class='login inline-type']")
-    public WebElement siginlogin1;
-
-    @FindBy(xpath = "//*[@id='username']")
-    public WebElement email;
-
+//
+//    public WebElement anySize;
+//
+//    public WebElement anySize; }
+//
+//
+//}
+//
+//
+//   public WebElement anySize;
+//
+//
+//
+//*/
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+////Buraya kadar Tuba
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//    }
+//    @FindBy(xpath = "//*[text()='Sign In']")
+//    public WebElement login;
+//    @FindBy(xpath="//*[@id='username']")
+//    public WebElement userName;
+//
 //    @FindBy(xpath = "//*[@id='password']")
 //    public WebElement password;
 
-    @FindBy(xpath = "(//*[@type='submit'])[1]")
-    public WebElement sigin;
-//    @FindBy(xpath= "//li[@id='menu-item-1079']")
-//    public WebElement myAccount;
-
-    @FindBy(xpath = "(//[h2])[1]")
-    public WebElement myAccountText;
-
-    @FindBy(linkText = "Store Manager")
-    public WebElement storemanager;
-
-    @FindBy(xpath = "(//h2)[1]")
-    public WebElement storeManagerText;
-
-//    @FindBy(xpath = "(//*[@class='wcfm_menu_item '])[3]")
-//    public WebElement products;
-
-    @FindBy(xpath = "//*[text()='Products']")
-    public WebElement productsText;
-    @FindBy(xpath = "(//*[h2])[2]")
-    public WebElement addProductText;
-
-//    @FindBy(xpath = "//*[@id='add_new_product_dashboard']")
-//    public WebElement addNew;
-
-    @FindBy(xpath = "//*[@class='wcfm-tabWrap']")
-    public WebElement menu;
-
-    @FindBy(xpath = "//*[@id='dropdown_product_type']")
-    public WebElement allproducttypes;
-
-    @FindBy(xpath = "//*[@id='featured_img_display']")
-    public WebElement image;
-    @FindBy(xpath = "//*[@id='__wp-uploader-id-1']")
-    public WebElement selectFiles;
-
-//    @FindBy(xpath = "//*[@id='pro_title']")
-//    public WebElement productTitle;
-
-    @FindBy(xpath = "body[data-id='excerpt']")
-    public WebElement shortDescription;
-    @FindBy(css = "body[data-id='description']")
-    public WebElement Description;
-
-    @FindBy(xpath = "(//*[@name='product_cats[]'])[2]")
-    public WebElement categories;
-
-    //     @FindBy(xpath = "(//*[@class='wcfm-checkbox checklist_type_product_cat '])[1]")
-//      public WebElement categories;
-    @FindBy(xpath = "//*[text()='+Add new category']")
-    public WebElement addNewcategory;
-    @FindBy(css = "input[@id='wcfm_new_cat']")
-    public WebElement Namecategory;
-
-    //    @FindBy(xpath = "(//*[text()='Add'])[1]")
-//     public WebElement categoryAdd;
-    @FindBy(xpath = "(//*[@class='button wcfm_add_category_bt wcfm_add_taxonomy_bt'])[1]")
-    public WebElement categoryAdd;
-
-    @FindBy(css = "li[class='product_cats_checklist_item checklist_item_707']")
-    public WebElement categoryVerify;
-
-    @FindBy(xpath = "(//*[@class='wcfm-checkbox checklist_type_product_brand '])[3]")
-    public WebElement productBrands;
-
-    //    @FindBy(xpath = "(//*[@name='product_custom_taxonomies[product_brand][]'])[2]")
-//     public WebElement productBrands1;
-    @FindBy(xpath = "//*[text()='+Add new Product brands']")
-    public WebElement addNewProductBrands;
-
-    @FindBy(css = "input[id='wcfm_new_product_brand']")
-    public WebElement productBrandsName;
-
-    @FindBy(xpath = "(//*[text()='Add'])[2]")
-    public WebElement productAdd;
-    @FindBy(css = "li[class='product_cats_checklist_item checklist_item_712']")
-    public WebElement productBrandsVerify;
-    @FindBy(css = "p[class='description wcfm_full_ele wcfm_side_tag_cloud wcfm_fetch_tag_cloud']")
-    public WebElement Choosetags;
-
-    @FindBy(xpath = "(//*[@role='button'])[36]")
-    public WebElement secimChooseTags;
-
-    @FindBy(css = "p[class='catalog_visibility wcfm_title  wcfm_full_ele catalog_visibility_ele']")
-    public WebElement catalogVisibility;
-    @FindBy(xpath = "//*[@id='catalog_visibility']")
-    public WebElement shopResult;
-
-    @FindBy(css = "div[id='wcfm_products_manage_form_inventory_head']")
-    public WebElement inventory;
-
-    @FindBy(css = "input[id='sku']")
-    public  WebElement sku;
-
-    @FindBy(css = "input[id='manage_stock']")
-    public  WebElement manageStock;
-    @FindBy(css = "input[id='stock_qty']")
-    public  WebElement stockqty;
-
-    @FindBy(css = "select[id='stock_status']")
-    public  WebElement stockStatus;
-    @FindBy(css = "input[id='sold_individually']")
-    public  WebElement soldIndividually;
-    @FindBy(css = "div[id='wcfm_products_manage_form_shipping_head']")
-    public  WebElement shipping;
-    @FindBy(css = "input[id='weight']")
-    public  WebElement weight;
-    @FindBy(css = "input[id='length']")
-    public  WebElement lenghtDimensions;
-
-    //@FindBy(css = "input[id='width']")
-//public  WebElement widthDimensions;
-//@FindBy(css = "input[id='height']")
-//public  WebElement heightDimensions;
-    @FindBy(css = "select[id='shipping_class']")
-    public  WebElement shippingClass;
-    @FindBy(css = "select[id='_wcfmmp_processing_time']")
-    public  WebElement processingTime;
-//    @FindBy(css = "div[id='wcfm_products_manage_form_attribute_head']")
-//    public  WebElement attributes;
-//    @FindBy(css = "input[id='attributes_is_active_1']")
-//    public  WebElement color;
-//    @FindBy(css = "input[id='attributes_is_active_2']")
-//    public  WebElement size;
-    @FindBy(css = "div[id='wcfm_products_manage_form_linked_head']")
-    public  WebElement linked;
-    @FindBy(css = "select[id='upsell_ids']")
-    public  WebElement upsell;
-    @FindBy(css = "select[id='crosssell_ids']")
-    public  WebElement crosssels;
-    @FindBy(css = "div[id='wcfm_products_manage_form_yoast_head']")
-    public  WebElement seo;
-    @FindBy(css = "input[id='yoast_wpseo_focuskw_text_input']")
-    public  WebElement enterfocuskeyword;
-    @FindBy(css = "textarea[id='yoast_wpseo_metadesc']")
-    public  WebElement metadescription;
-    @FindBy(css = "div[id='wcfm_products_manage_form_toptan-urun-gosterme-ayarlari_head']")
-    public WebElement urunAyarlari;
-    //@FindBy(css = "select[id='piecetype']")
-    //public  WebElement select1;
-    @FindBy(xpath = "//*[@id='piecetype']")
-    public  WebElement pieceType;
-    @FindBy(css = "input[id='unitpercart']")
-    public  WebElement unitsPerPiece;
-
-    @FindBy(css = "input[id='minorderqtytr']")
-    public  WebElement minOrderQuantity;
-    @FindBy(css = "div[id='wcfm_products_manage_form_advanced_head']")
-    public  WebElement advanced;
-    @FindBy(css = "input[id='enable_reviews']")
-    public  WebElement enablereviews;
-    @FindBy(css = "input[id='menu_order']")
-    public  WebElement menuOrder;
-    @FindBy(css = "textarea[id='purchase_note']")
-    public  WebElement purchaseNote;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//buraya kadar zeynep
-
 //    @FindBy(linkText = "Store Manager")
 //    public WebElement storemanager;
-
+//
+//
 //    @FindBy(xpath = "(//h2)[1]")
 //    public WebElement storeManagerText;
-
-
-    //DropDown
-    @FindBy(xpath = "//*[@id='product_type']")
-    public WebElement dropDown;
-
-}
+//
+//    @FindBy(css = "a[class='wcfm_menu_item active']")
+//    public WebElement products;
+//
+//    @FindBy(xpath = "//*[text()='Products']")
+//    public WebElement productsText;
+//
+//    //DropDown
+//    @FindBy(xpath = "//*[@id='product_type']")
+//    public WebElement dropDown;
+//}
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+////buraya kadar zeynep
+////package Team05.pages;
+////
+////import Team05.utilities.Driver;
+////import org.openqa.selenium.WebElement;
+////import org.openqa.selenium.support.FindBy;
+////import org.openqa.selenium.support.PageFactory;
+////
+////public class VendorAddProductLocates {
+////    //US_14_18
+////    public VendorAddProductLocates() {
+////        PageFactory.initElements(Driver.getDriver(), this);
+////
+////    }
+////    //AddNew locator(zeynep)
+////    @FindBy(xpath = "(//*[text()='Add New'])[1]")
+////    public WebElement addNew;
+////
+////    //Virtual tıklama(zeynep)
+////    @FindBy(xpath = "//*[@id='is_virtual']")
+////    public WebElement virtual;
+////
+////    //is_downloadable tıklama(zeynep)
+////    @FindBy(xpath = "//*[@id='is_downloadable']")
+////    public WebElement is_downloadable;
+////
+////    //price kutucugu (zeynep)
+////    @FindBy(xpath = "//*[@id='regular_price']")
+////    public WebElement price;
+////
+////    //sale price kutucugu(zeynep)
+////    @FindBy(xpath = "//*[@id='sale_price']")
+////    public WebElement salePrice;
+////
+////    //variableProduct secimi(zeynep)
+////    @FindBy(xpath = "//*[@id='product_type']")
+////    public WebElement variableProduct;
+////
+////    //color secimi(zeynep)
+////    @FindBy(xpath = "//*[@id='is_virtual']")
+////    public WebElement color;
+////
+////    //size secimi(zeynep)
+////    @FindBy(xpath = "//*[@id='attributes_is_active_2']")
+////    public WebElement size;
+////
+////    // Variations'a tıkla(zeynep)
+////    @FindBy(xpath = "(//*[@class='page_collapsible_content_holder'])[6]")
+////    public WebElement variations;
+////
+////    // Any Color tıkla(zeynep)
+////    @FindBy(xpath = "//*[@data-name='default_attribute_pa_color']")
+////    public WebElement anyColor;
+////
+////    // Any size tıkla(zeynep)
+////   // @FindBy(xpath = "//*[@data-name='default_attribute_pa_size']")
+////    //public WebElement anySize;
+////
