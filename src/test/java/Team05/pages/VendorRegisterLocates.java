@@ -26,10 +26,12 @@ public class VendorRegisterLocates {
     public WebElement VerificationCode;
 
 @FindBy(xpath = "//input[@type='button']")
-    public WebElement reSendCode;//dogrulamakodu icin yeniden dogrulama
+    public WebElement reSendCode;//dogrulama kodu icin yeniden dogrulama
 
 @FindBy(xpath = "//*[@id='passoword']")
     public WebElement VendorPassword;
+@FindBy(xpath = "//*[@id='confirm_pwd']")
+ public WebElement PasswordConfirm;
 
 @FindBy(xpath = "//*[@class='wcfm-text wcfm_email_verified_input']")
     public WebElement VendorConfirm;
@@ -44,31 +46,33 @@ public class VendorRegisterLocates {
     public WebElement Uyarı2; //Kod gönderildi uyarısı
 
 
-
-
-
-    @FindBy(xpath = "/html/body/div[2]/div[2]/div[2]/div")
-    public WebElement Copy;
-
-
     @FindBy(xpath = "//*[@id='password_strength']")//passwordda kisa oldu dogrulama
     public WebElement tooShort;
 
-
-    @FindBy(xpath = "//*[text()='Weak']")//passwordda zayif oldugunu dogrulama
-    public WebElement Weak;
-
-    @FindBy(xpath = "//*[text()='Password strength should be atleast Good.']")//paasword kisminda olan paralo gucu en az good seviyesinde olmalidir dogrulama
+    @FindBy(xpath = "//*[@id='password_strength']" )
     public WebElement good;
 
-    @FindBy(xpath = "//*[text()='Password and Confirm-password are not same.']")//Password and Confirm-password are not same. paralo ve paralo onaylama kismi ayni olmadigini dogrulama
-    public  WebElement passwordConfirmPassword;
+    @FindBy(xpath = "//*[@id='password_strength']")
+    public WebElement strong;
 
-    @FindBy(xpath = "//*[@class='wcfm-message wcfm-error']")//Bu E-posta zaten var dogrulama
+
+    @FindBy(xpath = "//*[@id='password_strength']") //passwordda zayif oldugunu dogrulama
+    public WebElement Weak;
+
+    @FindBy(xpath = "//*[@class='wcfm-message wcfm-error']")//paasword kisminda olan paralo gucu en az good seviyesinde olmalidir dogrulama
+    public WebElement gooddogrulama;
+
+    @FindBy(xpath = "//*[@class='wcfm-message wcfm-error']")//Password and Confirm-password are not same. paralo ve paralo onaylama kismi ayni olmadigini dogrulama
+    public  WebElement passwordConfirmHata;
+
+    @FindBy(xpath = "/html/body/div[1]/main/div/div/div/div/div/div/div/div/form/div[3]")//Bu E-posta zaten var dogrulama
     public WebElement Emailalreadyexists;
 
-    @FindBy(xpath = "//*[@class='wcfm-message wcfm-error']")//gecersiz dogrulama kodu
+    @FindBy(xpath = "//*[@class=\"wcfm-message wcfm-error\"]")//gecersiz dogrulama kodu
     public WebElement Verificationcodeinvalid;
+
+    @FindBy(xpath = "//*[@class='hidden-xs hidden-sm klikaciRadek newMail']") //fake mail
+    public WebElement FakeMail;
 
     @FindBy(xpath = "(//h1)[2]")//basarili sekilde kayit olduguna dair dogrulama
     public WebElement basariliKayit;

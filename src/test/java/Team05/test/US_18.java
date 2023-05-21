@@ -1,3 +1,4 @@
+
 package Team05.test;
 
 import Team05.pages.VendorAddProductLocates;
@@ -199,5 +200,3 @@ public class US_18 extends ReusableMethods {
         extentTest.info("Kullanıcı eklemiş olduğu ürünü görüntüledi");
     }
 }
-
-

@@ -115,7 +115,7 @@ public class ReusableMethods {
     }
 
     //Tüm Sayfa ScreenShot
-    public static String tumSayfaResmi() {
+    public static void tumSayfaResmi() {
         String tarih = new SimpleDateFormat("_hh_mm_ss_ddMMyyyy").format(new Date());
         String dosyaYolu = "TestOutput/screenshot/screenshot" + tarih + ".png";
         TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
@@ -124,7 +124,6 @@ public class ReusableMethods {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return tarih;
     }
 
     //WebElement ScreenShot
@@ -154,9 +153,7 @@ public class ReusableMethods {
         extentReports.setSystemInfo("Tester", "Team05");
         extentHtmlReporter.config().setDocumentTitle("Extent Report");
         extentHtmlReporter.config().setReportName("Smoke Test Raporu");
-
     }
-
 
     public static ExtentReports getExtentReports() {
         if (extentReports == null) {
@@ -164,7 +161,6 @@ public class ReusableMethods {
         }
         return extentReports;
     }
-
 
     //WebTable
     public static void printData(int satir, int sutun) {
@@ -183,7 +179,7 @@ public class ReusableMethods {
     }
 
     //JS Scroll
-    public static void scroll(int element) {
+    public static void scroll(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }

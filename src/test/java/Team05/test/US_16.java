@@ -112,15 +112,15 @@ US14 ve US15 deki işlemler yapılabilmeli
         // Virtual ve Downloadable seçilebilmeli
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.PAGE_DOWN).perform();
-        vendorAddProductLocates.virtual.click();
-        vendorAddProductLocates.is_downloadable.click();
+        vendorAddProductLocates.price0.click();
+        vendorAddProductLocates.downloads.click();
         ReusableMethods.bekle(2);
         vendorAddProductLocates.productTitle.sendKeys("Canta");
         extentTest.pass("Vendor olarak Virtual ve Downloadable secilebilir");
 
         //Price ve Sale Price yazılabilmeli
         ReusableMethods.bekle(2);
-        vendorAddProductLocates.price.sendKeys("100", Keys.TAB, "50");
+        vendorAddProductLocates.price0.sendKeys("100", Keys.TAB, "50");
         extentTest.pass("Vendor olarak Price ve Sale Price yazılabilir");
 
         // US14 ve US15 deki işlemler yapılabilmeli
