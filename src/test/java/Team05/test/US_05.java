@@ -115,7 +115,7 @@ public class US_05 extends ReusableMethods {
         Driver.getDriver().switchTo().defaultContent();
         extentTest.info("Biography bölümüne bir metin girildi");
         bekle(2);
-        Driver.getDriver().navigate().back();
+
 
 
 

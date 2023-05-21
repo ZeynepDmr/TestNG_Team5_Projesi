@@ -1,5 +1,9 @@
 package Team05.test;
 
+
+public class US_08 {
+
+
 import Team05.pages.ProductCompareLocates;
 import Team05.pages.WishListLocates;
 import Team05.utilities.ConfigReader;
@@ -115,5 +119,6 @@ public class US_08 extends ReusableMethods {
         Driver.getDriver().close();
 
     }
+
 
 }
