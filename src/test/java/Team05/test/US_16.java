@@ -63,7 +63,6 @@ US14 ve US15 deki işlemler yapılabilmeli
         vendorAddProductLocates.login.click();
         extentTest.pass("SignIn linkine tiklandi");
 
-        vendorAddProductLocates.signInLogin.click();
 
         //Kullanici gecerli email ve password girer
         vendorAddProductLocates.email.sendKeys(ConfigReader.getProperty("Vendor_Username"), Keys.ENTER);
@@ -77,6 +76,7 @@ US14 ve US15 deki işlemler yapılabilmeli
         ReusableMethods.bekle(3);
         vendorAddProductLocates.myAccount.click();
         extentTest.pass("My Account Linkine tıklandı ");
+        ReusableMethods.bekle(1);
 
         // Kullanici store manager menusune tiklar
         ReusableMethods.bekle(2);
@@ -85,7 +85,6 @@ US14 ve US15 deki işlemler yapılabilmeli
 
         // Kullanici store manager sayfasina gider
         Assert.assertTrue(vendorAddProductLocates.storeManager.isDisplayed());
-
 
         // Kullanici products menusune tiklar
 
@@ -112,15 +111,15 @@ US14 ve US15 deki işlemler yapılabilmeli
         // Virtual ve Downloadable seçilebilmeli
         actions = new Actions(Driver.getDriver());
         actions.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.PAGE_DOWN).perform();
-        vendorAddProductLocates.price0.click();
-        vendorAddProductLocates.downloads.click();
+        vendorAddProductLocates.virtual.click();
+        vendorAddProductLocates.is_downloadable.click();
         ReusableMethods.bekle(2);
         vendorAddProductLocates.productTitle.sendKeys("Canta");
         extentTest.pass("Vendor olarak Virtual ve Downloadable secilebilir");
 
         //Price ve Sale Price yazılabilmeli
         ReusableMethods.bekle(2);
-        vendorAddProductLocates.price0.sendKeys("100", Keys.TAB, "50");
+        vendorAddProductLocates.price.sendKeys("100", Keys.TAB, "50");
         extentTest.pass("Vendor olarak Price ve Sale Price yazılabilir");
 
         // US14 ve US15 deki işlemler yapılabilmeli
@@ -144,4 +143,6 @@ US14 ve US15 deki işlemler yapılabilmeli
 
     }
 }
+
+
 

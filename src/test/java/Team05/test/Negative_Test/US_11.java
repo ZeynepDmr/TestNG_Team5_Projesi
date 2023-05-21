@@ -12,12 +12,20 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class US_11 {
+public class US_11 extends ReusableMethods{
     VendorSignInLocates vendorSignInLocates;
+
+    @BeforeMethod
+    public void setUp() {
+        extentReport();
+        extentTest=extentReports.createTest("ExtentTest", "Test Raporu");
+    }
 
     @AfterClass
     public void tearDown(){
         Driver.closeDriver();
+        extentTest.pass("Test sonlandırıldı");
+        extentReports.flush();
     }
 
     @Test(dataProvider = "loginData", dataProviderClass = DataProviderUtils.class)
@@ -25,11 +33,13 @@ public class US_11 {
 
         //Kullanıcı anasayfayı açar.
                 Driver.getDriver().get(ConfigReader.getProperty("Hubcomfy_Url"));
+        extentTest.info("HumComfy sayfasına gidildi");
         ReusableMethods.bekle(5);
 
         //Kullanıcı Sign In butonuna tıklar
         vendorSignInLocates = new VendorSignInLocates();
         vendorSignInLocates.signInLogin.click();
+        extentTest.info("Kullanıcı Sign In butonuna tıkladı");
         ReusableMethods.bekle(5);
 
         //Kullanıcı username/email alanına geçersiz bir email girer
@@ -43,6 +53,15 @@ public class US_11 {
         ReusableMethods.bekle(5);
         Assert.assertTrue(vendorSignInLocates.wrongUsernameOrPass.isDisplayed());
         ReusableMethods.tumSayfaResmi();
+        extentTest.info("Kullanıcı username alanına geçersiz bir email girdi");
+        extentTest.info("Kullanıcı password alanına geçersiz bir email girdi");
+        extentTest.info("Wrong Username or Password uyarısı görüntülendi");
+        extentTest.info("Kullanıcı username alanına geçerli bir email girdi");
+        extentTest.info("Kullanıcı password alanına geçersiz bir email girdi");
+        extentTest.info("Wrong Username or Password uyarısı görüntülendi");
+        extentTest.info("Kullanıcı username alanına geçersiz bir email girdi");
+        extentTest.info("Kullanıcı password alanına geçerli bir email girdi");
+        extentTest.info("Wrong Username or Password uyarısı görüntülendi");
 
     }
 
