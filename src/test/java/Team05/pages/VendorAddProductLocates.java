@@ -269,96 +269,7 @@ public class VendorAddProductLocates {
 
 
 
-    //Store Manager
-    @FindBy(xpath= "//*[@href='https://hubcomfy.com/store-manager/']")
-    public WebElement storeManager0;
 
-    //Store Manager Text
-    @FindBy(xpath= "//h2[1]")
-    public WebElement storeManagerText0;
-
-    @FindBy(xpath= "//*[text()='Downloads'])[1]")
-    public WebElement downloads;
-
-//buraya kadar zeynep
-
-
-    @FindBy(linkText = "Store Manager")
-    public WebElement storemanager;
-
-    @FindBy(xpath = "(//h2)[1]")
-    public WebElement storeManagerText;
-
-
-
-    @FindBy(xpath = "//*[text()='Sign In']")
-    public WebElement signInLogin;
-
-    @FindBy(xpath = "//*[@id='username']")
-    public WebElement email;
-
-    @FindBy(xpath = "//*[@id='password']")
-    public WebElement password;
-
-    @FindBy(xpath = "(//button[@type='submit'])[1]")
-    public WebElement signIn2;
-
-  @FindBy(xpath= "//li[@id='menu-item-1079']")
-  public WebElement myAccount0;
-
-  @FindBy(xpath= "//*[@class='page-title']")
-  public WebElement myAccount2;
-
-    //Product
-    @FindBy(xpath= "//*[@class='wcfm_menu_items wcfm_menu_wcfm-products']")
-    public WebElement products0;
-
-  //Product Text
-    @FindBy(xpath= "//*[text()='Products Dashboard']")
-    public WebElement productText;
-
-  //Add New
-    @FindBy(xpath= "//*[@href='https://hubcomfy.com/store-manager/products-manage/']")
-  public WebElement addNew0;
-
-  //Add New Text
-  @FindBy(xpath= "//*[text()='Add Product']")
-  public WebElement addNewText;
-
-
-    //DropDown
-    @FindBy(xpath = "//*[@id='product_type']")
-    public WebElement dropDown;
-
-
-    // Product Title
-    @FindBy(xpath = "//*[@id='pro_title']")
-    public WebElement productTitle0;
-
-  // URL
-  @FindBy(xpath = "//*[@id='product_url']")
-  public WebElement URL0;
-
-  // Button Text
-  @FindBy(xpath = "//*[@id='button_text']")
-  public WebElement buttonText0;
-
-  // Price
-  @FindBy(xpath = "//*[@id='regular_price']")
-  public WebElement price0;
-
-  // Sale Price
-  @FindBy(xpath = "//*[@id='sale_price']")
-  public WebElement salePrice0;
-
-  // Short Description
-  @FindBy(xpath = "//*[@id='tinymce'][1]")
-  public WebElement shortDescription0;
-
-  //Product Dashboard Text
-
-  @FindBy(xpath = "//*[text()='Products Dashboard']")
-  public WebElement productDashboardText0;
 
 
     @FindBy(xpath = "//*[@data-name='default_attribute_pa_color']")
@@ -366,7 +277,6 @@ public class VendorAddProductLocates {
 
     @FindBy(xpath = "//*[@data-name='default_attribute_pa_size']")
     public WebElement dropDown3;
-
 
 
     @FindBy(xpath = "//*[text()='Select']")
@@ -398,410 +308,256 @@ public class VendorAddProductLocates {
     @FindBy(id="variations_description_0") public WebElement descriptionVari;
 
 
-  //Girilen Ürünü arama:Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Store Manager (Mehmet)
+    @FindBy(xpath= "//*[@href='https://hubcomfy.com/store-manager/']")
+    public WebElement storeManager0;
+
+    //Store Manager Text(Mehmet)
+    @FindBy(xpath= "//h2[1]")
+    public WebElement storeManagerText0;
+
+    @FindBy(xpath= "//*[text()='Downloads'])[1]")
+    public WebElement downloads;
+
+    @FindBy(linkText = "Store Manager")
+    public WebElement storemanager;
+
+    @FindBy(xpath = "(//h2)[1]")
+    public WebElement storeManagerText;
+
+    @FindBy(xpath = "//*[text()='Sign In']")
+    public WebElement signInLogin0;
+
+    @FindBy(xpath = "//*[@id='username']")
+    public WebElement email;
+
+    @FindBy(xpath = "//*[@id='password']")
+    public WebElement password;
+
+    @FindBy(xpath = "(//button[@type='submit'])[1]")
+    public WebElement signIn0;
+
+    @FindBy(xpath= "//li[@id='menu-item-1079']")
+    public WebElement myAccount0;
+
+    @FindBy(xpath= "//*[@class='page-title']")
+    public WebElement myAccount2;
+
+    //Product(Mehmet)
+    @FindBy(xpath= "//*[@class='wcfm_menu_items wcfm_menu_wcfm-products']")
+    public WebElement products0;
+
+    //Product Text(Mehmet)
+    @FindBy(xpath= "//*[text()='Products Dashboard']")
+    public WebElement productText;
+
+    //Add New(Mehmet)
+    @FindBy(xpath= "//*[@href='https://hubcomfy.com/store-manager/products-manage/']")
+    public WebElement addNew0;
+
+    //Add New Text(Mehmet)
+    @FindBy(xpath= "//*[text()='Add Product']")
+    public WebElement addNewText0;
+
+
+    //DropDown(Mehmet)
+    @FindBy(xpath = "//*[@id='product_type']")
+    public WebElement dropDown0;
+
+
+    // Product Title(Mehmet)
+    @FindBy(xpath = "//*[@id='pro_title']")
+    public WebElement productTitle0;
+
+    // URL(Mehmet)
+    @FindBy(xpath = "//*[@id='product_url']")
+    public WebElement URL0;
+
+    // Button Text(Mehmet)
+    @FindBy(xpath = "//*[@id='button_text']")
+    public WebElement buttonText0;
+
+    // Price(Mehmet)
+    @FindBy(xpath = "//*[@id='regular_price']")
+    public WebElement price0;
+
+    // Sale Price(Mehmet)
+    @FindBy(xpath = "//*[@id='sale_price']")
+    public WebElement salePrice0;
+
+    // Short Description(Mehmet)
+    @FindBy(xpath = "//*[@id='tinymce'][1]")
+    public WebElement shortDescription0;
+
+    //Product Dashboard Text(Mehmet)
+
+    @FindBy(xpath = "//*[text()='Products Dashboard']")
+    public WebElement productDashboardText0;
+
+  //Girilen Ürünü arama:Search(Mehmet)
   @FindBy(xpath = "(//input[@type='search'])[2]")
   public WebElement searchKutusu0;
 
 
-  //Girilen Ürün
+  //Girilen Ürün(Mehmet)
 
-  @FindBy(xpath = "//*[@alt='Red Apple']")
+  @FindBy(xpath = "(//*[text()='Apple'])[2]")
   public WebElement girilenProduct0;
-
-
 
 }
 
 
 
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-////Buraya kadar Tuba
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 
 

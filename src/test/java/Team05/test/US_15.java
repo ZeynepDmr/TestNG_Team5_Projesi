@@ -19,6 +19,7 @@ public class US_15 {
     VendorAddProductLocates vendorAddProductLocates;
     Actions actions;
     Select select;
+
     @BeforeMethod
     public void setUp() {
 
@@ -254,6 +255,8 @@ public class US_15 {
         //KeysTAB ile yazdırdım
     }
 }
+
+
 
 
 
